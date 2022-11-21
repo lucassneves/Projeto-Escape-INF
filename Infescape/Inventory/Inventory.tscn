@@ -123,12 +123,12 @@ align = 1
 [node name="TextureRect" type="TextureRect" parent="ItemDescription"]
 margin_top = 34.0
 margin_right = 200.0
-margin_bottom = 98.0
+margin_bottom = 66.0
 texture = ExtResource( 1 )
 stretch_mode = 4
 
 [node name="Label2" type="Label" parent="ItemDescription"]
-margin_top = 118.0
+margin_top = 86.0
 margin_right = 200.0
 margin_bottom = 310.0
 size_flags_vertical = 7

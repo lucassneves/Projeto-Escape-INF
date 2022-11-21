@@ -11,8 +11,8 @@ func show_text(_text):
 	get_parent().mouse_filter = Control.MOUSE_FILTER_STOP # Bloqueio input enquanto mostra texto
 	done = false
 	icon.hide()
-	show()
 	text = _text
+	show()
 	visible_characters = 0
 	timer.start(time)
 
@@ -38,5 +38,5 @@ func setDone(value):
 		icon.show()
 
 func _on_Collectable_collected(item_data: Item):
-	var _text = "Você colocou " + item_data.name + " na sua mohicla."
+	var _text = "\n Você colocou  " + item_data.name + " na sua mochila."
 	show_text(_text)

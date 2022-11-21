@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Infescape"
+run/main_scene="res://Scenes/Room1/Room1_3.tscn"
 config/icon="res://icon.png"
 
 [gui]
