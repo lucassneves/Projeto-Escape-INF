@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+
 onready var item_name_label := $Label
 onready var item_sprite_rect := $TextureRect
 onready var item_description_label := $Label2
