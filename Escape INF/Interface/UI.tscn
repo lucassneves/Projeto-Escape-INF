@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Interface/WallSwitch/WallSwitch.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interface/InventoryRect/mochila.png" type="Texture" id=2]
+[ext_resource path="res://Interface/InventoryRect/InventoryRect.tscn" type="PackedScene" id=4]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="WallSwitch" parent="." instance=ExtResource( 1 )]
+margin_top = -8.0
+margin_bottom = 8.0
+
+[node name="InventoryRect2" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="InventoryRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[connection signal="gui_input" from="InventoryRect" to="InventoryRect2" method="_on_InventoryRect_gui_input"]

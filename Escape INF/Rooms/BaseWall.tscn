@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Collectable/Collectables.gd" type="Script" id=1]
+
+[node name="BaseWall" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collectables" type="Node2D" parent="."]
+script = ExtResource( 1 )
