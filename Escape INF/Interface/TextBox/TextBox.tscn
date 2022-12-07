@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Interface/TextBox/TextBox.gd" type="Script" id=1]
+[ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=2]
+
+[node name="TextBoxLayer" type="CanvasLayer"]
+visible = false
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextBox" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -96.0
+margin_top = -68.0
+margin_right = 96.0
+margin_bottom = -20.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/TextBox"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -9.0
+margin_top = -1.0
+margin_right = -1.0
+margin_bottom = 7.0
+rect_rotation = -90.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+
+[node name="Timer" type="Timer" parent="Control/TextBox"]
+
+[node name="Text" type="RichTextLabel" parent="Control/TextBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+text = "tadsasdasdasdasdasdasdsadasdasd asdas dasf f rwgr ege rge rger reg er "
+
+[connection signal="timeout" from="Control/TextBox/Timer" to="." method="_on_Timer_timeout"]
