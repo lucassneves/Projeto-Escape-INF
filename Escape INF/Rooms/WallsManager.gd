@@ -6,6 +6,9 @@ onready var walls := get_children()
 
 func _ready():
 	
+	if ProgressManager.previous_wall_index != null:
+		current_wall_index = ProgressManager.previous_wall_index
+	
 	# Esconde todas as walls e mostra a primeira atual
 	for wall in walls:
 		wall.hide()

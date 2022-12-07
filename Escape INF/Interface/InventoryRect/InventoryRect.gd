@@ -13,6 +13,7 @@ func _ready():
 	
 	for i in range(Inventory.inventory_size):
 		var _b = slotsGrid.get_child(i).connect("gui_input", self, "slot_gui_input", [i])
+		var _c = slotsGrid.get_child(i).connect("mouse_exited", self, "slot_mouse_exited")
 		update_slot(i)
 	if Inventory.items[selected_slot_index] != null:
 		select_slot(selected_slot_index)
@@ -20,10 +21,13 @@ func _ready():
 func slot_gui_input(event, slot_index):
 	if event is InputEventMouseMotion:
 		hovering_slot_index = slot_index
+		
+func slot_mouse_exited():
+	hovering_slot_index = -1 # null
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT:
+		if event.button_index == BUTTON_LEFT and hovering_slot_index != -1:
 			selected_slot_index = hovering_slot_index
 			var item: Item = Inventory.items[selected_slot_index]
 			if item != null:
