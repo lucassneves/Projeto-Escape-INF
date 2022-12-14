@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Escape INF"
-run/main_scene="res://Rooms/Lab257/Lab257.tscn"
+run/main_scene="res://Interface/MainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

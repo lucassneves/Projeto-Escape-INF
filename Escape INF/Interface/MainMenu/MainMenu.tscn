@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Interface/MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Interface/MainMenu/background.png" type="Texture" id=2]
+[ext_resource path="res://Interface/MainMenu/buttonIcon.png" type="Texture" id=3]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+first_scene = "res://Rooms/Lab257/Lab257.tscn"
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -27.0
+margin_top = -63.0
+margin_right = 37.0
+
+[node name="PlayButton" type="Button" parent="Buttons"]
+margin_right = 64.0
+margin_bottom = 14.0
+text = "PLAY GAME"
+icon = ExtResource( 3 )
+flat = true
+align = 0
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+margin_top = 18.0
+margin_right = 64.0
+margin_bottom = 32.0
+text = "QUIT"
+icon = ExtResource( 3 )
+flat = true
+align = 0
+
+[connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]
