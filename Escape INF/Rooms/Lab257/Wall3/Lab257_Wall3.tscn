@@ -15,7 +15,7 @@ extents = Vector2( 9, 3.5 )
 texture = ExtResource( 4 )
 
 [node name="Chave257" parent="." index="1" instance=ExtResource( 2 )]
-position = Vector2( 112, 78 )
+position = Vector2( 111, 78 )
 item_data = ExtResource( 3 )
 
 [node name="Sprite" parent="Chave257" index="0"]

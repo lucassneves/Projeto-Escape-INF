@@ -1,11 +1,15 @@
 extends Control
 
-var hovering_slot_index := 0
-var selected_slot_index := 0
+const DESELECT_INDEX = -10
+
+var hovering_slot_index := -1
+var selected_slot_index := DESELECT_INDEX setget select_slot
 
 onready var slotsGrid := $HBoxContainer/GridContainer
 onready var selectedRect := $TextureRect
 onready var itemDescription := $HBoxContainer/ItemDescription
+
+signal selected_item_changed
 
 func _ready():
 	
@@ -15,8 +19,8 @@ func _ready():
 		var _b = slotsGrid.get_child(i).connect("gui_input", self, "slot_gui_input", [i])
 		var _c = slotsGrid.get_child(i).connect("mouse_exited", self, "slot_mouse_exited")
 		update_slot(i)
-	if Inventory.items[selected_slot_index] != null:
-		select_slot(selected_slot_index)
+
+	self.selected_slot_index = Inventory.selected_item_index
 	
 func slot_gui_input(event, slot_index):
 	if event is InputEventMouseMotion:
@@ -27,15 +31,28 @@ func slot_mouse_exited():
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT and hovering_slot_index != -1:
-			selected_slot_index = hovering_slot_index
-			var item: Item = Inventory.items[selected_slot_index]
+		if event.button_index == BUTTON_LEFT and event.pressed and hovering_slot_index != -1:
+			var item: Item = Inventory.items[hovering_slot_index]
 			if item != null:
-				select_slot(selected_slot_index)
+				if hovering_slot_index == selected_slot_index:
+					self.selected_slot_index = DESELECT_INDEX # Deselect
+				else:
+					self.selected_slot_index = hovering_slot_index # Select
+				
 
 func select_slot(slot_index):
-	selectedRect.rect_position = slotsGrid.get_child(slot_index).rect_position
-	itemDescription.update_selected_item(Inventory.items[slot_index])
+	
+	selected_slot_index = slot_index
+	Inventory.selected_item_index = selected_slot_index
+	emit_signal("selected_item_changed")
+	
+	if selected_slot_index == DESELECT_INDEX:
+		selectedRect.hide()
+		itemDescription.update_selected_item(null)
+	else:
+		selectedRect.show()
+		selectedRect.rect_position = slotsGrid.get_child(slot_index).rect_position
+		itemDescription.update_selected_item(Inventory.items[slot_index])
 	
 func update_slot(slot_index):
 	var item: Item = Inventory.items[slot_index]
@@ -49,6 +66,7 @@ func update_slot(slot_index):
 		
 	elif slotsGrid.get_child(slot_index).get_children().size() > 0:
 		slotsGrid.get_child(slot_index).get_child(0).queue_free()
+		self.selected_slot_index = DESELECT_INDEX
 
 func _on_Button_pressed():
 	hide()

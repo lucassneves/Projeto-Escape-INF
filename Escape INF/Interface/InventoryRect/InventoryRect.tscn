@@ -187,6 +187,7 @@ margin_left = 34.0
 margin_right = 70.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 2
 texture = ExtResource( 6 )
 stretch_mode = 4
 

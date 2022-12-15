@@ -13,7 +13,7 @@ extents = Vector2( 26, 44 )
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 4 )
 
-[node name="Door" parent="." index="2" instance=ExtResource( 2 )]
+[node name="Door" parent="." index="1" instance=ExtResource( 2 )]
 position = Vector2( 222, 100 )
 locked = true
 item_needed = ExtResource( 3 )
