@@ -8,3 +8,4 @@ func update_selected_item(item: Item):
 	item_name_label.text = item.name
 	item_sprite_rect.texture = item.sprite
 	item_description_label.text = item.description
+
