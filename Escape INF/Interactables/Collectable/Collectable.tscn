@@ -3,6 +3,7 @@
 [ext_resource path="res://Interactables/Collectable/Collectable.gd" type="Script" id=1]
 
 [node name="Collectable" type="Area2D"]
+priority = 1.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -10,7 +11,8 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 
-[node name="CollisioShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -0.5 )
 
-[connection signal="input_event" from="." to="." method="_on_Collectable_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_Collectable_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Collectable_mouse_exited"]

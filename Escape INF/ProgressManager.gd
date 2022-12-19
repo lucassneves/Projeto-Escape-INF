@@ -4,6 +4,8 @@ var previous_room: String
 var previous_wall_name: String
 var previous_wall_index: int
 
+var anxiety = 0 setget set_anxiety
+
 # Para fazer um controle de quais interagiveis ja foram interagidos e portanto nao podem
 # ser interagidos novamente
 
@@ -12,6 +14,9 @@ var unlocked_doors := {}
 var completed_puzzles := {}
 
 var collected_items := {}
+
+signal anxiety_changed
+signal anxiety_attack
 
 func add_completed_puzzles(room_name, wall_index, puzzle):
 	
@@ -35,3 +40,11 @@ func add_collected_item(room_name, wall_name, item_data):
 			collected_items[room_name][wall_name].append(item_data)
 	else:
 		collected_items[room_name] = {wall_name : [item_data]}
+
+func set_anxiety(value):
+	anxiety = clamp(value, 0, 100)
+	emit_signal("anxiety_changed")
+	
+	if anxiety == 100:
+		TextBox.show_text("Você ficou ansioso demais!")
+		emit_signal("anxiety_attack")

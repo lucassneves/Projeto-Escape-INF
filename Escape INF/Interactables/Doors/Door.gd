@@ -6,6 +6,8 @@ export(Resource) var item_needed
 
 export(String, FILE, "*.tscn") var goto
 
+var _hovering = false
+
 func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
@@ -14,9 +16,17 @@ func _ready():
 		if ProgressManager.unlocked_doors[room_file].has(wall_name):
 			locked = false
 
-func _on_Door_input_event(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-		interact()
+func _on_Door_mouse_entered():
+	_hovering = true
+
+func _on_Door_mouse_exited():
+	_hovering = false
+	
+func _input(event):
+	if _hovering:
+		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+			interact()
+			get_tree().set_input_as_handled()
 		
 func interact():
 	
@@ -31,6 +41,7 @@ func interact():
 			ProgressManager.add_unlocked_door(room_file, wall_name)
 			# Usar a chave do inventario
 			Inventory.remove_item(item_needed)
+			ProgressManager.anxiety -= 10
 		else:
 			TextBox.show_text("A porta está trancada.")
 	else:

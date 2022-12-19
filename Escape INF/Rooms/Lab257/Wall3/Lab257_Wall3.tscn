@@ -7,7 +7,7 @@
 [ext_resource path="res://Items/Chave257/chave257Scene.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9, 3.5 )
+extents = Vector2( 8.5, 3.5 )
 
 [node name="Lab257_Wall3" instance=ExtResource( 1 )]
 
@@ -15,14 +15,14 @@ extents = Vector2( 9, 3.5 )
 texture = ExtResource( 4 )
 
 [node name="Chave257" parent="." index="1" instance=ExtResource( 2 )]
-position = Vector2( 111, 78 )
+position = Vector2( 111, 77 )
 item_data = ExtResource( 3 )
 
 [node name="Sprite" parent="Chave257" index="0"]
 texture = ExtResource( 5 )
 
-[node name="CollisioShape2D" parent="Chave257" index="1"]
-position = Vector2( 0, 0.5 )
+[node name="CollisionShape2D" parent="Chave257" index="1"]
+position = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
 
 [editable path="Chave257"]

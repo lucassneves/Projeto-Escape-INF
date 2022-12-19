@@ -12,4 +12,5 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-[connection signal="input_event" from="." to="." method="_on_PuzzleArea_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_PuzzleArea_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_PuzzleArea_mouse_exited"]
