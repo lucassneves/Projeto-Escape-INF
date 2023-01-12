@@ -16,7 +16,6 @@ texture = ExtResource( 2 )
 [node name="PuzzleArea" parent="." index="1" instance=ExtResource( 3 )]
 position = Vector2( 156, 96 )
 puzzle_file = "res://Interactables/Puzzles/ConnectPath/ConnectPath.tscn"
-change_sprite = true
 
 [node name="Sprite" parent="PuzzleArea" index="0"]
 texture = ExtResource( 4 )

@@ -36,14 +36,14 @@ func interact():
 	
 	if locked:
 		if Inventory.items[Inventory.selected_item_index] == item_needed:
-			TextBox.show_text("Você usou " + item_needed.name + " para destrancar a porta.")
+			TextBox.show_texts(["Você usou " + item_needed.name + " para destrancar a porta."])
 			locked = false
 			ProgressManager.add_unlocked_door(room_file, wall_name)
 			# Usar a chave do inventario
 			Inventory.remove_item(item_needed)
 			ProgressManager.anxiety -= 10
 		else:
-			TextBox.show_text("A porta está trancada.")
+			TextBox.show_texts(["A porta está trancada."])
 	else:
 		ProgressManager.previous_room = room_file
 		ProgressManager.previous_wall_name = wall_name

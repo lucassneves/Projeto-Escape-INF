@@ -2,16 +2,28 @@ extends CanvasLayer
 
 export (float) var time := 0.05
 
+var texts: Array
+var text_count = 0
+
 var done := true setget setDone
+
+signal texts_done
 
 onready var icon = $Control/TextBox/TextureRect
 onready var timer = $Control/TextBox/Timer
 onready var textLabel = $Control/TextBox/Text
 
-func show_text(_text):
+func show_texts(_texts):
+	show()
+	
+	texts = _texts
+	text_count = 0
+	_show_text(texts[text_count])
+
+func _show_text(_text):
 	self.done = false
 	icon.hide()
-	show()
+	
 	textLabel.text = _text
 	textLabel.visible_characters = 0
 	timer.start(time)
@@ -24,7 +36,12 @@ func _input(event):
 				if not done:
 					self.done = true
 				elif done:
-					hide()
+					if text_count < texts.size() - 1:
+						text_count += 1
+						_show_text(texts[text_count])
+					else:
+						hide()
+						emit_signal("texts_done")
 
 func _on_Timer_timeout():
 	textLabel.visible_characters += 1

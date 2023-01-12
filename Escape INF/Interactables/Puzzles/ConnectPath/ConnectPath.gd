@@ -11,6 +11,6 @@ func complete():
 	
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
-	TextBox.show_text("Você resolveu o puzzle!")
+	TextBox.show_texts(["Você ligou a energia do INF!"])
 	
 	ProgressManager.anxiety -= 25

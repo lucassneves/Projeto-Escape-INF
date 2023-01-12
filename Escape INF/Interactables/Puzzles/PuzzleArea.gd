@@ -1,7 +1,6 @@
 extends Area2D
 
 export (String, FILE, "*.tscn") var puzzle_file
-export (bool) var change_sprite
 
 var _hovering = false
 
@@ -16,8 +15,7 @@ func _ready():
 		if ProgressManager.completed_puzzles[room_file].has(wall_name):
 			if ProgressManager.completed_puzzles[room_file][wall_name].has(puzzle_file):
 				area_collision.disabled = true
-				if change_sprite:
-					sprite.frame = 1
+				sprite.frame = 1
 
 func _on_PuzzleArea_mouse_entered():
 	_hovering = true

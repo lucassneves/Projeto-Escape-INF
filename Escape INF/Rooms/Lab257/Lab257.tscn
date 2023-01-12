@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/Lab257/Wall0/Lab257_Wall0.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Lab257/Wall1/Lab257_Wall1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Rooms/BaseRoom.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Rooms/Lab257/Wall2/Lab257_Wall2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Rooms/Lab257/Wall3/Lab257_Wall3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Rooms/Lab257/Lab257.gd" type="Script" id=6]
 
 [node name="Lab257" instance=ExtResource( 3 )]
+script = ExtResource( 6 )
 
 [node name="Lab257_Wall0" parent="Walls" index="0" instance=ExtResource( 1 )]
 
@@ -26,3 +28,9 @@ __meta__ = {
 
 [node name="Label" parent="UI Layer" index="1"]
 text = "Laboratório 257"
+
+[node name="ScreenModulate" parent="." index="2"]
+color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
+
+[node name="PhoneLight" parent="." index="3"]
+mode = 2

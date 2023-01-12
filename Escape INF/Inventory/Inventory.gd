@@ -4,7 +4,7 @@ const DESELECT_INDEX = -10
 
 const inventory_size := 12
 
-var selected_item_index = DESELECT_INDEX
+var selected_item_index = DESELECT_INDEX setget set_selected_item_index
 
 export(Array, Resource) var items = [
 	preload("res://Items/Celular/celular.tres"),
@@ -22,6 +22,7 @@ export(Array, Resource) var items = [
 ]
 
 signal item_changed(index)
+signal selected_item_changed
 
 func add_item(item: Item):
 	for i in range(inventory_size):
@@ -39,3 +40,6 @@ func remove_item(item: Item):
 			return
 	print("Item nao encontrado")
 			
+func set_selected_item_index(index):
+	selected_item_index = index
+	emit_signal("selected_item_changed")

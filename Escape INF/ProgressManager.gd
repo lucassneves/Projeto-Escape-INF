@@ -15,6 +15,8 @@ var completed_puzzles := {}
 
 var collected_items := {}
 
+var seen_texts := {}
+
 signal anxiety_changed
 signal anxiety_attack
 
@@ -41,10 +43,17 @@ func add_collected_item(room_name, wall_name, item_data):
 	else:
 		collected_items[room_name] = {wall_name : [item_data]}
 
+func add_seen_texts(room_name, texts):
+	
+	if seen_texts.has(room_name):
+			seen_texts[room_name].append(texts)
+	else:
+		seen_texts = {room_name : [texts]}
+
 func set_anxiety(value):
 	anxiety = clamp(value, 0, 100)
 	emit_signal("anxiety_changed")
 	
 	if anxiety == 100:
-		TextBox.show_text("Você ficou ansioso demais!")
+		TextBox.show_texts(["Você ficou ansioso demais!"])
 		emit_signal("anxiety_attack")

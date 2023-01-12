@@ -30,7 +30,7 @@ func _input(event):
 
 func collect():
 	print(item_data.name + " coletado!")
-	TextBox.show_text("Você colocou " + item_data.name + " na sua mochila.")
+	TextBox.show_texts(["Você colocou " + item_data.name + " na sua mochila."])
 	Inventory.add_item(item_data)
 	
 	var room_file = get_tree().current_scene.filename
