@@ -7,4 +7,4 @@
 script = ExtResource( 1 )
 name = "Celular"
 sprite = ExtResource( 2 )
-description = "Seu celular. A lanterna pode ser útil."
+description = "Seu celular está sem sinal de rede, mas a lanterna pode ser útil."

@@ -62,6 +62,7 @@ visible = false
 visible = false
 
 [node name="Anxiety" parent="." instance=ExtResource( 8 )]
+margin_right = -3.0
 
 [connection signal="gui_input" from="PauseMenuRect" to="PauseMenu" method="_on_PauseMenuRect_gui_input"]
 [connection signal="gui_input" from="HBoxContainer/InventoryRect" to="InventoryRect2" method="_on_InventoryRect_gui_input"]
