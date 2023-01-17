@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Interactables/Puzzles/BoxOpener/Boxopened.gd" type="Script" id=1]
-[ext_resource path="res://Interactables/Puzzles/BoxOpener/box_opened.png.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/Puzzles/BoxOpener/box_opened.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Puzzles/BoxOpener/BoxOpenedContainer.gd" type="Script" id=3]
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=7]
 

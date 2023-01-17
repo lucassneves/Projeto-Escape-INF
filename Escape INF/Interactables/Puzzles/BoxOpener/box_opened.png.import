@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/box_sprite_1.png.png-23522e098e9cffa3462c5fb9a9659118.stex"
+path="res://.import/box_opened.png-6675c335ba9387998c8c929f0b7b2bff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactables/Puzzles/BoxOpener/box_sprite_1.png.png"
-dest_files=[ "res://.import/box_sprite_1.png.png-23522e098e9cffa3462c5fb9a9659118.stex" ]
+source_file="res://Interactables/Puzzles/BoxOpener/box_opened.png"
+dest_files=[ "res://.import/box_opened.png-6675c335ba9387998c8c929f0b7b2bff.stex" ]
 
 [params]
 
