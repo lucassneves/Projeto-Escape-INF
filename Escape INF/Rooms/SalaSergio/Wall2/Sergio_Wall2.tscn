@@ -6,7 +6,7 @@
 [ext_resource path="res://Interactables/Puzzles/BoxOpener/box_sprite.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 21.3902, 12.001 )
+extents = Vector2( 21, 12 )
 
 [node name="Oficina_Wall2" instance=ExtResource( 1 )]
 
@@ -14,17 +14,14 @@ extents = Vector2( 21.3902, 12.001 )
 texture = ExtResource( 2 )
 
 [node name="PuzzleArea" parent="." index="1" instance=ExtResource( 4 )]
-position = Vector2( 210, 282 )
-scale = Vector2( 2.08, 1.16 )
+position = Vector2( 105, 141 )
 puzzle_file = "res://Interactables/Puzzles/BoxOpener/Boxopener.tscn"
 
-[node name="Sprite2" type="Sprite" parent="PuzzleArea" index="0"]
-position = Vector2( -50.4808, -121.552 )
-scale = Vector2( 0.480769, 0.862069 )
+[node name="Sprite" parent="PuzzleArea" index="0"]
 texture = ExtResource( 5 )
 hframes = 2
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="PuzzleArea" index="3"]
-position = Vector2( -50.4808, -121.552 )
-scale = Vector2( 0.472, 0.862 )
+[node name="CollisionShape2D" parent="PuzzleArea" index="1"]
 shape = SubResource( 1 )
+
+[editable path="PuzzleArea"]

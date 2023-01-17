@@ -12,16 +12,24 @@
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
 
-[node name="PuzzleArea2" parent="." index="1" instance=ExtResource( 4 )]
+[node name="PuzzleArea" parent="." index="1" instance=ExtResource( 4 )]
 puzzle_file = "res://Interactables/Puzzles/ImageTile/Imagetile.tscn"
 
-[node name="Sprite2" type="Sprite" parent="PuzzleArea2" index="2"]
+[node name="Sprite" parent="PuzzleArea" index="0"]
 position = Vector2( 156, 71 )
 scale = Vector2( 0.12, 0.12 )
 texture = ExtResource( 3 )
 hframes = 2
+__meta__ = {
+"_editor_description_": ""
+}
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="PuzzleArea2" index="3"]
+[node name="CollisionShape2D" parent="PuzzleArea" index="1"]
 position = Vector2( 156, 71 )
 scale = Vector2( 3.252, 3.21103 )
 shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[editable path="PuzzleArea"]
