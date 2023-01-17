@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Interface/PauseMenu/PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://Interface/ConfigureMenu/ConfigureMenu.gd" type="Script" id=1]
 
 [node name="PauseMenu" type="Panel"]
 pause_mode = 2
@@ -32,14 +32,20 @@ align = 1
 margin_top = 12.0
 margin_right = 79.0
 margin_bottom = 26.0
-text = "Resume"
+text = "Retormar"
+
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 79.0
+margin_bottom = 44.0
+text = "Tutorial"
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer"]
 margin_top = 87.0
 margin_right = 79.0
 margin_bottom = 101.0
 size_flags_vertical = 10
-text = "Main Menu"
+text = "Menu Principal"
 
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
 [connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

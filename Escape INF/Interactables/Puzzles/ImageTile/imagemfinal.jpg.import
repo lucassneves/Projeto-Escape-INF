@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mochila3.png-7057903230ccb62626e45690891d06ae.stex"
+path="res://.import/imagemfinal.jpg-6964740ee32a6a143695a2813fcdd913.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interface/InventoryRect/mochila3.png"
-dest_files=[ "res://.import/mochila3.png-7057903230ccb62626e45690891d06ae.stex" ]
+source_file="res://Interactables/Puzzles/ImageTile/imagemfinal.jpg"
+dest_files=[ "res://.import/imagemfinal.jpg-6964740ee32a6a143695a2813fcdd913.stex" ]
 
 [params]
 
