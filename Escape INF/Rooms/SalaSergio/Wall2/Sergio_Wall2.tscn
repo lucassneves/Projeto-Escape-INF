@@ -1,27 +1,40 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall2/sergioescritorio_wall2.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/Puzzles/BoxOpener/box_sprite_1.png.png" type="Texture" id=3]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Interactables/Puzzles/BoxOpener/box_sprite.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21, 14 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 21, 12 )
+extents = Vector2( 21.3902, 14 )
 
 [node name="Oficina_Wall2" instance=ExtResource( 1 )]
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
 
-[node name="PuzzleArea" parent="." index="1" instance=ExtResource( 4 )]
-position = Vector2( 105, 141 )
+[node name="PuzzleArea2" parent="." index="1" instance=ExtResource( 4 )]
+position = Vector2( 36, 2 )
+puzzle_file = "res://Interactables/Puzzles/BoxOpener/Boxopened.tscn"
+
+[node name="CollisionShape2D" parent="PuzzleArea2" index="1"]
+position = Vector2( 69, 137 )
+shape = SubResource( 2 )
+
+[node name="PuzzleArea" parent="." index="2" instance=ExtResource( 4 )]
+position = Vector2( 105, 133 )
 puzzle_file = "res://Interactables/Puzzles/BoxOpener/Boxopener.tscn"
 
 [node name="Sprite" parent="PuzzleArea" index="0"]
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 hframes = 2
 
 [node name="CollisionShape2D" parent="PuzzleArea" index="1"]
+position = Vector2( 0, 6 )
 shape = SubResource( 1 )
 
+[editable path="PuzzleArea2"]
 [editable path="PuzzleArea"]
