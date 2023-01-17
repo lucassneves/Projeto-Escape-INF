@@ -33,7 +33,7 @@ func _on_panel_gui_input(event, index):
 				
 				
 				if check_completion() == true:
-#					destinyButton.texture = load("res://Interactables/Puzzles/ConnectPath/greenLight.png")
+					#pictureFinal.texture = load("res://Interactables/Puzzles/SergioPuzzle/imagemfinal.jpg")
 					get_parent().complete()
 					completed = true
 

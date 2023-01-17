@@ -25,7 +25,7 @@ margin_bottom = -4.0
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 79.0
 margin_bottom = 8.0
-text = "PAUSE"
+text = "CONFIGURAÇÕES"
 align = 1
 
 [node name="Resume" type="Button" parent="VBoxContainer"]

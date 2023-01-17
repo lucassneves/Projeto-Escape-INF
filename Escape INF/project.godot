@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Github"
 run/main_scene="res://Interface/MainMenu/MainMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://Interface/MainMenu/background.png"
 
 [autoload]
 
