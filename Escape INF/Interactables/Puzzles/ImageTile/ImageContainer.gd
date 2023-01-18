@@ -30,8 +30,6 @@ func _on_panel_gui_input(event, index):
 					first_panel = null
 					second_panel = null
 					
-				
-				
 				if check_completion() == true:
 					#pictureFinal.texture = load("res://Interactables/Puzzles/SergioPuzzle/imagemfinal.jpg")
 					get_parent().complete()

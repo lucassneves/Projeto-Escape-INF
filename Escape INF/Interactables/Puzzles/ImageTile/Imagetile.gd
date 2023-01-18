@@ -1,8 +1,8 @@
 extends Control
 
 var text = ["Pronto, a foto foi arrumada!",
-			"Um rodízio de pizza",
-			"Vou fazer um networking com esse Sérgio pra ser convidado"]
+			"Um rodízio de pizza.",
+			"Vou fazer um networking com esse Sérgio pra ser convidado!"]
 
 func _on_TextureRect_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
