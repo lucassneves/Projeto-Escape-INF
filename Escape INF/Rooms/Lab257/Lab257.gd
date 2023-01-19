@@ -1,5 +1,7 @@
 extends Node2D
 
+export (bool) var skip_intros = true # Para testar o jogo mais rapidamente
+
 var intro_texts = [
 	"Está muito escuro!",
 	"Preciso encontrar uma maneira de ligar a energia.",
@@ -20,7 +22,11 @@ func _ready():
 			if intro_texts in ProgressManager.seen_texts[room_file]:
 				return
 		
-	TextBox.show_texts(intro_texts)
-	
-	ProgressManager.add_seen_texts(room_file, intro_texts)
+	if not skip_intros:
+		
+		screenModulate.color = Color("0a0a0a") 
+		
+		TextBox.show_texts(intro_texts)
+		
+		ProgressManager.add_seen_texts(room_file, intro_texts)
 	

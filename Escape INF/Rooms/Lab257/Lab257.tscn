@@ -29,9 +29,5 @@ __meta__ = {
 [node name="Label" parent="UI Layer" index="1"]
 text = "Laboratório 257"
 
-[node name="ScreenModulate" parent="." index="2"]
-visible = false
-color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
-
 [node name="PhoneLight" parent="." index="3"]
 mode = 2

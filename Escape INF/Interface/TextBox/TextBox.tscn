@@ -35,6 +35,7 @@ tracks/0/keys = {
 }
 
 [node name="TextBoxLayer" type="CanvasLayer"]
+layer = 10
 visible = false
 script = ExtResource( 1 )
 
