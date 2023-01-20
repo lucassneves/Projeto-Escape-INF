@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Rooms/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall0/Sergio_Wall0.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Rooms/SalaSergio/Wall1/Sergio_Wall1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Rooms/SalaSergio/Wall2/Sergio_Wall2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Rooms/SalaSergio/Wall3/Sergio_Wall3.tscn" type="PackedScene" id=5]
 
 [node name="Sergio" instance=ExtResource( 1 )]
 
@@ -12,6 +13,8 @@
 [node name="Oficina_Wall1" parent="Walls" index="1" instance=ExtResource( 3 )]
 
 [node name="Oficina_Wall2" parent="Walls" index="2" instance=ExtResource( 4 )]
+
+[node name="Sergio_Wall3" parent="Walls" index="3" instance=ExtResource( 5 )]
 
 [node name="Label" parent="UI Layer" index="1"]
 text = "Sala do Sergio"

@@ -12,6 +12,9 @@ var first_time_anxiety = true
 
 var unlocked_doors := {}
 
+#Para colocar items que precisam de outros objetos para funcionar - como um unlock doors
+var unlocked_items := {}
+
 var completed_puzzles := {}
 
 var collected_items := {}
@@ -37,6 +40,13 @@ func add_unlocked_door(room_name, wall_name):
 		unlocked_doors[room_name].append(wall_name)
 	else:
 		unlocked_doors[room_name] = [wall_name]
+
+func add_unlocked_item(room_name, wall_name):
+	
+	if unlocked_items.has(room_name):
+		unlocked_items[room_name].append(wall_name)
+	else:
+		unlocked_items[room_name] = [wall_name]
 
 func add_collected_item(room_name, wall_name, item_data):
 	

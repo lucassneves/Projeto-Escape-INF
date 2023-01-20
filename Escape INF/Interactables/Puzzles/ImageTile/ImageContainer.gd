@@ -6,13 +6,17 @@ onready var panels = get_children()
 
 onready var destinyButton = $TextureRect8
 
+#onready var linkedItem = get_node("res://Rooms/SalaSergio/Wall0/Sergio_Wall0/Collectable")
+
+
+
 var first_panel
 
 func _ready():
 	for i in panels.size():
 		panels[i].connect("gui_input", self, "_on_panel_gui_input", [i])
 	randomize_position()
-
+	#print(linkedItem)
 		
 func _on_panel_gui_input(event, index):
 	if not completed:
@@ -34,6 +38,7 @@ func _on_panel_gui_input(event, index):
 					#pictureFinal.texture = load("res://Interactables/Puzzles/SergioPuzzle/imagemfinal.jpg")
 					get_parent().complete()
 					completed = true
+					#linkedItem.visible = true
 
 func randomize_position():
 	
