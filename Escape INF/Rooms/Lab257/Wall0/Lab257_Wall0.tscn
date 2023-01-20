@@ -20,7 +20,7 @@ extents = Vector2( 4, 4 )
 texture = ExtResource( 2 )
 
 [node name="ReadableArea" parent="." index="1" instance=ExtResource( 4 )]
-position = Vector2( 72, 139 )
+position = Vector2( 112, 124 )
 readable_scene = ExtResource( 5 )
 
 [node name="Sprite" parent="ReadableArea" index="0"]
@@ -30,7 +30,7 @@ texture = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="ReadableArea2" parent="." index="2" instance=ExtResource( 4 )]
-position = Vector2( 238, 119 )
+position = Vector2( 201, 106 )
 readable_scene = ExtResource( 7 )
 
 [node name="Sprite" parent="ReadableArea2" index="0"]

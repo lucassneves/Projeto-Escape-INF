@@ -26,25 +26,25 @@ margin_right = 37.0
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 margin_right = 70.0
-margin_bottom = 14.0
+margin_bottom = 15.0
 text = "JOGAR"
 icon = ExtResource( 3 )
 flat = true
 align = 0
 
 [node name="PlayButton2" type="Button" parent="Buttons"]
-margin_top = 18.0
+margin_top = 19.0
 margin_right = 70.0
-margin_bottom = 32.0
+margin_bottom = 34.0
 text = "COMO JOGAR"
 icon = ExtResource( 3 )
 flat = true
 align = 0
 
 [node name="QuitButton" type="Button" parent="Buttons"]
-margin_top = 36.0
+margin_top = 38.0
 margin_right = 70.0
-margin_bottom = 50.0
+margin_bottom = 53.0
 text = "SAIR"
 icon = ExtResource( 3 )
 flat = true
