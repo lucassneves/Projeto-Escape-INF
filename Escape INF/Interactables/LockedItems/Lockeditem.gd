@@ -4,6 +4,8 @@ export(bool) var locked := false
 
 export(Resource) var item_needed
 
+export(String, FILE, "*.tscn") var goto
+
 var _hovering = false
 
 func _ready():
@@ -43,6 +45,8 @@ func interact():
 		else:
 			TextBox.show_texts(["Precisa " + item_needed.name + " para usar!"])
 	else:
-		ProgressManager.previous_room = room_file
-		ProgressManager.previous_wall_name = wall_name
-		ProgressManager.previous_wall_index = wall_index
+		if goto:
+			ProgressManager.previous_room = room_file
+			ProgressManager.previous_wall_name = wall_name
+			ProgressManager.previous_wall_index = wall_index
+			var _a = get_tree().change_scene(goto)
