@@ -2,21 +2,33 @@ extends Area2D
 
 export(Resource) var item_data
 
+export (String, FILE, "*.tscn") var puzzle_file
+
 var _hovering = false
 
 onready var sprite := $Sprite
+
+onready var area_collision = $CollisionShape2D
 
 func _ready():
 	
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
+	
+	area_collision.disabled = true
 
 	if ProgressManager.collected_items.has(room_file):
 		if ProgressManager.collected_items[room_file].has(wall_name):
 			if item_data in ProgressManager.collected_items[room_file][wall_name]:
 				hide()
 				
-		
+	if ProgressManager.completed_puzzles.has(room_file):
+		if ProgressManager.completed_puzzles[room_file].has(wall_name):
+			if ProgressManager.completed_puzzles[room_file][wall_name].has(puzzle_file):
+				sprite.visible = true
+				area_collision.disabled = false
+				
+				
 func _on_Collectable_mouse_entered():
 	_hovering = true
 
@@ -41,3 +53,8 @@ func collect():
 	ProgressManager.anxiety -= 10
 	
 	queue_free()
+
+
+
+func _on_Collectable_visibility_changed():
+	pass # Replace with function body.
