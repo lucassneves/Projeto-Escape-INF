@@ -11,5 +11,4 @@ func complete():
 	
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
-	
 	ProgressManager.anxiety -= 0
