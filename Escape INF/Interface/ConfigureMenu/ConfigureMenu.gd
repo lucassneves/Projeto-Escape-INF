@@ -1,6 +1,7 @@
 extends Panel
 
 const MAIN_MENU = preload("res://Interface/MainMenu/MainMenu.tscn")
+export (String, FILE, "*.tscn") var tutorial_scene
 
 func _on_PauseMenuRect_gui_input(event):
 	if event is InputEventMouseButton:

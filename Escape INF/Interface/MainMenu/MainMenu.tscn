@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 first_scene = "res://Rooms/Lab257/Lab257.tscn"
+tutorial_scene = "res://Interface/Tutorial/TutorialPage1.tscn"
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -32,7 +33,7 @@ icon = ExtResource( 3 )
 flat = true
 align = 0
 
-[node name="PlayButton2" type="Button" parent="Buttons"]
+[node name="TutorialButton" type="Button" parent="Buttons"]
 margin_top = 19.0
 margin_right = 70.0
 margin_bottom = 34.0
@@ -51,4 +52,5 @@ flat = true
 align = 0
 
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Buttons/TutorialButton" to="." method="_on_TutorialButton_pressed"]
 [connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]

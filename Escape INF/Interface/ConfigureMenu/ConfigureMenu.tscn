@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Interface/ConfigureMenu/ConfigureMenu.gd" type="Script" id=1]
 
-[node name="PauseMenu" type="Panel"]
+[node name="ConfigureMenu" type="Panel"]
 pause_mode = 2
 anchor_left = 0.5
 anchor_top = 0.5
@@ -13,6 +13,7 @@ margin_top = -54.5
 margin_right = 43.5
 margin_bottom = 54.5
 script = ExtResource( 1 )
+tutorial_scene = "res://Interface/Tutorial/TutorialPage1.tscn"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -33,12 +34,6 @@ margin_top = 12.0
 margin_right = 79.0
 margin_bottom = 26.0
 text = "Retomar"
-
-[node name="Tutorial" type="Button" parent="VBoxContainer"]
-margin_top = 30.0
-margin_right = 79.0
-margin_bottom = 44.0
-text = "Tutorial"
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer"]
 margin_top = 87.0
