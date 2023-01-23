@@ -11,10 +11,9 @@ var _hovering = false
 func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
-
-	if ProgressManager.unlocked_items.has(room_file):
-		if ProgressManager.unlocked_items[room_file].has(wall_name):
-			locked = false
+	
+	if ProgressManager.check_progress("unlocked_items", room_file, wall_name):
+		locked = false
 
 func _on_Door_mouse_entered():
 	_hovering = true

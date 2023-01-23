@@ -75,3 +75,31 @@ func set_anxiety(value):
 	if anxiety == 100:
 		TextBox.show_texts(["Você ficou ansioso demais!"])
 		emit_signal("anxiety_attack")
+
+func check_progress(progress_type: String, room, wall = null, object = null):
+	match progress_type:
+		"completed_puzzles":
+			if completed_puzzles.has(room) and completed_puzzles[room].has(wall) and completed_puzzles[room][wall].has(object):
+				return true
+			else:
+				return false
+		"collected_items":
+			if collected_items.has(room) and collected_items[room].has(wall) and collected_items[room][wall].has(object):
+				return true
+			else:
+				return false
+		"unlocked_items":
+			if unlocked_items.has(room) and unlocked_items[room].has(wall):
+				return true
+			else:
+				return false
+		"unlocked_doors":
+			if unlocked_doors.has(room) and unlocked_doors[room].has(wall):
+				return true
+			else:
+				return false
+		"seen_texts":
+			if seen_texts.has(room) and seen_texts[room].has(object):
+				return true
+			else:
+				return false

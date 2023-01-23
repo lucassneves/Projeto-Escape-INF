@@ -13,11 +13,8 @@ func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
 
-	if ProgressManager.collected_items.has(room_file):
-		if ProgressManager.collected_items[room_file].has(wall_name):
-			if item_data in ProgressManager.collected_items[room_file][wall_name]:
-				hide()
-				
+	if ProgressManager.check_progress("collected_items", room_file, wall_name, item_data):
+		hide()
 		
 func _on_Collectable_mouse_entered():
 	_hovering = true

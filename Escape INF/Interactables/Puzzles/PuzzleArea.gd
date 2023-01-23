@@ -10,12 +10,10 @@ onready var sprite = $Sprite
 func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
-
-	if ProgressManager.completed_puzzles.has(room_file):
-		if ProgressManager.completed_puzzles[room_file].has(wall_name):
-			if ProgressManager.completed_puzzles[room_file][wall_name].has(puzzle_file):
-				area_collision.disabled = true
-				sprite.frame = 1
+	
+	if ProgressManager.check_progress("completed_puzzles", room_file, wall_name, puzzle_file):
+		area_collision.disabled = true
+		sprite.frame = 1
 
 func _on_PuzzleArea_mouse_entered():
 	_hovering = true

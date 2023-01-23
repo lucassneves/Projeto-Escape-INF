@@ -17,18 +17,13 @@ func _ready():
 	
 	area_collision.disabled = true
 
-	if ProgressManager.collected_items.has(room_file):
-		if ProgressManager.collected_items[room_file].has(wall_name):
-			if item_data in ProgressManager.collected_items[room_file][wall_name]:
-				hide()
-				
-	if ProgressManager.completed_puzzles.has(room_file):
-		if ProgressManager.completed_puzzles[room_file].has(wall_name):
-			if ProgressManager.completed_puzzles[room_file][wall_name].has(puzzle_file):
-				sprite.visible = true
-				area_collision.disabled = false
-				
-				
+	if ProgressManager.check_progress("collected_items", room_file, wall_name, item_data):
+		hide()
+	
+	if ProgressManager.check_progress("completed_puzzles", room_file, wall_name, puzzle_file):
+		sprite.visible = true
+		area_collision.disabled = false
+		
 func _on_Collectable_mouse_entered():
 	_hovering = true
 

@@ -17,20 +17,15 @@ func _ready():
 	
 	var room_file = get_tree().current_scene.filename
 	
-	if ProgressManager.completed_puzzles.has(room_file):
-		if ProgressManager.completed_puzzles[room_file].has("Lab257_Wall1"):
-			if "res://Interactables/Puzzles/ConnectPath/ConnectPath.tscn" in ProgressManager.completed_puzzles[room_file]["Lab257_Wall1"]:
-				screenModulate.color = Color(1,1,1)
-	
-	if ProgressManager.seen_texts.has(room_file):
-			if intro_texts in ProgressManager.seen_texts[room_file]:
-				return
-		
+	if ProgressManager.check_progress("completed_puzzles", room_file, "Lab257_Wall1", "res://Interactables/Puzzles/ConnectPath/ConnectPath.tscn"):
+		screenModulate.color = Color(1,1,1)
+
 	if not skip_intros:
 		
 		screenModulate.color = Color("0a0a0a") 
 		
-		TextBox.show_texts(intro_texts)
+		if not ProgressManager.check_progress("seen_texts", room_file, null, intro_texts):
+			TextBox.show_texts(intro_texts)
 		
 		ProgressManager.add_seen_texts(room_file, intro_texts)
 	

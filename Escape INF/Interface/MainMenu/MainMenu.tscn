@@ -1,8 +1,137 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Interface/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Interface/MainMenu/background.png" type="Texture" id=2]
 [ext_resource path="res://Interface/MainMenu/buttonIcon.png" type="Texture" id=3]
+[ext_resource path="res://UFGLogo.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=7]
+resource_name = "Animate"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 320, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Animate"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -320, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Animate"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 320, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Animate"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -320, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -11,10 +140,83 @@ script = ExtResource( 1 )
 first_scene = "res://Rooms/Lab257/Lab257.tscn"
 tutorial_scene = "res://Interface/Tutorial/TutorialPage1.tscn"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0640869, 0.151308, 0.234375, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UFGLogo2" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0.784314 )
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="UFGLogo2"]
+modulate = Color( 1, 1, 1, 0.0745098 )
+margin_right = 96.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 90, 90 )
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UFGLogo2/TextureRect"]
+autoplay = "Animate"
+anims/Animate = SubResource( 7 )
+anims/RESET = SubResource( 8 )
+
+[node name="TextureRect2" type="TextureRect" parent="UFGLogo2"]
+modulate = Color( 1, 1, 1, 0.0745098 )
+margin_right = 96.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 90, 90 )
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UFGLogo2/TextureRect2"]
+autoplay = "Animate"
+anims/Animate = SubResource( 9 )
+anims/RESET = SubResource( 10 )
+
+[node name="UFGLogo1" type="Control" parent="."]
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 80.0
+
+[node name="TextureRect" type="TextureRect" parent="UFGLogo1"]
+modulate = Color( 1, 1, 1, 0.0745098 )
+margin_right = 180.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 90, 90 )
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UFGLogo1/TextureRect"]
+autoplay = "Animate"
+anims/Animate = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="TextureRect2" type="TextureRect" parent="UFGLogo1"]
+modulate = Color( 1, 1, 1, 0.0745098 )
+margin_right = 180.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 90, 90 )
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UFGLogo1/TextureRect2"]
+autoplay = "Animate"
+anims/Animate = SubResource( 5 )
+anims/RESET = SubResource( 6 )
+
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 anchor_left = 0.5

@@ -44,6 +44,7 @@ window/stretch/aspect="keep"
 
 common/drop_mouse_on_gui_input_disabled=true
 theme/custom_font="res://Assets/Font/pixelFont.tres"
+common/snap_controls_to_pixels=false
 
 [importer_defaults]
 
