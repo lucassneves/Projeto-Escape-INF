@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Interface/ConfigureMenu/ConfigureMenu.gd" type="Script" id=1]
+[ext_resource path="res://Interface/ConfigureMenu/AudioSlider.gd" type="Script" id=2]
 
 [node name="ConfigureMenu" type="Panel"]
 pause_mode = 2
@@ -35,6 +36,48 @@ margin_right = 79.0
 margin_bottom = 26.0
 text = "Retomar"
 
+[node name="Sound" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 79.0
+margin_bottom = 54.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Sound"]
+margin_right = 79.0
+margin_bottom = 8.0
+text = "Efeitos Sonoros"
+align = 1
+
+[node name="SoundSlider" type="HSlider" parent="VBoxContainer/Sound"]
+margin_top = 8.0
+margin_right = 79.0
+margin_bottom = 24.0
+max_value = 1.0
+step = 0.05
+script = ExtResource( 2 )
+audio_bus_name = "Sound"
+
+[node name="Music" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 58.0
+margin_right = 79.0
+margin_bottom = 82.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Music"]
+margin_right = 79.0
+margin_bottom = 8.0
+text = "Música"
+align = 1
+
+[node name="SoundSlider" type="HSlider" parent="VBoxContainer/Music"]
+margin_top = 8.0
+margin_right = 79.0
+margin_bottom = 24.0
+max_value = 1.0
+step = 0.05
+script = ExtResource( 2 )
+audio_bus_name = "Music"
+
 [node name="MainMenuButton" type="Button" parent="VBoxContainer"]
 margin_top = 87.0
 margin_right = 79.0
@@ -43,4 +86,6 @@ size_flags_vertical = 10
 text = "Menu Principal"
 
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Sound/SoundSlider" to="VBoxContainer/Sound/SoundSlider" method="_on_SoundSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/Music/SoundSlider" to="VBoxContainer/Music/SoundSlider" method="_on_SoundSlider_value_changed"]
 [connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

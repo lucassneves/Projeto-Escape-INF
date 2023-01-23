@@ -1,5 +1,7 @@
 extends Node2D
 
+var RAIN_SFX = preload("res://Audio/rain_thunder_loop.wav")
+
 export (bool) var skip_intros = true # Para testar o jogo mais rapidamente
 
 var intro_texts = [
@@ -10,6 +12,8 @@ var intro_texts = [
 onready var screenModulate = $ScreenModulate
 
 func _ready():
+	
+	AudioPlayer.play_audio(RAIN_SFX, "Sound")
 	
 	var room_file = get_tree().current_scene.filename
 	

@@ -2,6 +2,8 @@ extends Area2D
 
 export(Resource) var item_data
 
+const SFX = preload("res://Interactables/Collectable/CollectableSFX.wav")
+
 var _hovering = false
 
 onready var sprite := $Sprite
@@ -39,5 +41,7 @@ func collect():
 	ProgressManager.add_collected_item(room_file, wall_name, item_data)
 	
 	ProgressManager.anxiety -= 10
+	
+	AudioPlayer.play_audio(SFX, "Sound")
 	
 	queue_free()

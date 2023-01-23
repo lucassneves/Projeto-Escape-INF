@@ -2,6 +2,9 @@ extends CanvasLayer
 
 export (float) var time := 0.05
 
+const CHAR_AUDIO = preload("res://Interface/TextBox/CharSFX.wav")
+const PROCCEED_AUDIO = preload("res://Interface/TextBox/ProcceedSFX.wav")
+
 var texts: Array
 var text_count = 0
 
@@ -41,12 +44,15 @@ func _input(event):
 						_show_text(texts[text_count])
 					else:
 						hide()
+						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
 						emit_signal("texts_done")
 
 func _on_Timer_timeout():
-	textLabel.visible_characters += 1
-	if textLabel.visible_characters == textLabel.get_total_character_count():
-		self.done = true
+	if not done:
+		textLabel.visible_characters += 1
+		AudioPlayer.play_audio(CHAR_AUDIO, "Sound")
+		if textLabel.visible_characters == textLabel.get_total_character_count():
+			self.done = true
 
 func setDone(value):
 	done = value
