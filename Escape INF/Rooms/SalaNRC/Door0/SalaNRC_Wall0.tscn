@@ -1,9 +1,37 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Door0/portaNRC.png" type="Texture" id=2]
+[ext_resource path="res://Interface/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Rooms/WallsManager.gd" type="Script" id=5]
 
-[node name="Lab257_Wall0" instance=ExtResource( 1 )]
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="SalaNRC_Door" instance=ExtResource( 1 )]
+rotation = -0.00248952
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+
+[node name="UI" parent="CanvasLayer" index="0" instance=ExtResource( 3 )]
+
+[node name="WallSwitch" parent="CanvasLayer/UI" index="0"]
+visible = false
+
+[node name="Walls" type="Node2D" parent="." index="2"]
+script = ExtResource( 5 )
+
+[node name="SalaNRC_Wall0" type="Node2D" parent="Walls" index="0"]
+
+[node name="PuzzleArea" parent="Walls/SalaNRC_Wall0" index="0" instance=ExtResource( 4 )]
+position = Vector2( 287.713, 115.717 )
+puzzle_file = "res://Interactables/Puzzles/Passnumber/Passnumber.tscn"
+
+[node name="CollisionShape2D" parent="Walls/SalaNRC_Wall0/PuzzleArea" index="1"]
+shape = SubResource( 1 )
+
+[editable path="CanvasLayer/UI"]
+[editable path="Walls/SalaNRC_Wall0/PuzzleArea"]
