@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Interactables/Puzzles/BoxOpener/Boxopened.gd" type="Script" id=1]
+[ext_resource path="res://Interactables/LockedItems/CoffeeMachine/CoffeeMachine.gd" type="Script" id=1]
 [ext_resource path="res://Interactables/LockedItems/CoffeeMachine/coffee_machine_solved.png" type="Texture" id=2]
-[ext_resource path="res://Interactables/Puzzles/BoxOpener/BoxOpenedContainer.gd" type="Script" id=3]
+[ext_resource path="res://Interactables/LockedItems/CoffeeMachine/CoffeeMachineContainer.gd" type="Script" id=3]
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interactables/Readable/DocumentoSC/ReadableSC.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=7]
