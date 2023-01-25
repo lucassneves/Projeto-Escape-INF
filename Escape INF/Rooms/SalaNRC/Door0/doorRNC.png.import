@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portaNRC.png-acd1be83197409877538f31005a6c8a8.stex"
+path="res://.import/doorRNC.png-83dcaf446eefcf743709ee8b9270f76f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rooms/SalaNRC/Door0/portaNRC.png"
-dest_files=[ "res://.import/portaNRC.png-acd1be83197409877538f31005a6c8a8.stex" ]
+source_file="res://Rooms/SalaNRC/Door0/doorRNC.png"
+dest_files=[ "res://.import/doorRNC.png-83dcaf446eefcf743709ee8b9270f76f.stex" ]
 
 [params]
 

@@ -1,17 +1,20 @@
-extends Node
+extends Node2D
+
+var SOUNDTRACK = preload("res://Audio/Music_naruto_lab_x.wav")
 
 var intro_texts = [
-	"Nem acredito que eu entrei aqui.",
-	"Nossa que barulho!",
-	"Bom, temos um supercomputador quando FPS será que consigo?.",]
+	"Já que estou aqui mesmo, será que que consigo entrar na sala do supercomputador?"
+]
 
 
+func _ready():
 
-#func _ready():
+	AudioPlayer.stop_all_audios()
+	AudioPlayer.play_audio(SOUNDTRACK, "Sound")
 	
-	#var room_file = get_tree().current_scene.filename
+	var room_file = get_tree().current_scene.filename
 	
-	#if ProgressManager.completed_puzzles.has(room_file):
-		#if ProgressManager.completed_puzzles[room_file].has("Lab257_Wall1"):
-		#	if "res://Interactables/Puzzles/ConnectPath/ConnectPath.tscn" in ProgressManager.completed_puzzles[room_file]["Lab257_Wall1"]:
-				#screenModulate.color = Color(1,1,1)
+	if not ProgressManager.check_progress("seen_texts", room_file, null, intro_texts):
+		TextBox.show_texts(intro_texts)
+		
+	ProgressManager.add_seen_texts(room_file, intro_texts)
