@@ -5,7 +5,7 @@
 [ext_resource path="res://Rooms/SalaSergio/Wall2/Sergio_Wall2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Rooms/SalaSergio/Wall3/Sergio_Wall3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Rooms/SalaSergio/Wall1/Sergio_Wall1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Rooms/Lab251/Lab251.gd" type="Script" id=6]
+[ext_resource path="res://Rooms/SalaSergio/SalaSergio.gd" type="Script" id=6]
 
 [node name="Sergio" instance=ExtResource( 1 )]
 script = ExtResource( 6 )

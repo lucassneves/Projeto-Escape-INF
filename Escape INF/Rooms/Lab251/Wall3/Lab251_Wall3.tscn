@@ -265,6 +265,7 @@ shape = SubResource( 3 )
 [node name="Lockeditem" parent="." index="22" instance=ExtResource( 5 )]
 locked = true
 item_needed = ExtResource( 7 )
+goto = "res://Interactables/LockedItems/DracoPoster/PaintKey.tscn"
 
 [node name="CollisionShape2D" parent="Lockeditem" index="0"]
 position = Vector2( 189, 49 )
