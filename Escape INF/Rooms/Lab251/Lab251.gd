@@ -17,7 +17,7 @@ func _ready():
 	#Can comment if only going to use one audio for all
 	AudioPlayer.stop_all_audios()
 	
-	AudioPlayer.play_audio(SOUNDTRACK, "Sound")
+	AudioPlayer.play_audio(SOUNDTRACK, "Music")
 	
 	var room_file = get_tree().current_scene.filename
 	

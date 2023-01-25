@@ -17,7 +17,7 @@ func _ready():
 	AudioPlayer.stop_all_audios()
 	
 	#RABeginning_music_naruto_lab_257IN_SFX if changed
-	AudioPlayer.play_audio(SOUNDTRACK, "Sound")
+	AudioPlayer.play_audio(SOUNDTRACK, "Music")
 	
 	var room_file = get_tree().current_scene.filename
 	

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Doors/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Items/Chave257/chave257.tres" type="Resource" id=3]
 [ext_resource path="res://Rooms/Lab257/Wall2/lab257_wall2.png" type="Texture" id=4]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26, 44 )
@@ -22,4 +23,12 @@ goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 [node name="CollisionShape2D" parent="Door" index="0"]
 shape = SubResource( 1 )
 
+[node name="HoverInfo" parent="." index="2" instance=ExtResource( 5 )]
+position = Vector2( 222, 100 )
+nome = "Porta do Laboratório 257"
+
+[node name="CollisionShape2D" parent="HoverInfo" index="0"]
+polygon = PoolVector2Array( -26, 44, -26, -43, 26, -43, 26, 44 )
+
 [editable path="Door"]
+[editable path="HoverInfo"]

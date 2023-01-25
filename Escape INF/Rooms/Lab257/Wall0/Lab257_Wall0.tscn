@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Lab257/Wall0/lab257_wall0.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Interactables/Readable/Prova/ReadableProva.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interactables/Readable/Postit/postit.png" type="Texture" id=6]
 [ext_resource path="res://Interactables/Readable/Postit/PostitSenha.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 5 )
@@ -39,5 +40,55 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" parent="ReadableArea2" index="1"]
 shape = SubResource( 2 )
 
+[node name="HoverInfos" type="Node2D" parent="." index="3"]
+
+[node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 8 )]
+position = Vector2( 90, 115 )
+nome = "Computador"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
+polygon = PoolVector2Array( -16, -1, -16, -12, 18, -12, 18, 2, 10, 14, -22, 13, -16, 5 )
+
+[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 8 )]
+position = Vector2( 136, 114 )
+nome = "Computador"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
+polygon = PoolVector2Array( -15, 1, -15, -12, 20, -12, 20, 7, 10, 16, -14, 15 )
+
+[node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 8 )]
+position = Vector2( 186, 114 )
+nome = "Computador"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
+polygon = PoolVector2Array( -18, 2, -18, -11, 9, -11, 10, -2, 18, -2, 18, 9, 14, 16, -14, 15 )
+
+[node name="HoverInfo4" parent="HoverInfos" index="3" instance=ExtResource( 8 )]
+position = Vector2( 160, 63 )
+nome = "Quadro branco"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
+polygon = PoolVector2Array( -88, 33, -88, -37, 89, -37, 89, 36 )
+
+[node name="HoverInfo5" parent="HoverInfos" index="4" instance=ExtResource( 8 )]
+position = Vector2( 112, 124 )
+nome = "Prova"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo5" index="0"]
+polygon = PoolVector2Array( -6, 2, -2, -4, 6, -3, 2, 5, -6, 4 )
+
+[node name="HoverInfo6" parent="HoverInfos" index="5" instance=ExtResource( 8 )]
+position = Vector2( 201, 106 )
+nome = "Post-it"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo6" index="0"]
+polygon = PoolVector2Array( -3, 4, -4, 2, -4, -4, 3, -4, 4, 3, 3, 4 )
+
 [editable path="ReadableArea"]
 [editable path="ReadableArea2"]
+[editable path="HoverInfos/HoverInfo"]
+[editable path="HoverInfos/HoverInfo2"]
+[editable path="HoverInfos/HoverInfo3"]
+[editable path="HoverInfos/HoverInfo4"]
+[editable path="HoverInfos/HoverInfo5"]
+[editable path="HoverInfos/HoverInfo6"]
