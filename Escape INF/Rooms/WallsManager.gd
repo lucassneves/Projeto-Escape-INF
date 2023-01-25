@@ -4,6 +4,7 @@ var current_wall_index := 0 setget set_current_wall
 
 onready var walls := get_children()
 
+
 func _ready():
 	
 	if ProgressManager.previous_wall_index != null:

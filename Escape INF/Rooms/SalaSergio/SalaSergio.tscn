@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall0/Sergio_Wall0.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Rooms/SalaSergio/Wall2/Sergio_Wall2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Rooms/SalaSergio/Wall3/Sergio_Wall3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Rooms/SalaSergio/Wall1/Sergio_Wall1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Rooms/Lab251/Lab251.gd" type="Script" id=6]
 
 [node name="Sergio" instance=ExtResource( 1 )]
+script = ExtResource( 6 )
 
 [node name="Oficina_Wall0" parent="Walls" index="0" instance=ExtResource( 2 )]
 

@@ -1,6 +1,7 @@
 extends Node2D
 
-var RAIN_SFX = preload("res://Audio/rain_thunder_loop.wav")
+#var RAIN_SFX = preload("res://Audio/rain_thunder_loop.wav")
+var SOUNDTRACK = preload("res://Audio/Music_naruto_lab_x.wav")
 
 export (bool) var skip_intros = true # Para testar o jogo mais rapidamente
 
@@ -12,8 +13,11 @@ var intro_texts = [
 onready var screenModulate = $ScreenModulate
 
 func _ready():
+
+	AudioPlayer.stop_all_audios()
 	
-	AudioPlayer.play_audio(RAIN_SFX, "Sound")
+	#RABeginning_music_naruto_lab_257IN_SFX if changed
+	AudioPlayer.play_audio(SOUNDTRACK, "Sound")
 	
 	var room_file = get_tree().current_scene.filename
 	
