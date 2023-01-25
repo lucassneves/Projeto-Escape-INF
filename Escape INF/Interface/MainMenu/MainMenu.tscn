@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Interface/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Interface/MainMenu/background.png" type="Texture" id=2]
@@ -133,6 +133,14 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
+[sub_resource type="StyleBoxLine" id=11]
+content_margin_left = 4.0
+thickness = 0
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -219,17 +227,21 @@ __meta__ = {
 }
 
 [node name="Buttons" type="VBoxContainer" parent="."]
-anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -35.0
-margin_top = -63.0
-margin_right = 35.0
+margin_left = 48.0
+margin_top = -83.0
+margin_right = 118.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 margin_right = 70.0
 margin_bottom = 15.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
 text = "JOGAR"
 icon = ExtResource( 3 )
 flat = true
@@ -239,6 +251,8 @@ align = 0
 margin_top = 19.0
 margin_right = 70.0
 margin_bottom = 34.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 13 )
 text = "COMO JOGAR"
 icon = ExtResource( 3 )
 flat = true
@@ -248,6 +262,8 @@ align = 0
 margin_top = 38.0
 margin_right = 70.0
 margin_bottom = 53.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 13 )
 text = "SAIR"
 icon = ExtResource( 3 )
 flat = true

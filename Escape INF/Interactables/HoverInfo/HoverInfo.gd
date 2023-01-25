@@ -12,7 +12,8 @@ func _ready():
 		collectable.connect("tree_exited", self, "collectable_collected")
 
 func _on_HoverInfo_mouse_entered():
-	label.text = nome
+	if not TextBox.visible:
+		label.text = nome
 	
 func _on_HoverInfo_mouse_exited():
 	if label.text == nome:

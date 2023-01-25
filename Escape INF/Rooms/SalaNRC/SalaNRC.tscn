@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Rooms/SalaNRC/Door0/SalaNRC_Wall0.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rooms/SalaNRC/SalaNRC.gd" type="Script" id=2]
 [ext_resource path="res://Rooms/BaseRoom.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Rooms/Lab257/Lab257.gd" type="Script" id=6]
 
 [node name="SalaNRC" instance=ExtResource( 3 )]
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 
 [node name="SalaNRC_Wall0" parent="Walls" index="0" instance=ExtResource( 1 )]
 
