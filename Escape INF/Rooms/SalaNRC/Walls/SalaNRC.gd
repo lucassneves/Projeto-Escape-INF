@@ -3,7 +3,8 @@ extends Node2D
 var SOUNDTRACK = preload("res://Audio/Music_naruto_lab_x.wav")
 
 var intro_texts = [
-	"Já que estou aqui mesmo, será que consigo entrar na sala do supercomputador?"
+	"uau! Consegui entrar, acho que isso já mostra minha competência na computação, vou exigir meu diploma depois dessa",
+	"QUE CALOR !!!!!!!!!"
 ]
 
 func _ready():

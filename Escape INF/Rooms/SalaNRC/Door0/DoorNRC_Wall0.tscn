@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Door0/doorRNC.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Rooms/SalaNRC/Door0/Door.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 8.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 26, 45.5 )
 
 [node name="SalaNRC_Wall0" instance=ExtResource( 1 )]
 
@@ -20,5 +24,18 @@ puzzle_file = "res://Interactables/Puzzles/Passnumber/Passnumber.tscn"
 [node name="CollisionShape2D" parent="PuzzleArea" index="1"]
 position = Vector2( -1, -0.5 )
 shape = SubResource( 1 )
+
+[node name="Door" type="Area2D" parent="." index="2"]
+position = Vector2( 291, 117 )
+script = ExtResource( 4 )
+locked = true
+goto = "res://Rooms/SalaNRC/Walls/SalaNRC.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" index="0"]
+position = Vector2( -42, -9.5 )
+shape = SubResource( 2 )
+
+[connection signal="mouse_entered" from="Door" to="Door" method="_on_Door_mouse_entered"]
+[connection signal="mouse_exited" from="Door" to="Door" method="_on_Door_mouse_exited"]
 
 [editable path="PuzzleArea"]
