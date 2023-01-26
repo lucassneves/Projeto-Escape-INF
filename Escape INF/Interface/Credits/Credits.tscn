@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Scroll"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -380 ) ]
+}
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 380.0
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+margin_top = 29.0
+margin_right = -160.0
+margin_bottom = 37.0
+rect_scale = Vector2( 2, 2 )
+text = "WMDG"
+align = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+margin_left = 28.0
+margin_top = 90.0
+margin_right = 130.0
+margin_bottom = 146.0
+text = "Programação:
+- André Ribeiro Miranda
+- Daniela
+- Angelo
+- Wanderson
+- Lucas"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect"]
+margin_left = 199.0
+margin_top = 197.0
+margin_right = 301.0
+margin_bottom = 253.0
+text = "Arte:
+- André Ribeiro Miranda
+- Daniela
+- Angelo
+- Wanderson
+- Lucas"
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect"]
+margin_left = 23.0
+margin_top = 302.0
+margin_right = 125.0
+margin_bottom = 358.0
+text = "Roteiro:
+- André Ribeiro Miranda
+- Daniela
+- Angelo
+- Wanderson
+- Lucas"
+scroll_active = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/Scroll = SubResource( 2 )
