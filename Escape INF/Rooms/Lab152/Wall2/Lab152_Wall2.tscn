@@ -5,7 +5,6 @@
 [ext_resource path="res://Items/Chave257/chave257.tres" type="Resource" id=3]
 [ext_resource path="res://Rooms/Lab257/Wall2/lab257_wall2.png" type="Texture" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26, 44 )
 

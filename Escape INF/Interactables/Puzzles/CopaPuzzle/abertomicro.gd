@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-		TextBox.show_texts(["Muito estranho esses números nas embalagens, será que queira me dizer algo???"])
+		TextBox.show_texts(["UI"])
 	#get_parent().complete()
 		
 func _on_TextureRect_gui_input(event):

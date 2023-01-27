@@ -4,8 +4,8 @@ export (String, FILE, "*.tscn") var puzzle_file
 
 var _hovering = false
 
-onready var area_collision = $CollisionShape2D2
-onready var sprite = $Sprite2
+onready var area_collision = $CollisionShape2D
+onready var sprite = $Sprite
 
 func _ready():
 	var room_file = get_tree().current_scene.filename

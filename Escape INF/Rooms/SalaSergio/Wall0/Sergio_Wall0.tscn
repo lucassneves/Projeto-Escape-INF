@@ -26,7 +26,6 @@ item_data = ExtResource( 5 )
 puzzle_file = "res://Interactables/Puzzles/ImageTile/Imagetile.tscn"
 
 [node name="Sprite" parent="InvisibleCollectable" index="0"]
-visible = false
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" parent="InvisibleCollectable" index="1"]

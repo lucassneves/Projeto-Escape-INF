@@ -29,16 +29,16 @@ func _input(event):
 			get_tree().set_input_as_handled()
 
 func collect():
-	print(item_data.name + " coletado!")
-	TextBox.show_texts(["Você colocou " + item_data.name + " na sua mochila."])
-	Inventory.add_item(item_data)
+		print(item_data.name + " coletado!")
+		TextBox.show_texts(["Você colocou " + item_data.name + " na sua mochila."])
+		Inventory.add_item(item_data)
 	
-	var room_file = get_tree().current_scene.filename
-	var wall_name = get_parent().name
-	ProgressManager.add_collected_item(room_file, wall_name, item_data)
+		var room_file = get_tree().current_scene.filename
+		var wall_name = get_parent().name
+		ProgressManager.add_collected_item(room_file, wall_name, item_data)
 	
-	ProgressManager.anxiety -= 10
+		ProgressManager.anxiety -= 10
 	
-	AudioPlayer.play_audio(SFX, "Sound")
+		AudioPlayer.play_audio(SFX, "Sound")
 	
-	queue_free()
+		queue_free()
