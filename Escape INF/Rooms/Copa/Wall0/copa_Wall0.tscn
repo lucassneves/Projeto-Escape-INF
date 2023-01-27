@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Rooms/Copa/Wall0/copa_wall0.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=2]
@@ -7,12 +7,18 @@
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.gd" type="Script" id=5]
 [ext_resource path="res://Items/Banana/banana.tres" type="Resource" id=6]
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Interactables/Readable/Postit/postit.png" type="Texture" id=9]
+[ext_resource path="res://Interactables/Readable/Postit/PostitTemp.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.5, 12.25 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 11.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3, 3 )
 
 [node name="Copa_Wall0" type="Node2D"]
 
@@ -53,5 +59,16 @@ position = Vector2( 7, -2.5 )
 shape = SubResource( 2 )
 disabled = true
 
+[node name="ReadableArea" parent="." instance=ExtResource( 8 )]
+position = Vector2( 74, 137 )
+readable_scene = ExtResource( 10 )
+
+[node name="Sprite" parent="ReadableArea" index="0"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" parent="ReadableArea" index="1"]
+shape = SubResource( 3 )
+
 [editable path="PuzzleArea"]
 [editable path="InvisibleCollectable"]
+[editable path="ReadableArea"]
