@@ -20,12 +20,18 @@ func _input(event):
 			get_tree().set_input_as_handled()
 
 func interact():
+	
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
 	var wall_index = get_parent().get_parent().current_wall_index
 	
 	if locked:
-		TextBox.show_texts(["A porta está trancada."])
+		if ProgressManager.check_progress("completed_puzzles", room_file, "SalaNRC_Wall0", "res://Interactables/Puzzles/Passnumber/Passnumber.tscn"):
+			locked = false
+			ProgressManager.add_unlocked_door(room_file, wall_name)
+			ProgressManager.anxiety -= 10
+		else:
+			TextBox.show_texts(["A porta está trancada."])
 	else:
 		ProgressManager.previous_room = room_file
 		ProgressManager.previous_wall_name = wall_name

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Tmp/Tmp.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tmp/aviso.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 159, 90 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_right = 321.0
+margin_bottom = 180.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -29,7 +29,7 @@ shape = SubResource( 1 )
 position = Vector2( 291, 117 )
 script = ExtResource( 4 )
 locked = true
-goto = "res://Rooms/SalaNRC/Walls/SalaNRC.tscn"
+goto = "res://Assets/Tmp/Tmp.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" index="0"]
 position = Vector2( -42, -9.5 )

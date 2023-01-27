@@ -33,6 +33,6 @@ stretch_mode = 4
 [node name="PhoneLight" parent="." index="3"]
 mode = 2
 
-[connection signal="gui_input" from="UI Layer/GoBack" to="." method="_on_GoBack_gui_input"]
+[connection signal="mouse_entered" from="UI Layer/GoBack" to="." method="_on_GoBack_mouse_entered"]
 
 [editable path="UI Layer/UI"]

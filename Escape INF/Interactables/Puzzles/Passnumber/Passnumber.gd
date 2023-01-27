@@ -12,8 +12,6 @@ func complete():
 	
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
-	ProgressManager.add_unlocked_door("res://Rooms/SalaNRC/DoorNRC.tscn", "SalaNRC_Wall0")
-	
 	TextBox.show_texts(["Parece que funcionou."])
 	
 	ProgressManager.anxiety -= 25

@@ -30,5 +30,6 @@ func _ready():
 		
 		if not ProgressManager.check_progress("seen_texts", room_file, null, intro_texts):
 			TextBox.show_texts(intro_texts)
-			ProgressManager.add_seen_texts(room_file, intro_texts)
+		
+		ProgressManager.add_seen_texts(room_file, intro_texts)
 	

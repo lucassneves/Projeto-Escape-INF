@@ -13,8 +13,7 @@ func _ready():
 	
 	if ProgressManager.check_progress("completed_puzzles", room_file, wall_name, puzzle_file):
 		area_collision.disabled = true
-		if sprite.hframes > 1:
-			sprite.frame = 1
+		sprite.frame = 1
 
 func _on_PuzzleArea_mouse_entered():
 	_hovering = true
