@@ -5,13 +5,13 @@
 [ext_resource path="res://Interactables/LockedItems/DracoPoster/PaintKeyContainer.gd" type="Script" id=3]
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interactables/Readable/DocumentoSC/ReadableSC.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Items/Chave251/chave251Scene.png" type="Texture" id=6]
+[ext_resource path="res://Items/Chave251/chave251.png" type="Texture" id=6]
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=7]
 [ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Items/Chave251/chave251.tres" type="Resource" id=9]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 46, 17 )
+extents = Vector2( 77, 40 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 35 )
@@ -52,15 +52,17 @@ texture = ExtResource( 7 )
 stretch_mode = 4
 
 [node name="Collectable" parent="." instance=ExtResource( 8 )]
-position = Vector2( 147, 61 )
+position = Vector2( 154, 75 )
+scale = Vector2( 0.5, 0.5 )
 item_data = ExtResource( 9 )
 
 [node name="Sprite" parent="Collectable" index="0"]
+rotation = 1.5708
 scale = Vector2( 6, 6 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" parent="Collectable" index="1"]
-position = Vector2( 3, 3 )
+position = Vector2( -5, -6 )
 shape = SubResource( 2 )
 
 [node name="ReadableArea" parent="." instance=ExtResource( 4 )]
