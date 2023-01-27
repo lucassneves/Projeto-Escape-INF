@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource( 2 )
-name = "cafe"
+name = "Banana"
 sprite = ExtResource( 1 )
-description = "Banana para o macaco"
+description = "Os macacos gostam das bananas... né?"
