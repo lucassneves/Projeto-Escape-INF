@@ -21,9 +21,9 @@ margin_bottom = 40.0
 texture = ExtResource( 2 )
 
 [node name="Numero1" type="Label" parent="Control"]
-margin_left = 117.0
+margin_left = 116.0
 margin_top = 46.0
-margin_right = 125.0
+margin_right = 124.0
 margin_bottom = 55.0
 rect_scale = Vector2( 2, 2 )
 text = "0"
@@ -31,35 +31,35 @@ align = 1
 valign = 1
 
 [node name="Numero2" type="Label" parent="Control"]
-margin_left = 134.0
-margin_top = 46.0
-margin_right = 142.0
-margin_bottom = 54.0
+margin_left = 135.0
+margin_top = 48.0
+margin_right = 143.0
+margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
 text = "0"
 align = 1
 valign = 1
 
 [node name="Numero3" type="Label" parent="Control"]
-margin_left = 152.0
-margin_top = 46.0
-margin_right = 159.0
-margin_bottom = 54.0
+margin_left = 158.0
+margin_top = 48.0
+margin_right = 165.0
+margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
 text = "0"
 
 [node name="Numero4" type="Label" parent="Control"]
-margin_left = 168.0
-margin_top = 46.0
-margin_right = 175.0
-margin_bottom = 54.0
+margin_left = 175.0
+margin_top = 48.0
+margin_right = 182.0
+margin_bottom = 56.0
 rect_scale = Vector2( 2, 2 )
 text = "0"
 
 [node name="Proximo" type="Label" parent="Control"]
-margin_left = 51.0
+margin_left = -28.0
 margin_top = 45.0
-margin_right = 58.0
+margin_right = -21.0
 margin_bottom = 53.0
 rect_scale = Vector2( 2, 2 )
 text = "0"

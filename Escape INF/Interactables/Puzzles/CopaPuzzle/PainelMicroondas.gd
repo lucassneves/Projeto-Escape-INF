@@ -162,12 +162,16 @@ func _on_Botao9_pressed():
 func _on_BotaoEnter_pressed():
 	if proximo == 5:
 		if numero1 == "3":
-			if numero2 == "4":
-				if numero3 == "2":
-					if numero4 == "3":
-						numero1 = "2"
+			if numero2 == "5":
+				if numero3 == "4":
+					if numero4 == "5":
 						ok = true
 						get_parent().complete()
+						numero1 = "_"
+						numero2 = "_"
+						numero3 = "_"
+						numero4 = "_"
+						
 						
 	if proximo == 5 and ok == false:
 		numero1 = "_"
@@ -175,5 +179,3 @@ func _on_BotaoEnter_pressed():
 		numero3 = "_"
 		numero4 = "_"
 		proximo = 1
-
-

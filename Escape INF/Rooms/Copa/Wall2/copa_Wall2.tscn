@@ -4,7 +4,7 @@
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 40, 43 )
+extents = Vector2( 30.5, 43 )
 
 [node name="Copa_Wall2" type="Node2D"]
 
@@ -19,5 +19,5 @@ puzzle_file = "res://Interactables/Puzzles/CopaPuzzle/Geladeira.tscn"
 [node name="Sprite2" type="Sprite" parent="PuzzleArea"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PuzzleArea"]
-position = Vector2( 30, 33 )
+position = Vector2( 25.5, 33 )
 shape = SubResource( 1 )
