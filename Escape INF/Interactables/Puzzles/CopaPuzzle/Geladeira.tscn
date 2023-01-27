@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Puzzles/CopaPuzzle/geladeira.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Puzzles/CopaPuzzle/Geladeira.gd" type="Script" id=3]
+[ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/Churrasco/Carne_churrasco.png" type="Texture" id=5]
+[ext_resource path="res://Items/Churrasco/carne.tres" type="Resource" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.5, 15.5 )
 
 [node name="Geladeira" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
@@ -14,13 +21,27 @@ margin_left = 79.0
 margin_top = 53.0
 margin_right = 259.0
 margin_bottom = 120.0
+mouse_filter = 1
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 margin_left = -78.0
 margin_top = -53.0
 margin_right = 242.0
 margin_bottom = 127.0
+mouse_filter = 2
 texture = ExtResource( 2 )
+
+[node name="Collectable" parent="." instance=ExtResource( 4 )]
+position = Vector2( 99, 161 )
+item_data = ExtResource( 6 )
+
+[node name="Sprite" parent="Collectable" index="0"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" parent="Collectable" index="1"]
+position = Vector2( -0.5, -2.5 )
+shape = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 8.0
@@ -30,3 +51,5 @@ margin_bottom = 23.0
 texture = ExtResource( 1 )
 
 [connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
+
+[editable path="Collectable"]
