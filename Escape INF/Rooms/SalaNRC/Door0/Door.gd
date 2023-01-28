@@ -30,13 +30,16 @@ func interact():
 			locked = false
 			ProgressManager.add_unlocked_door(room_file, wall_name)
 			ProgressManager.anxiety -= 10
+			AudioPlayer.play_audio(preload("res://Audio/SFX/door-unlock2.wav"), "Sound")
 		else:
 			TextBox.show_texts(["A porta está trancada."])
+			AudioPlayer.play_audio(preload("res://Audio/SFX/door-locked.wav"), "Sound")
 	else:
 		ProgressManager.previous_room = room_file
 		ProgressManager.previous_wall_name = wall_name
 		ProgressManager.previous_wall_index = wall_index
 		var _a = get_tree().change_scene(goto)
+		
 
 func _on_Door_mouse_entered():
 	_hovering = true

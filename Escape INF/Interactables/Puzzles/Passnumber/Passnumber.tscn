@@ -1,9 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Puzzles/Passnumber/Passnumber.gd" type="Script" id=2]
 [ext_resource path="res://Interactables/Puzzles/Passnumber/Passnumber.png" type="Texture" id=3]
 [ext_resource path="res://Interactables/Puzzles/Passnumber/SequenceTyped.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -18,14 +24,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.0
 margin_right = 1.0
+mouse_filter = 1
 script = ExtResource( 2 )
+goto = "res://Rooms/SalaNRC/DoorNRC.tscn"
 
-[node name="GoBack" type="TextureRect" parent="."]
-margin_top = -1.0
-margin_right = 22.0
-margin_bottom = 23.0
-texture = ExtResource( 1 )
-stretch_mode = 4
+[node name="GoBack" type="Button" parent="."]
+visible = false
+margin_left = -1.0
+margin_right = 27.0
+margin_bottom = 24.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+icon = ExtResource( 1 )
+flat = true
 
 [node name="Keyboard" type="Sprite" parent="."]
 position = Vector2( 158, 89 )
@@ -33,9 +45,8 @@ texture = ExtResource( 3 )
 hframes = 2
 
 [node name="SequenceTyped" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-mouse_filter = 2
+margin_right = 319.0
+margin_bottom = 179.0
 script = ExtResource( 4 )
 
 [node name="Button1" type="Button" parent="SequenceTyped"]
@@ -197,4 +208,11 @@ custom_styles/focus = SubResource( 4 )
 button_mask = 2
 flat = true
 
-[connection signal="gui_input" from="GoBack" to="." method="_on_TextureRect_gui_input"]
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 22.0
+margin_bottom = 24.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[connection signal="pressed" from="GoBack" to="." method="_on_GoBack_pressed"]
+[connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]

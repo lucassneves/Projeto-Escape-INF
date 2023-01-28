@@ -15,6 +15,7 @@ func _on_panel_gui_input(event, index):
 	if not completed:
 		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 			tmp+=1
+			AudioPlayer.play_audio(preload("res://Audio/SFX/click.wav"), "Sound")
 			button[index].set_action_mode(tmp)
 			#print(button[index].get_action_mode())
 			aux+=1
@@ -22,13 +23,15 @@ func _on_panel_gui_input(event, index):
 			if(aux%6==0):
 				if check_completion() == true:
 					up.frame = 1
+					AudioPlayer.play_audio(preload("res://Audio/SFX/correct-answer.wav"), "Sound")
 					get_parent().complete()
 					completed = true
 				else:
 					for i in button.size():
-						TextBox.show_texts(["Não é essa a senha"]) #colocar som em vez de texto
+						AudioPlayer.play_audio(preload("res://Audio/SFX/wrong-answer.wav"), "Sound")
 						button[index].set_action_mode(0)
-						print(button[index].get_action_mode())
+						tmp=1
+					print("LOG: Puzzle PassnumberNRC incorreto.")
 
 func check_completion():
 	if button[9].get_action_mode() == 2:

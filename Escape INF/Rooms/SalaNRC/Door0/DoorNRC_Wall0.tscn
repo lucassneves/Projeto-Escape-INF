@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Door0/doorRNC.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Rooms/SalaNRC/Door0/Door.gd" type="Script" id=4]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 8.5 )
@@ -35,7 +36,37 @@ goto = "res://Assets/Tmp/Tmp.tscn"
 position = Vector2( -42, -9.5 )
 shape = SubResource( 2 )
 
+[node name="HoverInfo2" type="Node2D" parent="." index="3"]
+
+[node name="HoverInfo" parent="HoverInfo2" index="0" instance=ExtResource( 5 )]
+nome = "Porta da Fábrica de Software"
+
+[node name="CollisionShape2D" parent="HoverInfo2/HoverInfo" index="0"]
+polygon = PoolVector2Array( 153, 62, 205, 62, 205, 152, 153, 151 )
+
+[node name="HoverInfo2" parent="HoverInfo2" index="1" instance=ExtResource( 5 )]
+nome = "Extintor de Incêndio"
+
+[node name="CollisionShape2D" parent="HoverInfo2/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 54, 54, 74, 54, 67, 88, 59, 89 )
+
+[node name="HoverInfo3" parent="HoverInfo2" index="2" instance=ExtResource( 5 )]
+nome = "Sala do NRC (supercomputador)"
+
+[node name="CollisionShape2D" parent="HoverInfo2/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 223, 62, 224, 154, 275, 153, 275, 62 )
+
+[node name="HoverInfo4" parent="HoverInfo2" index="3" instance=ExtResource( 5 )]
+nome = "Fechadura Eletrônica"
+
+[node name="CollisionShape2D" parent="HoverInfo2/HoverInfo4" index="0"]
+polygon = PoolVector2Array( 283, 108, 283, 124, 297, 124, 297, 108 )
+
 [connection signal="mouse_entered" from="Door" to="Door" method="_on_Door_mouse_entered"]
 [connection signal="mouse_exited" from="Door" to="Door" method="_on_Door_mouse_exited"]
 
 [editable path="PuzzleArea"]
+[editable path="HoverInfo2/HoverInfo"]
+[editable path="HoverInfo2/HoverInfo2"]
+[editable path="HoverInfo2/HoverInfo3"]
+[editable path="HoverInfo2/HoverInfo4"]
