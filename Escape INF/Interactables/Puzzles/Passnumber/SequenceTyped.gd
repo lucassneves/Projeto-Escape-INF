@@ -17,7 +17,6 @@ func _on_panel_gui_input(event, index):
 			tmp+=1
 			AudioPlayer.play_audio(preload("res://Audio/SFX/click.wav"), "Sound")
 			button[index].set_action_mode(tmp)
-			#print(button[index].get_action_mode())
 			aux+=1
 			
 			if(aux%6==0):

@@ -1,12 +1,80 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall1/DataCenter.png" type="Texture" id=2]
-[ext_resource path="res://Rooms/SalaNRC/Walls/Wall1/SalaNRC_Wall1.gd" type="Script" id=3]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 640, 0, 320, 180 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "light",
+"speed": 7.0
+} ]
 
 [node name="SalaNRC_Wall0" instance=ExtResource( 1 )]
-script = ExtResource( 3 )
 
 [node name="Background" parent="." index="0"]
+visible = false
 texture = ExtResource( 2 )
 hframes = 3
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+position = Vector2( 159, 92 )
+frames = SubResource( 4 )
+animation = "light"
+frame = 2
+playing = true
+
+[node name="HoverInfo" type="Node2D" parent="." index="2"]
+
+[node name="HoverInfo" parent="HoverInfo" index="0" instance=ExtResource( 4 )]
+nome = "Fios de internet Curtos"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo" index="0"]
+polygon = PoolVector2Array( 20, 162, 56, 158, 55, 178, 13, 176 )
+
+[node name="HoverInfo" parent="HoverInfo/HoverInfo" index="1" instance=ExtResource( 4 )]
+nome = "Fios de internet Curtos"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo/HoverInfo" index="0"]
+polygon = PoolVector2Array( 84, 38, 123, 37, 105, 80 )
+
+[node name="HoverInfo2" parent="HoverInfo" index="1" instance=ExtResource( 4 )]
+nome = "Fios de internet Curtos"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 276, 167, 303, 158, 313, 177, 288, 176 )
+
+[node name="HoverInfo3" parent="HoverInfo" index="2" instance=ExtResource( 4 )]
+nome = "Fios de internet Curtos"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 173, 27, 196, 17, 198, 25, 172, 34 )
+
+[node name="HoverInfo4" parent="HoverInfo" index="3" instance=ExtResource( 4 )]
+position = Vector2( 70, -6 )
+nome = "Fios de internet Curtos"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo4" index="0"]
+position = Vector2( -142.886, -14.3937 )
+scale = Vector2( 1.87019, 2.20956 )
+polygon = PoolVector2Array( 177.995, 22.8072, 167.301, 18.2814, 179.599, 19.6391, 179.599, 31.4062 )
+
+[editable path="HoverInfo/HoverInfo"]
+[editable path="HoverInfo/HoverInfo/HoverInfo"]
+[editable path="HoverInfo/HoverInfo2"]
+[editable path="HoverInfo/HoverInfo3"]
+[editable path="HoverInfo/HoverInfo4"]

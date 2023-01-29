@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall0/PortaInicial.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Doors/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26, 43.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 76, 13.5 )
 
 [node name="SalaNRC_Wall0" instance=ExtResource( 1 )]
 
@@ -20,4 +25,36 @@ goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 position = Vector2( 268, 108.5 )
 shape = SubResource( 1 )
 
+[node name="PuzzleArea" parent="." index="2" instance=ExtResource( 4 )]
+position = Vector2( 49, 10 )
+puzzle_file = "res://Interactables/Puzzles/AirConditioning/Air.tscn"
+
+[node name="CollisionShape2D" parent="PuzzleArea" index="1"]
+position = Vector2( 66, 3.5 )
+shape = SubResource( 2 )
+
+[node name="HoverInfo" type="Node2D" parent="." index="3"]
+
+[node name="HoverInfo" parent="HoverInfo" index="0" instance=ExtResource( 5 )]
+nome = "DELL EMC POWEREDGE T340"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo" index="0"]
+polygon = PoolVector2Array( 58, 104, 110, 105, 107, 128, 60, 129 )
+
+[node name="HoverInfo2" parent="HoverInfo" index="1" instance=ExtResource( 5 )]
+nome = "DELL EMC POWEREDGE T340"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 119, 83, 141, 82, 145, 88, 144, 129, 119, 130 )
+
+[node name="HoverInfo3" parent="HoverInfo" index="2" instance=ExtResource( 5 )]
+nome = "Supermicro GPU Workstation 7049GP-TRT"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 166, 80, 189, 80, 193, 129, 167, 127 )
+
 [editable path="Door"]
+[editable path="PuzzleArea"]
+[editable path="HoverInfo/HoverInfo"]
+[editable path="HoverInfo/HoverInfo2"]
+[editable path="HoverInfo/HoverInfo3"]

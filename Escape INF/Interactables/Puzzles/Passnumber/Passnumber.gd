@@ -1,7 +1,5 @@
 extends Control
 
-export(String, FILE, "*.tscn") var goto
-
 func complete():
 	
 	var room_file = ProgressManager.previous_room

@@ -1,10 +1,42 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/SuperComputador.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=3]
 
 [node name="SalaNRC_Wall0" instance=ExtResource( 1 )]
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
 hframes = 3
+
+[node name="HoverInfo" type="Node2D" parent="." index="1"]
+
+[node name="HoverInfo" parent="HoverInfo" index="0" instance=ExtResource( 3 )]
+nome = "Muitos gabinetes da SMS"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo" index="0"]
+polygon = PoolVector2Array( 31, 59, 54, 59, 54, 111, 95, 112, 95, 168, 15, 166, 15, 111, 30, 109 )
+
+[node name="HoverInfo2" parent="HoverInfo" index="1" instance=ExtResource( 3 )]
+nome = "Monitor conectado ao supercomputador"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 163, 60, 258, 61, 257, 117, 162, 118 )
+
+[node name="HoverInfo3" parent="HoverInfo" index="2" instance=ExtResource( 3 )]
+nome = "muitos fios"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 166, 140, 244, 139, 248, 178, 175, 179 )
+
+[node name="HoverInfo4" parent="HoverInfo" index="3" instance=ExtResource( 3 )]
+nome = "Apenas um cortina normal"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo4" index="0"]
+polygon = PoolVector2Array( 75, 0, 257, 2, 257, 55, 162, 56, 159, 85, 73, 83 )
+
+[editable path="HoverInfo/HoverInfo"]
+[editable path="HoverInfo/HoverInfo2"]
+[editable path="HoverInfo/HoverInfo3"]
+[editable path="HoverInfo/HoverInfo4"]

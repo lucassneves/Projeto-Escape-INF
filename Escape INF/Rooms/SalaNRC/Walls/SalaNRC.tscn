@@ -14,7 +14,6 @@ script = ExtResource( 5 )
 
 [node name="SalaNRC_Wall1" parent="Walls" index="1" instance=ExtResource( 4 )]
 visible = false
-script = null
 
 [node name="SalaNRC_Wall2" parent="Walls" index="2" instance=ExtResource( 1 )]
 visible = false
@@ -30,6 +29,10 @@ __meta__ = {
 [node name="Label" parent="UI Layer" index="1"]
 text = "Sala NRC
 "
+
+[node name="ScreenModulate" parent="." index="2"]
+visible = false
+color = Color( 0.509804, 0.678431, 1, 1 )
 
 [node name="PhoneLight" parent="." index="3"]
 mode = 2

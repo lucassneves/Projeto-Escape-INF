@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall3/PainelCabos.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/Readable/FolhaNRC/FolhaNRC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interactables/Readable/FolhaNRC/Folha.png" type="Texture" id=5]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Rooms/SalaNRC/Walls/Wall3/Fios.gd" type="Script" id=7]
+[ext_resource path="res://Items/Celular/celular.tres" type="Resource" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.5, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41, 46.5 )
 
 [node name="SalaNRC_Wall0" instance=ExtResource( 1 )]
 
@@ -9,3 +21,51 @@
 texture = ExtResource( 2 )
 hframes = 2
 frame = 1
+
+[node name="ReadableArea" parent="." index="1" instance=ExtResource( 4 )]
+position = Vector2( 114, 32 )
+readable_scene = ExtResource( 3 )
+
+[node name="Sprite" parent="ReadableArea" index="0"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" parent="ReadableArea" index="1"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 1 )
+
+[node name="HoverInfo" type="Node2D" parent="." index="2"]
+
+[node name="HoverInfo" parent="HoverInfo" index="0" instance=ExtResource( 6 )]
+nome = "Papel"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo" index="0"]
+polygon = PoolVector2Array( 104, 23, 123, 26, 117, 40, 107, 39 )
+
+[node name="HoverInfo2" parent="HoverInfo" index="1" instance=ExtResource( 6 )]
+nome = "Fios curtos de Internet"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 217, 26, 265, 24, 267, 33, 228, 45 )
+
+[node name="HoverInfo3" parent="HoverInfo" index="2" instance=ExtResource( 6 )]
+nome = "Fios curtos de Internet"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 55, 25, 77, 29, 62, 33 )
+
+[node name="Fios" type="Area2D" parent="." index="3"]
+script = ExtResource( 7 )
+locked = true
+item_needed = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fios" index="0"]
+position = Vector2( 148, 91.5 )
+shape = SubResource( 2 )
+
+[connection signal="mouse_entered" from="Fios" to="Fios" method="_on_Fios_mouse_entered"]
+[connection signal="mouse_exited" from="Fios" to="Fios" method="_on_Fios_mouse_exited"]
+
+[editable path="ReadableArea"]
+[editable path="HoverInfo/HoverInfo"]
+[editable path="HoverInfo/HoverInfo2"]
+[editable path="HoverInfo/HoverInfo3"]
