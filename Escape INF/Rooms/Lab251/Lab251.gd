@@ -11,7 +11,7 @@ var intro_texts = [
 func _ready():
 
 	AudioPlayer.stop_all_audios()
-	AudioPlayer.play_audio(SOUNDTRACK, "Sound")
+	AudioPlayer.play_audio(SOUNDTRACK, "Music")
 	
 	var room_file = get_tree().current_scene.filename
 	

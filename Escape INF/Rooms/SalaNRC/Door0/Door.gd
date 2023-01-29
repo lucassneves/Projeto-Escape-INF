@@ -28,6 +28,7 @@ func interact():
 	if locked:
 		if ProgressManager.check_progress("completed_puzzles", room_file, "SalaNRC_Wall0", "res://Interactables/Puzzles/Passnumber/Passnumber.tscn"):
 			locked = false
+			TextBox.show_texts(["A porta foi destrancada!"])
 			ProgressManager.add_unlocked_door(room_file, wall_name)
 			ProgressManager.anxiety -= 10
 			AudioPlayer.play_audio(preload("res://Audio/SFX/door-unlock2.wav"), "Sound")

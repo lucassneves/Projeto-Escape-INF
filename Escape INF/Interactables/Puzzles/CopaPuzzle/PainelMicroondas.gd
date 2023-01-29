@@ -11,7 +11,7 @@ var completed = false
 
 var proximo = 1
 
-func _process(_delta):	
+func _process(_delta):
 	$Numero1.text = numero1
 	$Numero2.text = numero2
 	$Numero3.text = numero3

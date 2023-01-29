@@ -8,7 +8,7 @@ var intro_texts = [
 
 func _on_GoBack_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-		var _a = get_tree().change_scene(ProgressManager.previous_room)
+		var _a = get_tree().change_scene(goto)
 	
 func _ready():
 	

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Items/CableEthernet/Cable_ethernet.png" type="Texture" id=3]
+[ext_resource path="res://Items/CableEthernet/cableEthernetScene.png" type="Texture" id=3]
 [ext_resource path="res://Rooms/Lab257/Wall3/lab257_wall3.png" type="Texture" id=4]
 [ext_resource path="res://Items/CableEthernet/cable_ethernet.tres" type="Resource" id=5]
 [ext_resource path="res://Interactables/Readable/Postit/postit.png" type="Texture" id=6]
@@ -15,7 +15,7 @@
 extents = Vector2( 4.5, 5 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.5, 7.5 )
+extents = Vector2( 8.5, 8 )
 
 [node name="Lab251_Wall1" instance=ExtResource( 1 )]
 
@@ -56,15 +56,14 @@ position = Vector2( -0.5, 0 )
 shape = SubResource( 2 )
 
 [node name="CableEthernet" parent="." index="4" instance=ExtResource( 2 )]
-position = Vector2( 165, 75 )
+position = Vector2( 167, 83 )
 item_data = ExtResource( 5 )
 
 [node name="Sprite" parent="CableEthernet" index="0"]
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="CableEthernet" index="1"]
-position = Vector2( 0.5, -0.5 )
+position = Vector2( 0.5, -1 )
 shape = SubResource( 1 )
 
 [editable path="ReadableArea"]
