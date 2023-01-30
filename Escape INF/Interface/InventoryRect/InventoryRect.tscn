@@ -135,16 +135,17 @@ size_flags_horizontal = 3
 script = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="HBoxContainer/ItemDescription"]
+margin_top = -1.0
 margin_right = 94.0
-margin_bottom = 19.0
+margin_bottom = 17.2727
 text = "NOME DO ITEM BEM GRANDE"
 align = 1
 autowrap = true
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/ItemDescription"]
-margin_top = 23.0
+margin_top = 22.0
 margin_right = 94.0
-margin_bottom = 55.0
+margin_bottom = 54.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 2 )
 expand = true
@@ -163,7 +164,7 @@ margin_bottom = 16.0
 rect_min_size = Vector2( 32, 32 )
 
 [node name="Label2" type="Label" parent="HBoxContainer/ItemDescription"]
-margin_top = 59.0
+margin_top = 58.0
 margin_right = 94.0
 margin_bottom = 134.0
 size_flags_vertical = 3

@@ -61,10 +61,10 @@ func add_collected_item(room_name, wall_name, item_data):
 func add_seen_texts(room_name, texts):
 	
 	if seen_texts.has(room_name):
-			seen_texts[room_name].append(texts)
+		seen_texts[room_name].append(texts)
 	else:
-		seen_texts = {room_name : [texts]}
-
+		seen_texts[room_name] = [texts]
+		
 func set_anxiety(value):
 	if first_time_anxiety and value > 0:
 		TextBox.show_texts(["Acho que mexer nas coisas sem pensar só vai aumentar minha ansiedade... Preciso focar!"])

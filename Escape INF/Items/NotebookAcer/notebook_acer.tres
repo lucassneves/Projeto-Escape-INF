@@ -7,4 +7,4 @@
 script = ExtResource( 1 )
 name = "Acer Notebook"
 sprite = ExtResource( 2 )
-description = "Uma notebook super potente que vai te ajudar passar suas materias. Pode correr Unity!!!"
+description = "Um notebook super potente que vai te ajudar a passar nas suas materias. Roda até Unity!"
