@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Lab257/Wall0/lab257_wall0.png" type="Texture" id=2]
@@ -9,12 +9,17 @@
 [ext_resource path="res://Interactables/Readable/Postit/PostitSenha.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Rooms/Lab257/Wall0/frase.png" type="Texture" id=9]
+[ext_resource path="res://Rooms/Lab257/Wall0/MeLivra.png" type="Texture" id=10]
+[ext_resource path="res://Interactables/Readable/MeLivra/MeLivra.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12, 6 )
 
 [node name="Lab257_Wall0" instance=ExtResource( 1 )]
 
@@ -25,7 +30,12 @@ texture = ExtResource( 2 )
 position = Vector2( 163, 61 )
 texture = ExtResource( 9 )
 
-[node name="ReadableArea" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Monitor" type="Sprite" parent="." index="2"]
+visible = false
+position = Vector2( 86, 109 )
+texture = ExtResource( 10 )
+
+[node name="ReadableArea" parent="." index="3" instance=ExtResource( 4 )]
 position = Vector2( 112, 124 )
 readable_scene = ExtResource( 5 )
 
@@ -35,7 +45,7 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" parent="ReadableArea" index="1"]
 shape = SubResource( 1 )
 
-[node name="ReadableArea2" parent="." index="3" instance=ExtResource( 4 )]
+[node name="ReadableArea2" parent="." index="4" instance=ExtResource( 4 )]
 position = Vector2( 201, 106 )
 readable_scene = ExtResource( 7 )
 
@@ -45,7 +55,17 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" parent="ReadableArea2" index="1"]
 shape = SubResource( 2 )
 
-[node name="HoverInfos" type="Node2D" parent="." index="4"]
+[node name="ReadableArea3" parent="." index="5" instance=ExtResource( 4 )]
+position = Vector2( 86, 109 )
+readable_scene = ExtResource( 11 )
+
+[node name="Sprite" parent="ReadableArea3" index="0"]
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" parent="ReadableArea3" index="1"]
+shape = SubResource( 3 )
+
+[node name="HoverInfos" type="Node2D" parent="." index="6"]
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 8 )]
 position = Vector2( 90, 115 )
@@ -91,6 +111,7 @@ polygon = PoolVector2Array( -3, 4, -4, 2, -4, -4, 3, -4, 4, 3, 3, 4 )
 
 [editable path="ReadableArea"]
 [editable path="ReadableArea2"]
+[editable path="ReadableArea3"]
 [editable path="HoverInfos/HoverInfo"]
 [editable path="HoverInfos/HoverInfo2"]
 [editable path="HoverInfos/HoverInfo3"]

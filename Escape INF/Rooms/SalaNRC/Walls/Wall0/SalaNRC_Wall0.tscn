@@ -53,8 +53,15 @@ nome = "Supermicro GPU Workstation 7049GP-TRT"
 [node name="CollisionShape2D" parent="HoverInfo/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 166, 80, 189, 80, 193, 129, 167, 127 )
 
+[node name="HoverInfo4" parent="HoverInfo" index="3" instance=ExtResource( 5 )]
+nome = "Suporte para Controle"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo4" index="0"]
+polygon = PoolVector2Array( 205, 70, 212, 69, 208, 76 )
+
 [editable path="Door"]
 [editable path="PuzzleArea"]
 [editable path="HoverInfo/HoverInfo"]
 [editable path="HoverInfo/HoverInfo2"]
 [editable path="HoverInfo/HoverInfo3"]
+[editable path="HoverInfo/HoverInfo4"]

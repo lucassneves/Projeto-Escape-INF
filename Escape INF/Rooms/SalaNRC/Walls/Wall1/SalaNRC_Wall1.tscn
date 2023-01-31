@@ -24,7 +24,7 @@ animations = [ {
 "speed": 7.0
 } ]
 
-[node name="SalaNRC_Wall0" instance=ExtResource( 1 )]
+[node name="SalaNRC_Wall1" instance=ExtResource( 1 )]
 
 [node name="Background" parent="." index="0"]
 visible = false
@@ -35,7 +35,6 @@ hframes = 3
 position = Vector2( 159, 92 )
 frames = SubResource( 4 )
 animation = "light"
-frame = 2
 playing = true
 
 [node name="HoverInfo" type="Node2D" parent="." index="2"]

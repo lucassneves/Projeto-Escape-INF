@@ -2,6 +2,7 @@ extends Area2D
 
 export(bool) var locked := false
 export(Resource) var item_needed
+#onready var uepa = get_node("res://Rooms/SalaNRC/Walls/Wall2/SalaNRC_Wall2.tscn")
 
 onready var sprite = get_parent().get_node("Background")
 
@@ -30,7 +31,6 @@ func interact():
 	
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
-	var wall_index = get_parent().get_parent().current_wall_index
 	
 	if locked:
 		if Inventory.items[Inventory.selected_item_index] == item_needed:
@@ -39,6 +39,7 @@ func interact():
 			ProgressManager.add_unlocked_item(room_file, wall_name)
 			Inventory.remove_item(item_needed)
 			sprite.frame=0
+			#mudar frame de outra cena
 			ProgressManager.anxiety -= 10
 		else:
 			TextBox.show_texts(["Há fios de internet faltando aqui."])
