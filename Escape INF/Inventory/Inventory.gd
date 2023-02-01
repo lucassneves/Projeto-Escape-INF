@@ -1,10 +1,8 @@
 extends Node
 
-const DESELECT_INDEX = -10
-
 const inventory_size := 12
 
-var selected_item_index = DESELECT_INDEX setget set_selected_item_index
+var selected_item_index = null setget set_selected_item_index
 
 # Para versao final, deixar apenas o celular
 export(Array, Resource) var items = [
@@ -44,3 +42,7 @@ func remove_item(item: Item):
 func set_selected_item_index(index):
 	selected_item_index = index
 	emit_signal("selected_item_changed")
+
+func get_selected_item():
+	if selected_item_index != null:
+		return items[selected_item_index]

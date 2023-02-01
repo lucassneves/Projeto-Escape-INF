@@ -18,7 +18,6 @@ onready var textLabel = $Control/TextBox/Text
 
 func show_texts(_texts):
 	show()
-	
 	texts = _texts
 	text_count = 0
 	_show_text(texts[text_count])

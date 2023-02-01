@@ -39,7 +39,7 @@ func interact():
 	var wall_name = get_parent().name
 	
 	if locked:
-		if Inventory.items[Inventory.selected_item_index] == item_needed:
+		if Inventory.get_selected_item() == item_needed:
 			TextBox.show_texts(["Você conectou " + item_needed.name + " ."])
 			locked = false
 			ProgressManager.add_unlocked_item(room_file, wall_name, unlocked_name)

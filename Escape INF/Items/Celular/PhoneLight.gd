@@ -5,12 +5,9 @@ func _ready():
 	on_selected_item_changed()
 	
 func on_selected_item_changed():
-	if Inventory.items[Inventory.selected_item_index] == null:
-		hide()
-	elif Inventory.items[Inventory.selected_item_index].name == 'Celular':
+	var item = Inventory.get_selected_item()
+	if item != null and item.name == 'Celular':
 		show()
-	else:
-		hide()
 
 func _input(event):
 	if event is InputEventMouseMotion:

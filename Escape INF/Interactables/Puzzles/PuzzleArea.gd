@@ -31,7 +31,7 @@ func _input(event):
 		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 			get_tree().set_input_as_handled()
 			if item_needed:
-				if Inventory.items[Inventory.selected_item_index] == item_needed:
+				if Inventory.get_selected_item() == item_needed:
 					interact()
 				else:
 					TextBox.show_texts([needed_text])
