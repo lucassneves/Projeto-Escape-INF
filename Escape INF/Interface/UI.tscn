@@ -13,6 +13,9 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="WallSwitch" parent="." instance=ExtResource( 1 )]
 margin_top = -8.0
@@ -56,7 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 stretch_mode = 4
 
-[node name="InventoryRect2" parent="." instance=ExtResource( 4 )]
+[node name="Inventory" parent="." instance=ExtResource( 4 )]
 visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
@@ -76,5 +79,7 @@ margin_bottom = -4.0
 align = 1
 
 [connection signal="gui_input" from="PauseMenuRect" to="PauseMenu" method="_on_PauseMenuRect_gui_input"]
-[connection signal="gui_input" from="HBoxContainer/InventoryRect" to="InventoryRect2" method="_on_InventoryRect_gui_input"]
-[connection signal="selected_item_changed" from="InventoryRect2" to="HBoxContainer/SelectedItemPanel" method="_on_InventoryRect2_selected_item_changed"]
+[connection signal="gui_input" from="HBoxContainer/InventoryRect" to="Inventory/InventoryRect" method="_on_InventoryRect_gui_input"]
+[connection signal="selected_item_changed" from="Inventory/InventoryRect" to="HBoxContainer/SelectedItemPanel" method="_on_InventoryRect_selected_item_changed"]
+
+[editable path="Inventory"]

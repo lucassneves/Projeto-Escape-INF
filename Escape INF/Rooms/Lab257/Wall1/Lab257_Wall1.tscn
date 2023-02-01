@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Lab257/Wall1/lab257_wall1.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Interactables/Puzzles/ConnectPath/connectPath.png" type="Texture" id=4]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.5, 12.5 )
@@ -25,4 +26,27 @@ hframes = 2
 position = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
 
+[node name="HoverInfos" type="Node2D" parent="." index="2"]
+
+[node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 5 )]
+nome = "Tomada"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
+polygon = PoolVector2Array( 83, 131, 83, 125, 92, 125, 92, 131 )
+
+[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 5 )]
+nome = "Tomada"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 225, 131, 225, 125, 234, 125, 234, 131 )
+
+[node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 5 )]
+nome = "Caixa de energia"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 137, 117, 137, 75, 175, 75, 175, 117 )
+
 [editable path="PuzzleArea"]
+[editable path="HoverInfos/HoverInfo"]
+[editable path="HoverInfos/HoverInfo2"]
+[editable path="HoverInfos/HoverInfo3"]

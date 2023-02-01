@@ -69,10 +69,10 @@ func update_slot(slot_index):
 		self.selected_slot_index = DESELECT_INDEX
 
 func _on_Button_pressed():
-	hide()
+	get_parent().hide()
 
 func _on_InventoryRect_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == BUTTON_LEFT:
-			show()
+			get_parent().show()
 			

@@ -17,6 +17,6 @@ func _ready():
 		ProgressManager.add_seen_texts(room_file, "intro_texts")
 		
 	if ProgressManager.check_progress("completed_puzzles", room_file, "SalaNRC_Wall0", "res://Interactables/Puzzles/AirConditioning/Air.tscn"):
-		screenModulate.color = Color("82adff")
+		screenModulate.color = Color("c3d8ff")
 	else:
-		screenModulate.color = Color("f66c6c") 
+		screenModulate.color = Color("ffc3c3") 

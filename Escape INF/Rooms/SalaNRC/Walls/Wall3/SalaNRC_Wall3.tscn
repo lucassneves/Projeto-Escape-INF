@@ -35,6 +35,7 @@ shape = SubResource( 1 )
 
 [node name="Fios" type="Area2D" parent="." index="2"]
 script = ExtResource( 7 )
+unlocked_name = "Fios"
 locked = true
 item_needed = ExtResource( 8 )
 

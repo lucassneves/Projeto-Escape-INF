@@ -30,7 +30,7 @@ shape = SubResource( 1 )
 position = Vector2( 49, 10 )
 puzzle_file = "res://Interactables/Puzzles/AirConditioning/Air.tscn"
 item_needed = ExtResource( 7 )
-item_needed_text = "Se eu tivesse um controle poderia mudar a temperatura..."
+needed_text = "Se eu tivesse um controle, poderia mudar a temperatura."
 
 [node name="CollisionShape2D" parent="PuzzleArea" index="1"]
 position = Vector2( 66, 3.5 )
@@ -48,19 +48,31 @@ polygon = PoolVector2Array( 58, 104, 110, 105, 107, 128, 60, 129 )
 nome = "DELL EMC POWEREDGE T340"
 
 [node name="CollisionShape2D" parent="HoverInfo/HoverInfo2" index="0"]
-polygon = PoolVector2Array( 119, 83, 141, 82, 145, 88, 144, 129, 119, 130 )
+polygon = PoolVector2Array( 119, 82, 141, 82, 145, 88, 145, 132, 119, 132 )
 
 [node name="HoverInfo3" parent="HoverInfo" index="2" instance=ExtResource( 5 )]
 nome = "Supermicro GPU Workstation 7049GP-TRT"
 
 [node name="CollisionShape2D" parent="HoverInfo/HoverInfo3" index="0"]
-polygon = PoolVector2Array( 166, 80, 189, 80, 193, 129, 167, 127 )
+polygon = PoolVector2Array( 166, 80, 189, 80, 192, 84, 193, 129, 167, 128 )
 
 [node name="HoverInfo4" parent="HoverInfo" index="3" instance=ExtResource( 5 )]
 nome = "Suporte para Controle"
 
 [node name="CollisionShape2D" parent="HoverInfo/HoverInfo4" index="0"]
-polygon = PoolVector2Array( 205, 70, 212, 69, 208, 76 )
+polygon = PoolVector2Array( 205, 70, 212, 70, 212, 76, 205, 76 )
+
+[node name="HoverInfo5" parent="HoverInfo" index="4" instance=ExtResource( 5 )]
+nome = "Ar Condicionado"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo5" index="0"]
+polygon = PoolVector2Array( 39, 15, 64, 28, 192, 27, 192, 5, 184, 0, 39, 0 )
+
+[node name="HoverInfo6" parent="HoverInfo" index="5" instance=ExtResource( 5 )]
+nome = "Porta da Sala NRC"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo6" index="0"]
+polygon = PoolVector2Array( 242, 153, 242, 64, 294, 64, 294, 153 )
 
 [editable path="Door"]
 [editable path="PuzzleArea"]
@@ -68,3 +80,5 @@ polygon = PoolVector2Array( 205, 70, 212, 69, 208, 76 )
 [editable path="HoverInfo/HoverInfo2"]
 [editable path="HoverInfo/HoverInfo3"]
 [editable path="HoverInfo/HoverInfo4"]
+[editable path="HoverInfo/HoverInfo5"]
+[editable path="HoverInfo/HoverInfo6"]

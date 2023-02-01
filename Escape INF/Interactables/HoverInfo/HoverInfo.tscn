@@ -5,9 +5,6 @@
 [node name="HoverInfo" type="Area2D"]
 priority = 1.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 

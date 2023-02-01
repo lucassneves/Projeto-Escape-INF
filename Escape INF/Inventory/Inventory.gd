@@ -6,12 +6,13 @@ const inventory_size := 12
 
 var selected_item_index = DESELECT_INDEX setget set_selected_item_index
 
+# Para versao final, deixar apenas o celular
 export(Array, Resource) var items = [
 	preload("res://Items/Celular/celular.tres"),
-	null,
-	null,
-	null,
-	null,
+	preload("res://Items/CableEthernet/cable_ethernet.tres"),
+	preload("res://Items/ControleAr/ControleAr.tres"),
+	preload("res://Items/Chave251/chave251.tres"),
+	preload("res://Items/Chave257/chave257.tres"),
 	null,
 	null,
 	null,

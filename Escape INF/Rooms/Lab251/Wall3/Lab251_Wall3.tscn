@@ -258,6 +258,7 @@ position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
 [node name="Lockeditem" parent="." index="22" instance=ExtResource( 5 )]
+locked_name = "Draco"
 locked = true
 item_needed = ExtResource( 7 )
 needed_text = "Tem o encaixe de uma chave aqui... Talvez faça alguma coisa."

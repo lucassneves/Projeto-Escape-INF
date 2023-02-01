@@ -1,5 +1,6 @@
 extends Area2D
 
+export(String) var locked_name
 export(bool) var locked := false
 
 export(Resource) var item_needed
@@ -15,7 +16,7 @@ func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
 	
-	if ProgressManager.check_progress("unlocked_items", room_file, wall_name, item_needed):
+	if ProgressManager.check_progress("unlocked_items", room_file, wall_name, locked_name):
 		locked = false
 
 func _on_Door_mouse_entered():
@@ -40,7 +41,7 @@ func interact():
 		if Inventory.items[Inventory.selected_item_index] == item_needed:
 			TextBox.show_texts([used_text])
 			locked = false
-			ProgressManager.add_unlocked_item(room_file, wall_name, item_needed)
+			ProgressManager.add_unlocked_item(room_file, wall_name, locked_name)
 			Inventory.remove_item(item_needed)
 			ProgressManager.anxiety -= 10
 		else:
