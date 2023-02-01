@@ -7,7 +7,7 @@
 [ext_resource path="res://Interactables/Readable/FolhaNRC/Folha.png" type="Texture" id=5]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall3/Fios.gd" type="Script" id=7]
-[ext_resource path="res://Items/Celular/celular.tres" type="Resource" id=8]
+[ext_resource path="res://Items/CableEthernet/cable_ethernet.tres" type="Resource" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.5, 8 )

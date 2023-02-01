@@ -39,6 +39,7 @@ margin_top = 45.0
 margin_right = 150.0
 margin_bottom = 53.0
 rect_scale = Vector2( 3, 3 )
+text = "5"
 align = 1
 
 [node name="Digito2" type="Label" parent="ButtonTyped"]
@@ -47,6 +48,7 @@ margin_top = 45.0
 margin_right = 170.0
 margin_bottom = 53.0
 rect_scale = Vector2( 3, 3 )
+text = "2"
 align = 1
 
 [node name="ButtonOff" type="Button" parent="ButtonTyped"]
@@ -109,14 +111,15 @@ flat = true
 [node name="GoBack" type="Button" parent="ButtonTyped"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 24.0
-margin_bottom = 25.0
+margin_right = 35.0
+margin_bottom = 29.0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/focus = SubResource( 9 )
 icon = ExtResource( 2 )
 flat = true
+icon_align = 1
 
 [connection signal="pressed" from="ButtonTyped/ButtonOff" to="ButtonTyped" method="_on_ButtonOff_pressed"]
 [connection signal="pressed" from="ButtonTyped/ButtonUp" to="ButtonTyped" method="_on_ButtonUp_pressed"]

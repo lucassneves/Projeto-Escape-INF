@@ -17,7 +17,6 @@
 [ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Items/ChaveDraco/chavedracoScene.png" type="Texture" id=18]
 
-
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4.5, 9.75 )
 
@@ -261,6 +260,8 @@ shape = SubResource( 3 )
 [node name="Lockeditem" parent="." index="22" instance=ExtResource( 5 )]
 locked = true
 item_needed = ExtResource( 7 )
+needed_text = "Tem o encaixe de uma chave aqui... Talvez faça alguma coisa."
+used_text = "Você usou a chave e o quadro mexeu."
 goto = "res://Interactables/LockedItems/DracoPoster/PaintKey.tscn"
 
 [node name="CollisionShape2D" parent="Lockeditem" index="0"]

@@ -1,5 +1,6 @@
 extends Area2D
 
+
 export(bool) var locked := false
 export(Resource) var item_needed
 #onready var uepa = get_node("res://Rooms/SalaNRC/Walls/Wall2/SalaNRC_Wall2.tscn")
@@ -12,7 +13,7 @@ func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
 	
-	if ProgressManager.check_progress("unlocked_item", room_file, wall_name):
+	if ProgressManager.check_progress("unlocked_item", room_file, wall_name, item_needed):
 		locked = false
 		
 func _on_Fios_mouse_entered():
@@ -36,7 +37,7 @@ func interact():
 		if Inventory.items[Inventory.selected_item_index] == item_needed:
 			TextBox.show_texts(["Você conectou " + item_needed.name + " ."])
 			locked = false
-			ProgressManager.add_unlocked_item(room_file, wall_name)
+			ProgressManager.add_unlocked_item(room_file, wall_name, item_needed)
 			Inventory.remove_item(item_needed)
 			sprite.frame=0
 			#mudar frame de outra cena

@@ -16,6 +16,8 @@ texture = ExtResource( 2 )
 [node name="Lockeditem" parent="." index="1" instance=ExtResource( 3 )]
 locked = true
 item_needed = ExtResource( 4 )
+needed_text = "Que pena, a máquina está sem café..."
+used_text = "Oba! Agora posso fazer um cafézinho!"
 goto = "res://Interactables/LockedItems/CoffeeMachine/CofeeMachine.tscn"
 
 [node name="CollisionShape2D" parent="Lockeditem" index="0"]

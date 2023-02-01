@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall0/sergioescritorio_wall0.png" type="Texture" id=2]
@@ -6,13 +6,19 @@
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Items/Cafe/cafesergio.tres" type="Resource" id=5]
 [ext_resource path="res://Items/Cafe/cafepote.png" type="Texture" id=6]
+[ext_resource path="res://Items/ControleAr/ControleAr.tres" type="Resource" id=7]
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.gd" type="Script" id=8]
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/ControleAr/controleScene.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.5, 8 )
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 9, 4.5 )
 
 [node name="Sergio_Wall0" instance=ExtResource( 1 )]
 
@@ -54,5 +60,16 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Collectable" parent="." index="3" instance=ExtResource( 10 )]
+position = Vector2( 218, 136 )
+item_data = ExtResource( 7 )
+
+[node name="Sprite" parent="Collectable" index="0"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" parent="Collectable" index="1"]
+shape = SubResource( 4 )
+
 [editable path="InvisibleCollectable"]
 [editable path="PuzzleArea"]
+[editable path="Collectable"]

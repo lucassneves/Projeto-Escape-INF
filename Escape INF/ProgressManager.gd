@@ -41,12 +41,15 @@ func add_unlocked_door(room_name, wall_name):
 	else:
 		unlocked_doors[room_name] = [wall_name]
 
-func add_unlocked_item(room_name, wall_name):
+func add_unlocked_item(room_name, wall_name, object):
 	
 	if unlocked_items.has(room_name):
-		unlocked_items[room_name].append(wall_name)
+		if unlocked_items[room_name].has(wall_name):
+			unlocked_items[room_name][wall_name].append(object)
+		else:
+			unlocked_items[room_name][wall_name] = [object]
 	else:
-		unlocked_items[room_name] = [wall_name]
+		unlocked_items[room_name] = {wall_name : [object]}
 
 func add_collected_item(room_name, wall_name, item_data):
 	
@@ -76,7 +79,7 @@ func set_anxiety(value):
 		TextBox.show_texts(["Você ficou ansioso demais!"])
 		emit_signal("anxiety_attack")
 
-func check_progress(progress_type: String, room, wall = null, object = null):
+func check_progress(progress_type: String, room = null, wall = null, object = null):
 	match progress_type:
 		"completed_puzzles":
 			if completed_puzzles.has(room) and completed_puzzles[room].has(wall) and completed_puzzles[room][wall].has(object):
@@ -89,7 +92,7 @@ func check_progress(progress_type: String, room, wall = null, object = null):
 			else:
 				return false
 		"unlocked_items":
-			if unlocked_items.has(room) and unlocked_items[room].has(wall):
+			if unlocked_items.has(room) and unlocked_items[room].has(wall) and unlocked_items[room][wall].has(object):
 				return true
 			else:
 				return false

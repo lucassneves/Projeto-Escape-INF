@@ -4,6 +4,9 @@ export(bool) var locked := false
 
 export(Resource) var item_needed
 
+export(String, MULTILINE) var needed_text
+export(String, MULTILINE) var used_text
+
 export(String, FILE, "*.tscn") var goto
 
 var _hovering = false
@@ -12,7 +15,7 @@ func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
 	
-	if ProgressManager.check_progress("unlocked_items", room_file, wall_name):
+	if ProgressManager.check_progress("unlocked_items", room_file, wall_name, item_needed):
 		locked = false
 
 func _on_Door_mouse_entered():
@@ -35,14 +38,13 @@ func interact():
 	
 	if locked:
 		if Inventory.items[Inventory.selected_item_index] == item_needed:
-			TextBox.show_texts(["Você usou " + item_needed.name + ". Parabens!"])
+			TextBox.show_texts([used_text])
 			locked = false
-			ProgressManager.add_unlocked_item(room_file, wall_name)
-			# Usar a chave do inventario
+			ProgressManager.add_unlocked_item(room_file, wall_name, item_needed)
 			Inventory.remove_item(item_needed)
 			ProgressManager.anxiety -= 10
 		else:
-			TextBox.show_texts(["Precisa de " + item_needed.name + " para usar!"])
+			TextBox.show_texts([needed_text])
 	else:
 		if goto:
 			ProgressManager.previous_room = room_file

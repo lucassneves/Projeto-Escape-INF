@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall0/PortaInicial.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Doors/Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/ControleAr/ControleAr.tres" type="Resource" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26, 43.5 )
@@ -28,6 +29,8 @@ shape = SubResource( 1 )
 [node name="PuzzleArea" parent="." index="2" instance=ExtResource( 4 )]
 position = Vector2( 49, 10 )
 puzzle_file = "res://Interactables/Puzzles/AirConditioning/Air.tscn"
+item_needed = ExtResource( 7 )
+item_needed_text = "Se eu tivesse um controle poderia mudar a temperatura..."
 
 [node name="CollisionShape2D" parent="PuzzleArea" index="1"]
 position = Vector2( 66, 3.5 )

@@ -2,6 +2,10 @@ extends Area2D
 
 export (String, FILE, "*.tscn") var puzzle_file
 
+export (Resource) var item_needed
+
+export (String) var needed_text
+
 var _hovering = false
 
 onready var area_collision = $CollisionShape2D
@@ -25,8 +29,16 @@ func _on_PuzzleArea_mouse_exited():
 func _input(event):
 	if _hovering:
 		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-			ProgressManager.previous_room = get_tree().current_scene.filename
-			ProgressManager.previous_wall_name = get_parent().name
-			ProgressManager.previous_wall_index = get_tree().current_scene.find_node("Walls").current_wall_index
-			var _a = get_tree().change_scene(puzzle_file)
 			get_tree().set_input_as_handled()
+			if item_needed:
+				if Inventory.items[Inventory.selected_item_index] == item_needed:
+					interact()
+				else:
+					TextBox.show_texts([needed_text])
+			else:
+				interact()
+func interact():
+	ProgressManager.previous_room = get_tree().current_scene.filename
+	ProgressManager.previous_wall_name = get_parent().name
+	ProgressManager.previous_wall_index = get_tree().current_scene.find_node("Walls").current_wall_index
+	var _a = get_tree().change_scene(puzzle_file)
