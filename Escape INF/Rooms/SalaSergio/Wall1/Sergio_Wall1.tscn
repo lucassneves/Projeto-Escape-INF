@@ -15,13 +15,7 @@ texture = ExtResource( 2 )
 nome = "Quadro branco"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
-polygon = PoolVector2Array( 71, 114, 71, 42, 250, 42, 249, 116 )
-
-[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 3 )]
-nome = "Ar Condicionado"
-
-[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
-polygon = PoolVector2Array( 171, 25, 171, 9, 254, 9, 269, 19, 268, 31, 181, 31 )
+position = Vector2( 0, -10 )
+polygon = PoolVector2Array( 71, 114, 71, 42, 250, 42, 250, 114 )
 
 [editable path="HoverInfos/HoverInfo"]
-[editable path="HoverInfos/HoverInfo2"]

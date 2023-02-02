@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall2/sergioescritorio_wall2.png" type="Texture" id=2]
@@ -8,13 +8,10 @@
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 26, 43.5 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21, 14 )
+extents = Vector2( 29, 48 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 21.3902, 14 )
+extents = Vector2( 21.5, 12.5 )
 
 [node name="Sergio_Wall2" instance=ExtResource( 1 )]
 
@@ -25,42 +22,44 @@ texture = ExtResource( 2 )
 goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 
 [node name="CollisionShape2D" parent="Door" index="0"]
-position = Vector2( 222, 100.5 )
+position = Vector2( 222, 104 )
 shape = SubResource( 3 )
 
 [node name="PuzzleArea2" parent="." index="2" instance=ExtResource( 4 )]
-position = Vector2( 36, 2 )
+position = Vector2( 94, 148 )
 puzzle_file = "res://Interactables/Puzzles/BoxOpener/Boxopened.tscn"
 
 [node name="CollisionShape2D" parent="PuzzleArea2" index="1"]
-position = Vector2( 69, 137 )
-shape = SubResource( 2 )
+position = Vector2( -4.5, 0.5 )
+shape = SubResource( 1 )
 
 [node name="PuzzleArea" parent="." index="3" instance=ExtResource( 4 )]
-position = Vector2( 105, 133 )
+position = Vector2( 94, 148 )
 puzzle_file = "res://Interactables/Puzzles/BoxOpener/Boxopener.tscn"
 
 [node name="Sprite" parent="PuzzleArea" index="0"]
+position = Vector2( 0, -0.5 )
 texture = ExtResource( 3 )
 hframes = 2
 
 [node name="CollisionShape2D" parent="PuzzleArea" index="1"]
-position = Vector2( 0, 6 )
+position = Vector2( -4.5, 0.5 )
 shape = SubResource( 1 )
 
 [node name="HoverInfos" type="Node2D" parent="." index="4"]
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 6 )]
-nome = "Baú"
+nome = "Caixa"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
-polygon = PoolVector2Array( 84, 153, 84, 129, 126, 129, 126, 153 )
+position = Vector2( -16, 8 )
+polygon = PoolVector2Array( 84, 153, 84, 128, 127, 128, 127, 153 )
 
 [node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 6 )]
 nome = "Porta da Sala do Sérgio"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
-polygon = PoolVector2Array( 196, 144, 196, 56, 248, 56, 248, 144 )
+polygon = PoolVector2Array( 193, 152, 193, 56, 251, 56, 251, 152 )
 
 [editable path="Door"]
 [editable path="PuzzleArea2"]

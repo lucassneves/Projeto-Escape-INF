@@ -7,4 +7,4 @@
 script = ExtResource( 1 )
 name = "Cable Ethernet"
 sprite = ExtResource( 2 )
-description = "Um cable ethernet! Perfeito para conectar na internet quando o Eduroam fica ruim ..."
+description = "Um cabo de ethernet! Perfeito para conectar na internet quando o Eduroam fica ruim ..."

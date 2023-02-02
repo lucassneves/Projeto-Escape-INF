@@ -7,7 +7,7 @@
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 26, 44 )
+extents = Vector2( 29, 48 )
 
 [node name="Lab257_Wall2" instance=ExtResource( 1 )]
 
@@ -21,6 +21,7 @@ item_needed = ExtResource( 3 )
 goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 
 [node name="CollisionShape2D" parent="Door" index="0"]
+position = Vector2( 0, 4 )
 shape = SubResource( 1 )
 
 [node name="HoverInfo" parent="." index="2" instance=ExtResource( 5 )]
@@ -28,7 +29,7 @@ position = Vector2( 222, 100 )
 nome = "Porta do Laboratório 257"
 
 [node name="CollisionShape2D" parent="HoverInfo" index="0"]
-polygon = PoolVector2Array( -26, 44, -26, -43, 26, -43, 26, 44 )
+polygon = PoolVector2Array( -29, 52, -29, -44, 29, -44, 29, 52 )
 
 [editable path="Door"]
 [editable path="HoverInfo"]

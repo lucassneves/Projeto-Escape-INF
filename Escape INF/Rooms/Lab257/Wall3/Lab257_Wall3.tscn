@@ -24,15 +24,15 @@ extents = Vector2( 8.5, 3.5 )
 texture = ExtResource( 4 )
 
 [node name="PuzzleArea2" parent="." index="1" instance=ExtResource( 6 )]
-position = Vector2( 221, 75 )
+position = Vector2( 229, 84 )
 puzzle_file = "res://Interactables/Puzzles/MiniBoxOpener/MiniBoxopened.tscn"
 
 [node name="CollisionShape2D" parent="PuzzleArea2" index="1"]
-position = Vector2( 0, -4 )
+position = Vector2( 0, -2 )
 shape = SubResource( 3 )
 
 [node name="PuzzleArea" parent="." index="2" instance=ExtResource( 6 )]
-position = Vector2( 221, 73 )
+position = Vector2( 229, 82 )
 puzzle_file = "res://Interactables/Puzzles/MiniBoxOpener/MiniBoxopener.tscn"
 
 [node name="Sprite" parent="PuzzleArea" index="0"]
@@ -42,11 +42,10 @@ texture = ExtResource( 7 )
 hframes = 2
 
 [node name="CollisionShape2D" parent="PuzzleArea" index="1"]
-position = Vector2( 0, -2 )
 shape = SubResource( 2 )
 
 [node name="Chave257" parent="." index="3" instance=ExtResource( 2 )]
-position = Vector2( 111, 79 )
+position = Vector2( 118, 90 )
 item_data = ExtResource( 3 )
 
 [node name="Sprite" parent="Chave257" index="0"]
@@ -62,13 +61,15 @@ nome = "Chave do Laboratório 257"
 collectable_path = NodePath("../Chave257")
 
 [node name="CollisionShape2D" parent="HoverInfo" index="0"]
-polygon = PoolVector2Array( -8, 4, -8, -2, 8, -3, 8, 4 )
+position = Vector2( 7, 11 )
+polygon = PoolVector2Array( -8, 4, -8, -3, 9, -3, 9, 4 )
 
 [node name="HoverInfo2" parent="." index="5" instance=ExtResource( 8 )]
 position = Vector2( 222, 74 )
 nome = "Mini caixa"
 
 [node name="CollisionShape2D" parent="HoverInfo2" index="0"]
+position = Vector2( 8, 9 )
 polygon = PoolVector2Array( -10, 8, -10, -11, 8, -11, 8, 9, -10, 9 )
 
 [editable path="PuzzleArea2"]

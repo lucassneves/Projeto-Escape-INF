@@ -38,13 +38,15 @@ polygon = PoolVector2Array( 121, 133, 121, 108, 134, 108, 134, 133 )
 nome = "Quadro"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
+position = Vector2( 25, -4 )
 polygon = PoolVector2Array( 190, 91, 190, 55, 230, 55, 230, 91 )
 
 [node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 5 )]
 nome = "Janela"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
-polygon = PoolVector2Array( 90, 104, 90, 50, 141, 50, 141, 105 )
+position = Vector2( -3, -9 )
+polygon = PoolVector2Array( 90, 104, 90, 50, 141, 50, 141, 104 )
 
 [editable path="Lockeditem"]
 [editable path="HoverInfos/HoverInfo"]

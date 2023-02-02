@@ -28,25 +28,11 @@ shape = SubResource( 1 )
 
 [node name="HoverInfos" type="Node2D" parent="." index="2"]
 
-[node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 5 )]
-nome = "Tomada"
-
-[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
-polygon = PoolVector2Array( 83, 131, 83, 125, 92, 125, 92, 131 )
-
-[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 5 )]
-nome = "Tomada"
-
-[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
-polygon = PoolVector2Array( 225, 131, 225, 125, 234, 125, 234, 131 )
-
-[node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 5 )]
+[node name="HoverInfo3" parent="HoverInfos" index="0" instance=ExtResource( 5 )]
 nome = "Caixa de energia"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 137, 117, 137, 75, 175, 75, 175, 117 )
 
 [editable path="PuzzleArea"]
-[editable path="HoverInfos/HoverInfo"]
-[editable path="HoverInfos/HoverInfo2"]
 [editable path="HoverInfos/HoverInfo3"]

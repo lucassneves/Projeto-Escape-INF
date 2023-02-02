@@ -17,6 +17,7 @@
 extents = Vector2( 8.5, 8 )
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.1476, 10 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 9, 4.5 )
@@ -27,7 +28,7 @@ extents = Vector2( 9, 4.5 )
 texture = ExtResource( 2 )
 
 [node name="InvisibleCollectable" parent="." index="1" instance=ExtResource( 9 )]
-position = Vector2( 92, 122 )
+position = Vector2( 94, 125 )
 script = ExtResource( 8 )
 item_data = ExtResource( 5 )
 puzzle_file = "res://Interactables/Puzzles/ImageTile/Imagetile.tscn"
@@ -42,6 +43,7 @@ shape = SubResource( 3 )
 disabled = true
 
 [node name="PuzzleArea" parent="." index="2" instance=ExtResource( 4 )]
+position = Vector2( 0, -11 )
 puzzle_file = "res://Interactables/Puzzles/ImageTile/Imagetile.tscn"
 
 [node name="Sprite" parent="PuzzleArea" index="0"]
@@ -62,7 +64,7 @@ __meta__ = {
 }
 
 [node name="Collectable" parent="." index="3" instance=ExtResource( 10 )]
-position = Vector2( 218, 136 )
+position = Vector2( 219, 135 )
 item_data = ExtResource( 7 )
 
 [node name="Sprite" parent="Collectable" index="0"]
@@ -77,25 +79,28 @@ shape = SubResource( 4 )
 nome = "Notebook"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
+position = Vector2( 0, 4 )
 polygon = PoolVector2Array( 121, 135, 124, 130, 124, 116, 147, 116, 147, 130, 150, 135 )
 
 [node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 12 )]
 nome = "Computador"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
-polygon = PoolVector2Array( 166, 116, 189, 116, 189, 132, 193, 140, 168, 140, 166, 135 )
+polygon = PoolVector2Array( 162, 114, 197, 114, 197, 133, 190, 140, 163, 140, 162, 135 )
 
 [node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 12 )]
 nome = "Controle do Ar Condicionado"
 collectable_path = NodePath("../../Collectable")
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
+position = Vector2( 1, -1 )
 polygon = PoolVector2Array( 212, 138, 212, 134, 224, 134, 224, 138 )
 
 [node name="HoverInfo4" parent="HoverInfos" index="3" instance=ExtResource( 12 )]
 nome = "Foto"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
+position = Vector2( 0, -11 )
 polygon = PoolVector2Array( 123, 103, 123, 39, 189, 39, 189, 103 )
 
 [node name="HoverInfo5" parent="HoverInfos" index="4" instance=ExtResource( 12 )]
