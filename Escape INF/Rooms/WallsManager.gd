@@ -6,6 +6,7 @@ onready var walls := get_children()
 
 func _ready():
 	
+	
 	if ProgressManager.previous_wall_index != null:
 		if walls.size() >= ProgressManager.previous_wall_index + 1:
 			current_wall_index = ProgressManager.previous_wall_index

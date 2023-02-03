@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall3/sergioescritorio_wall3.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/LockedItems/Lockeditem.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Items/Cafe/cafesergio.tres" type="Resource" id=4]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interactables/LockedItems/LockeditemNew.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Interactables/LockedItems/CoffeeMachine/coffee_machine.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6.5, 12.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.5, 12.5 )
@@ -14,7 +19,25 @@ extents = Vector2( 6.5, 12.5 )
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
 
-[node name="Lockeditem" parent="." index="1" instance=ExtResource( 3 )]
+[node name="LockeditemNew" parent="." index="1" instance=ExtResource( 6 )]
+locked_name = "Cafe"
+locked = true
+item_needed = ExtResource( 4 )
+needed_text = "Que pena, a máquina está sem café..."
+used_text = "Oba! Meu café está pronto!"
+goto = "res://Interactables/LockedItems/CoffeeMachine/CofeeMachine.tscn"
+
+[node name="Sprite" parent="LockeditemNew" index="0"]
+position = Vector2( 128, 121 )
+texture = ExtResource( 7 )
+hframes = 2
+
+[node name="CollisionShape2D" parent="LockeditemNew" index="1"]
+position = Vector2( 127.5, 120.5 )
+shape = SubResource( 2 )
+
+[node name="Lockeditem" parent="." index="2" instance=ExtResource( 3 )]
+visible = false
 locked_name = "Cafe"
 locked = true
 item_needed = ExtResource( 4 )
@@ -23,10 +46,11 @@ used_text = "Oba! Agora posso fazer um cafézinho!"
 goto = "res://Interactables/LockedItems/CoffeeMachine/CofeeMachine.tscn"
 
 [node name="CollisionShape2D" parent="Lockeditem" index="0"]
+visible = false
 position = Vector2( 127.5, 120.5 )
 shape = SubResource( 1 )
 
-[node name="HoverInfos" type="Node2D" parent="." index="2"]
+[node name="HoverInfos" type="Node2D" parent="." index="3"]
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 5 )]
 nome = "Máquina de café"
@@ -48,6 +72,7 @@ nome = "Janela"
 position = Vector2( -3, -9 )
 polygon = PoolVector2Array( 90, 104, 90, 50, 141, 50, 141, 104 )
 
+[editable path="LockeditemNew"]
 [editable path="Lockeditem"]
 [editable path="HoverInfos/HoverInfo"]
 [editable path="HoverInfos/HoverInfo2"]

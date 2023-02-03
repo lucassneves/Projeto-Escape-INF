@@ -1,6 +1,6 @@
 extends Node2D
 
-var SOUNDTRACK = preload("res://Audio/Music_naruto_lab_x.wav")
+#var SOUNDTRACK = preload("res://Audio/Music_naruto_lab_x.wav")
 
 var intro_texts = [
 	"Eita, como assim a porta trancou?",
@@ -10,8 +10,8 @@ var intro_texts = [
 
 func _ready():
 
-	AudioPlayer.stop_all_audios()
-	AudioPlayer.play_audio(SOUNDTRACK, "Music")
+#	AudioPlayer.stop_all_audios()
+#	AudioPlayer.play_audio(SOUNDTRACK, "Music")
 	
 	var room_file = get_tree().current_scene.filename
 	

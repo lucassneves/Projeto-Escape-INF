@@ -6,10 +6,6 @@ onready var panels = get_children()
 
 onready var destinyButton = $TextureRect8
 
-#onready var linkedItem = get_node("res://Rooms/SalaSergio/Wall0/Sergio_Wall0/Collectable")
-
-
-
 var first_panel
 
 func _ready():

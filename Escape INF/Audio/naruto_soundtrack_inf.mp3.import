@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/naruto_soundtrack_inf.mp3-eba41d3925237208ba5a8692b3b19808.mp3str"
+
+[deps]
+
+source_file="res://Audio/naruto_soundtrack_inf.mp3"
+dest_files=[ "res://.import/naruto_soundtrack_inf.mp3-eba41d3925237208ba5a8692b3b19808.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
