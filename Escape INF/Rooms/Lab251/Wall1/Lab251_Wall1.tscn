@@ -56,7 +56,7 @@ position = Vector2( -0.5, 0 )
 shape = SubResource( 2 )
 
 [node name="CableEthernet" parent="." index="4" instance=ExtResource( 2 )]
-position = Vector2( 167, 83 )
+position = Vector2( 172, 93 )
 item_data = ExtResource( 5 )
 
 [node name="Sprite" parent="CableEthernet" index="0"]
