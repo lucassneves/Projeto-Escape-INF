@@ -11,6 +11,7 @@
 script = ExtResource( 5 )
 
 [node name="SalaNRC_Wall0" parent="Walls" index="0" instance=ExtResource( 3 )]
+visible = false
 
 [node name="SalaNRC_Wall1" parent="Walls" index="1" instance=ExtResource( 4 )]
 visible = false
@@ -19,7 +20,6 @@ visible = false
 visible = false
 
 [node name="SalaNRC_Wall3" parent="Walls" index="3" instance=ExtResource( 6 )]
-visible = false
 
 [node name="Label" parent="UI Layer" index="1"]
 text = "Sala NRC

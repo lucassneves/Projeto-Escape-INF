@@ -6,9 +6,11 @@ var _hovering = false
 
 func _on_ReadableArea_mouse_entered():
 	_hovering = true
+	Input.set_default_cursor_shape(2)
 	
 func _on_ReadableArea_mouse_exited():
 	_hovering = false
+	Input.set_default_cursor_shape(0)
 
 func _input(event):
 	if _hovering:

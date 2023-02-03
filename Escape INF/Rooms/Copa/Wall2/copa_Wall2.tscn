@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Rooms/Copa/Wall2/copa_wall2.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Interactables/Readable/FolhaNRC/Folha.png" type="Texture" id=3]
+[ext_resource path="res://Interactables/Readable/FolhaUnificada/FolhaUnificada.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 43 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
 
 [node name="Copa_Wall2" type="Node2D"]
 
@@ -21,3 +27,15 @@ puzzle_file = "res://Interactables/Puzzles/CopaPuzzle/Geladeira.tscn"
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PuzzleArea"]
 position = Vector2( 25.5, 33 )
 shape = SubResource( 1 )
+
+[node name="ReadableArea" parent="." instance=ExtResource( 5 )]
+position = Vector2( 114, 101 )
+readable_scene = ExtResource( 4 )
+
+[node name="Sprite" parent="ReadableArea" index="0"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" parent="ReadableArea" index="1"]
+shape = SubResource( 2 )
+
+[editable path="ReadableArea"]

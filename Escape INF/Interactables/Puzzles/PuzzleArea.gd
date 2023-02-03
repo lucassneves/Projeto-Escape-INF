@@ -1,4 +1,5 @@
 extends Area2D
+#extends Button
 
 export (String, FILE, "*.tscn") var puzzle_file
 
@@ -22,9 +23,11 @@ func _ready():
 
 func _on_PuzzleArea_mouse_entered():
 	_hovering = true
+	Input.set_default_cursor_shape(2)
 
 func _on_PuzzleArea_mouse_exited():
 	_hovering = false
+	Input.set_default_cursor_shape(0)
 
 func _input(event):
 	if _hovering:
