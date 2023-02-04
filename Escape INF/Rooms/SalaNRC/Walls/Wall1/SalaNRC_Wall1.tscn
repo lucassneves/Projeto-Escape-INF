@@ -35,6 +35,7 @@ hframes = 3
 position = Vector2( 159, 92 )
 frames = SubResource( 4 )
 animation = "light"
+frame = 2
 playing = true
 
 [node name="HoverInfo" type="Node2D" parent="." index="2"]

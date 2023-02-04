@@ -8,6 +8,7 @@ var _hovering = false
 		
 func _on_Drawer_mouse_entered():
 	_hovering = true
+	
 
 func _on_Drawer_mouse_exited():
 	_hovering = false
@@ -19,9 +20,7 @@ func _input(event):
 			get_tree().set_input_as_handled()
 		
 func interact():
-	if ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3"):
-		("here")
+	if ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
 		sprite.frame=1
-		ProgressManager.anxiety -= 10
 	else:
 		TextBox.show_texts(["Estava gaveta está travada"])

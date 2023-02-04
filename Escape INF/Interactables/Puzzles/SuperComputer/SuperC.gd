@@ -1,4 +1,6 @@
 extends Control
 
+onready var computer = $Computer
+
 func _ready():
-	pass # Replace with function body.
+	computer.play("Typed")

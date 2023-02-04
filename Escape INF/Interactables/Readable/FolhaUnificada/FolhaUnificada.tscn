@@ -5,6 +5,9 @@
 
 [node name="FolhaUnificada" instance=ExtResource( 1 )]
 
+[node name="Readable" parent="." index="0"]
+texts = [ "Oooooh dia que fui ficar preso aqui.", "Justo no dia do churrasco da atlética.", "Estou precisando de um De Volta Para O Passado agora." ]
+
 [node name="Content" parent="Readable" index="0"]
 margin_left = -67.0
 margin_top = -88.0

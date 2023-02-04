@@ -1,13 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Doors/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Items/Chave257/chave257.tres" type="Resource" id=3]
 [ext_resource path="res://Rooms/Lab257/Wall2/lab257_wall2.png" type="Texture" id=4]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interactables/Readable/FolhaUFG/Folha.png" type="Texture" id=6]
+[ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Interactables/Readable/Poema/Poema2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Interactables/Readable/Poema/Poema.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 29, 48 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.5, 7.5 )
 
 [node name="Lab257_Wall2" instance=ExtResource( 1 )]
 
@@ -31,5 +38,29 @@ nome = "Porta do Laboratório 257"
 [node name="CollisionShape2D" parent="HoverInfo" index="0"]
 polygon = PoolVector2Array( -29, 52, -29, -44, 29, -44, 29, 52 )
 
+[node name="ReadableArea2" parent="." index="3" instance=ExtResource( 7 )]
+position = Vector2( 87, 68 )
+readable_scene = ExtResource( 10 )
+
+[node name="Sprite" parent="ReadableArea2" index="0"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" parent="ReadableArea2" index="1"]
+position = Vector2( -0.5, 0.5 )
+shape = SubResource( 2 )
+
+[node name="ReadableArea3" parent="." index="4" instance=ExtResource( 7 )]
+position = Vector2( 136, 103 )
+readable_scene = ExtResource( 9 )
+
+[node name="Sprite" parent="ReadableArea3" index="0"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" parent="ReadableArea3" index="1"]
+position = Vector2( -0.5, 0.5 )
+shape = SubResource( 2 )
+
 [editable path="Door"]
 [editable path="HoverInfo"]
+[editable path="ReadableArea2"]
+[editable path="ReadableArea3"]
