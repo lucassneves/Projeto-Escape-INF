@@ -22,6 +22,3 @@ func on_audio_finished(audioStreamPlayer):
 func stop_all_audios():
 	for audioPlayer in get_children():
 		audioPlayer.queue_free()
-
-func audio_playing():
-	audio_playing = true	

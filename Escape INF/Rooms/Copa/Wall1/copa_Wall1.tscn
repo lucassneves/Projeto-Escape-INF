@@ -1,9 +1,81 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Rooms/Copa/Wall1/copa_wall1.png" type="Texture" id=1]
+[ext_resource path="res://Interactables/Readable/Poema/monkeyTmp.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/Copa/Wall1/Macaco.gd" type="Script" id=3]
+[ext_resource path="res://Items/ControleAr/controleScene.png" type="Texture" id=4]
+[ext_resource path="res://Items/ControleAr/ControleAr.tres" type="Resource" id=5]
+[ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7, 3 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Fall"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 189, 66 ), Vector2( 196, 164 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="Copa_Wall1" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 161, 91 )
 texture = ExtResource( 1 )
+
+[node name="Macaco" type="Area2D" parent="."]
+position = Vector2( 186, 50 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Macaco"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Macaco"]
+shape = SubResource( 1 )
+
+[node name="Collectable" parent="." instance=ExtResource( 6 )]
+position = Vector2( 189, 66 )
+item_data = ExtResource( 5 )
+
+[node name="Sprite" parent="Collectable" index="0"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" parent="Collectable" index="1"]
+position = Vector2( 0, 0 )
+shape = SubResource( 2 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Collectable"]
+anims/Fall = SubResource( 3 )
+
+[connection signal="mouse_entered" from="Macaco" to="Macaco" method="_on_Macaco_mouse_entered"]
+[connection signal="mouse_exited" from="Macaco" to="Macaco" method="_on_Macaco_mouse_exited"]
+
+[editable path="Collectable"]

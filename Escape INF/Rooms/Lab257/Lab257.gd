@@ -18,7 +18,7 @@ func _ready():
 	#RABeginning_music_naruto_lab_257IN_SFX if changed
 	if AudioPlayer.audio_playing == false:
 		AudioPlayer.play_audio(SOUNDTRACK2, "Music")
-		AudioPlayer.audio_playing()
+		AudioPlayer.audio_playing = true
 	
 	
 	var room_file = get_tree().current_scene.filename

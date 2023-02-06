@@ -12,7 +12,7 @@
 [ext_resource path="res://Interactables/Readable/Postit/PostitTemp.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.5, 12.25 )
+extents = Vector2( 24, 11.625 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 11.5 )
@@ -38,7 +38,7 @@ texture = ExtResource( 3 )
 hframes = 2
 
 [node name="CollisionShape2D" parent="PuzzleArea" index="1"]
-position = Vector2( -67, -16 )
+position = Vector2( -86, -16.625 )
 shape = SubResource( 1 )
 
 [node name="InvisibleCollectable" parent="." instance=ExtResource( 7 )]

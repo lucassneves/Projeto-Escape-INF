@@ -29,7 +29,7 @@ position = Vector2( 25.5, 33 )
 shape = SubResource( 1 )
 
 [node name="ReadableArea" parent="." instance=ExtResource( 5 )]
-position = Vector2( 114, 101 )
+position = Vector2( 78, 103 )
 readable_scene = ExtResource( 4 )
 
 [node name="Sprite" parent="ReadableArea" index="0"]
