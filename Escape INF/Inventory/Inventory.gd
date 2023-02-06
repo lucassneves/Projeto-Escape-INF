@@ -11,7 +11,7 @@ export(Array, Resource) var items = [
 	preload("res://Items/ControleAr/ControleAr.tres"),
 	preload("res://Items/Chave251/chave251.tres"),
 	preload("res://Items/Chave257/chave257.tres"),
-	null,
+	preload("res://Items/Banana/banana.tres"),
 	null,
 	null,
 	null,
