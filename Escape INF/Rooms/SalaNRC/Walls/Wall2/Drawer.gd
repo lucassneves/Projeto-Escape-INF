@@ -21,7 +21,7 @@ func _input(event):
 			get_tree().set_input_as_handled()
 		
 func interact():
-	if  not ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
+	if  ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
 		sprite.frame=1
 	else:
 		TextBox.show_texts(["Estava gaveta está travada"])
