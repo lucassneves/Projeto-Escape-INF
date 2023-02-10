@@ -18,7 +18,7 @@ func _ready():
 	area_collision.disabled = true
 
 	if ProgressManager.check_progress("collected_items", room_file, wall_name, item_data):
-		hide()
+		queue_free()
 	
 	if ProgressManager.check_progress("completed_puzzles", room_file, wall_name, puzzle_file):
 		sprite.visible = true

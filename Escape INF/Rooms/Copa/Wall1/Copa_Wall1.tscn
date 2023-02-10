@@ -89,6 +89,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Collectable" parent="." instance=ExtResource( 6 )]
+visible = false
 position = Vector2( 197, 92 )
 item_data = ExtResource( 5 )
 

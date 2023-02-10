@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Rooms/BaseRoom.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Rooms/PlantaBaixa/Saída/Saída.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Rooms/PlantaBaixa/Saida/Saida.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=3]
-[ext_resource path="res://Rooms/PlantaBaixa/Saída.gd" type="Script" id=4]
+[ext_resource path="res://Rooms/PlantaBaixa/Saida.gd" type="Script" id=4]
+
 
 [node name="Saída" instance=ExtResource( 1 )]
 script = ExtResource( 4 )

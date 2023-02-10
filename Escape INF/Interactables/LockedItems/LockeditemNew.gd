@@ -19,8 +19,8 @@ func _ready():
 	
 	if ProgressManager.check_progress("unlocked_items", room_file, wall_name, locked_name):
 		locked = false
-		#if sprite.hframes > 1:
-		#	sprite.frame = 1
+		if sprite.hframes > 1:
+			sprite.frame = 1
 
 func _on_Door_mouse_entered():
 	_hovering = true

@@ -14,7 +14,7 @@ func _ready():
 	var wall_name = get_parent().name
 
 	if ProgressManager.check_progress("collected_items", room_file, wall_name, item_data):
-		hide()
+		queue_free()
 		
 func _on_Collectable_mouse_entered():
 	_hovering = true

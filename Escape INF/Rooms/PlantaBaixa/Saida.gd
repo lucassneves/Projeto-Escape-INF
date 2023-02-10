@@ -3,7 +3,7 @@ extends Node2D
 export(String, FILE, "*.tscn") var goto
 
 var intro_texts = [
-	"Frase bacana sobre o pátio"
+	"Frase bacana sobre a saída."
 ]
 
 func _on_GoBack_gui_input(event):

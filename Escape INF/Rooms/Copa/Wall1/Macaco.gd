@@ -7,6 +7,11 @@ var _hovering = false
 
 onready var bananaCollectable = get_parent().get_node("Collectable")
 
+func _ready():
+	if ProgressManager.check_progress("unlocked_items", "res://Rooms/Copa/Copa.tscn", "Copa_Wall1", "Banana"):
+		queue_free()
+		bananaCollectable.get_node("AnimationPlayer").play("Fall")
+
 func _on_Macaco_mouse_entered():
 	_hovering = true
 

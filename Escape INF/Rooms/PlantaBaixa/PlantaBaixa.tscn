@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.gd" type="Script" id=1]
 [ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.png" type="Texture" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Rooms/SalaNRC/DoorNRC.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Rooms/PlantaBaixa/Patio.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Tmp/Tmp.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Rooms/PlantaBaixa/Saída.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Rooms/PlantaBaixa/Saida.tscn" type="PackedScene" id=11]
 
 [sub_resource type="StyleBoxFlat" id=13]
 draw_center = false
@@ -37,8 +37,6 @@ border_color = Color( 0, 0, 0, 1 )
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=1]
-
-[sub_resource type="StyleBoxEmpty" id=14]
 
 [sub_resource type="StyleBoxEmpty" id=17]
 
@@ -196,13 +194,14 @@ sala_destino = ExtResource( 10 )
 
 [node name="Saída" type="Button" parent="Salas"]
 margin_left = 114.0
-margin_top = 38.0
-margin_right = 123.0
-margin_bottom = 46.0
-custom_styles/hover = SubResource( 14 )
+margin_top = 113.0
+margin_right = 124.0
+margin_bottom = 126.0
+custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 17 )
 custom_styles/focus = SubResource( 16 )
 custom_styles/disabled = SubResource( 7 )
 custom_styles/normal = SubResource( 3 )
 script = ExtResource( 3 )
+nome = "Saída"
 sala_destino = ExtResource( 11 )
