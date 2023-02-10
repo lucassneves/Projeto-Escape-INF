@@ -1,23 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Interface/InventoryRect/InventoryRect.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/32p.png" type="Texture" id=2]
 [ext_resource path="res://Interface/InventoryRect/ItemDescription.gd" type="Script" id=3]
-[ext_resource path="res://Interface/InventoryRect/inventorySelectedRect.png" type="Texture" id=6]
+[ext_resource path="res://Interface/InventoryRect/itemPanel.tres" type="StyleBox" id=4]
+[ext_resource path="res://Interface/panel.png" type="Texture" id=5]
+[ext_resource path="res://Interface/InventoryRect/selectedItemPanel.tres" type="StyleBox" id=6]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0, 0, 0, 1 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-anti_aliasing = false
-anti_aliasing_size = 0.01
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 16, 16 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
 
 [node name="Inventory" type="Control"]
 anchor_right = 1.0
@@ -25,15 +21,15 @@ anchor_bottom = 1.0
 mouse_filter = 1
 
 [node name="InventoryRect" type="Panel" parent="."]
-self_modulate = Color( 0.290196, 0.290196, 0.290196, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -101.0
-margin_top = -69.0
+margin_top = -71.0
 margin_right = 101.0
-margin_bottom = 69.0
+margin_bottom = 71.0
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true,
@@ -43,10 +39,10 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="InventoryRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 2.0
-margin_right = -2.0
-margin_bottom = -2.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="GridContainer" type="GridContainer" parent="InventoryRect/HBoxContainer"]
 margin_right = 100.0
@@ -59,24 +55,32 @@ columns = 3
 margin_right = 32.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 24, 24 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot2" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 34.0
 margin_right = 66.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot3" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 68.0
 margin_right = 100.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot4" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_top = 34.0
 margin_right = 32.0
 margin_bottom = 66.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot5" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 34.0
@@ -84,6 +88,8 @@ margin_top = 34.0
 margin_right = 66.0
 margin_bottom = 66.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot6" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 68.0
@@ -91,12 +97,16 @@ margin_top = 34.0
 margin_right = 100.0
 margin_bottom = 66.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot7" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_top = 68.0
 margin_right = 32.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot8" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 34.0
@@ -104,6 +114,8 @@ margin_top = 68.0
 margin_right = 66.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot9" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 68.0
@@ -111,12 +123,16 @@ margin_top = 68.0
 margin_right = 100.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot10" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_top = 102.0
 margin_right = 32.0
 margin_bottom = 134.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot11" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 34.0
@@ -124,6 +140,8 @@ margin_top = 102.0
 margin_right = 66.0
 margin_bottom = 134.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="Slot12" type="Panel" parent="InventoryRect/HBoxContainer/GridContainer"]
 margin_left = 68.0
@@ -131,17 +149,19 @@ margin_top = 102.0
 margin_right = 100.0
 margin_bottom = 134.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 4 )
 
 [node name="ItemDescription" type="VBoxContainer" parent="InventoryRect/HBoxContainer"]
 margin_left = 104.0
-margin_right = 198.0
+margin_right = 194.0
 margin_bottom = 134.0
 size_flags_horizontal = 3
 script = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="InventoryRect/HBoxContainer/ItemDescription"]
 margin_top = -1.0
-margin_right = 94.0
+margin_right = 90.0
 margin_bottom = 17.2727
 text = "NOME DO ITEM BEM GRANDE"
 align = 1
@@ -149,7 +169,7 @@ autowrap = true
 
 [node name="TextureRect" type="TextureRect" parent="InventoryRect/HBoxContainer/ItemDescription"]
 margin_top = 22.0
-margin_right = 94.0
+margin_right = 90.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 32, 32 )
 texture = ExtResource( 2 )
@@ -167,34 +187,17 @@ margin_top = -16.0
 margin_right = 16.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 32, 32 )
+mouse_filter = 1
+custom_styles/panel = ExtResource( 6 )
 
 [node name="Label2" type="Label" parent="InventoryRect/HBoxContainer/ItemDescription"]
 margin_top = 58.0
-margin_right = 94.0
+margin_right = 90.0
 margin_bottom = 134.0
 size_flags_vertical = 3
 text = "DESCRIÇÃO DO ITEM"
 align = 1
 autowrap = true
 
-[node name="CloseButton" type="Button" parent="InventoryRect"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_right = 17.0
-margin_bottom = 14.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 1 )
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 1 )
-text = "X"
-
-[node name="TextureRect" type="TextureRect" parent="InventoryRect"]
-margin_left = 34.0
-margin_right = 70.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 32, 32 )
-mouse_filter = 2
-texture = ExtResource( 6 )
-stretch_mode = 4
-
-[connection signal="pressed" from="InventoryRect/CloseButton" to="InventoryRect" method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="InventoryRect" to="InventoryRect" method="_on_InventoryRect_mouse_entered"]
+[connection signal="mouse_exited" from="InventoryRect" to="InventoryRect" method="_on_InventoryRect_mouse_exited"]

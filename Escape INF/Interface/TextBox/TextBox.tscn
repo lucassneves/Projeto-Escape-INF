@@ -1,7 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Interface/TextBox/TextBox.gd" type="Script" id=1]
-[ext_resource path="res://Interface/TextBox/procceedIcon.png" type="Texture" id=2]
+[ext_resource path="res://Interface/MainMenu/buttonIcon.png" type="Texture" id=2]
+[ext_resource path="res://Interface/panel.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 3 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
 
 [sub_resource type="Animation" id=1]
 resource_name = "BounceProcceedIcon"
@@ -16,7 +24,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 153, 33 ), Vector2( 153, 32 ), Vector2( 153, 33 ) ]
+"values": [ Vector2( 151, 30 ), Vector2( 151, 29 ), Vector2( 151, 30 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -31,7 +39,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 153, 33 ) ]
+"values": [ Vector2( 151, 30 ) ]
 }
 
 [node name="TextBoxLayer" type="CanvasLayer"]
@@ -52,19 +60,20 @@ margin_left = -80.0
 margin_top = -56.0
 margin_right = 80.0
 margin_bottom = -16.0
+custom_styles/panel = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="Control/TextBox"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -7.0
-margin_top = -7.0
-margin_right = -1.0
-margin_bottom = -1.0
+margin_left = 151.0
+margin_top = 30.0
+margin_right = 157.0
+margin_bottom = 37.0
 texture = ExtResource( 2 )
 expand = true
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/TextBox/TextureRect"]
 root_node = NodePath("../../../..")
@@ -77,10 +86,13 @@ anims/RESET = SubResource( 2 )
 [node name="Text" type="RichTextLabel" parent="Control/TextBox"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.5
-margin_top = 2.0
-margin_right = -1.5
-margin_bottom = -2.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
 text = "tadsasdasdasdasdasdasdsadasdasd asdas dasf f rwgr ege rge rger reg er "
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="timeout" from="Control/TextBox/Timer" to="." method="_on_Timer_timeout"]
