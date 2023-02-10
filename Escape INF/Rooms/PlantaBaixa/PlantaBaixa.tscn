@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.gd" type="Script" id=1]
 [ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Rooms/PlantaBaixa/Patio.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Tmp/Tmp.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Rooms/PlantaBaixa/Saida.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Rooms/Secretaria/Secretaria.tscn" type="PackedScene" id=12]
 
 [sub_resource type="StyleBoxFlat" id=13]
 draw_center = false
@@ -190,7 +191,7 @@ custom_styles/disabled = SubResource( 11 )
 custom_styles/normal = SubResource( 2 )
 script = ExtResource( 3 )
 nome = "Secretaria"
-sala_destino = ExtResource( 10 )
+sala_destino = ExtResource( 12 )
 
 [node name="Saída" type="Button" parent="Salas"]
 margin_left = 114.0
