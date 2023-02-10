@@ -4,6 +4,7 @@ const inventory_size := 12
 
 var selected_item_index = null setget set_selected_item_index
 
+
 # Para versao final, deixar apenas o celular
 export(Array, Resource) var items = [
 	preload("res://Items/Celular/celular.tres"),

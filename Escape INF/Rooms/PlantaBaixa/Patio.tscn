@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Rooms/BaseRoom.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rooms/PlantaBaixa/Patio/Patio.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=3]
+[ext_resource path="res://Rooms/PlantaBaixa/Patio.gd" type="Script" id=4]
+
+[node name="Patio" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
+
+[node name="Patio_Wall0" parent="Walls" index="0" instance=ExtResource( 2 )]
+
+[node name="WallSwitch" parent="UI Layer/UI" index="0"]
+visible = false
+
+[node name="Label" parent="UI Layer" index="1"]
+text = "Vista - Pátio
+"
+
+[node name="GoBack" type="TextureRect" parent="UI Layer" index="2"]
+margin_top = 13.0
+margin_right = 22.0
+margin_bottom = 37.0
+texture = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="PhoneLight" parent="." index="3"]
+mode = 2
+
+[connection signal="gui_input" from="UI Layer/GoBack" to="." method="_on_GoBack_gui_input"]
+
+[editable path="UI Layer/UI"]
+[editable path="UI Layer/UI/Inventory"]

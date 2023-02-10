@@ -19,8 +19,8 @@ func _ready():
 	
 	if ProgressManager.check_progress("unlocked_items", room_file, wall_name, locked_name):
 		locked = false
-		if sprite.hframes > 1:
-			sprite.frame = 1
+		#if sprite.hframes > 1:
+		#	sprite.frame = 1
 
 func _on_Door_mouse_entered():
 	_hovering = true
@@ -46,6 +46,8 @@ func interact():
 			locked = false
 			ProgressManager.add_unlocked_item(room_file, wall_name, locked_name)
 			Inventory.remove_item(item_needed)
+			if sprite.hframes > 1:
+				sprite.frame = 1
 			ProgressManager.anxiety -= 10
 		else:
 			TextBox.show_texts([needed_text])

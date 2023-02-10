@@ -3,9 +3,10 @@ extends Node2D
 #var SOUNDTRACK = preload("res://Audio/Music_naruto_lab_x.wav")
 
 var intro_texts = [
-	"Eita, como assim a porta trancou?",
+	"Eita! como assim a porta trancou?",
 	"Essa porta é automática?",
-	"Espero que eu encontre uma chave por aqui." 
+	"Espero que eu encontre uma forma de sair daqui.",
+	"Se não estarei perdido." 
 ]
 
 func _ready():

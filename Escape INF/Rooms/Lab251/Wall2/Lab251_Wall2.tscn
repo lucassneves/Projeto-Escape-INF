@@ -12,7 +12,7 @@
 [ext_resource path="res://Interactables/Readable/Postit/PostitDescoragoso3.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 26, 44 )
+extents = Vector2( 26, 47 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.5, 5.5 )
@@ -29,7 +29,7 @@ item_needed = ExtResource( 3 )
 goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 
 [node name="CollisionShape2D" parent="Door" index="0"]
-position = Vector2( 1, 0 )
+position = Vector2( 1, 6 )
 shape = SubResource( 1 )
 
 [node name="ReadableArea" parent="." index="2" instance=ExtResource( 7 )]

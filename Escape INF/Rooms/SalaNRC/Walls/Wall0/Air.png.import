@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FolhaGustavo.png-8e76ad071bfb09e38c0a1ace016cf985.stex"
+path="res://.import/Air.png-44f0b1a223b29073b377c257205e0723.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactables/Readable/FolhaUFG/FolhaGustavo.png"
-dest_files=[ "res://.import/FolhaGustavo.png-8e76ad071bfb09e38c0a1ace016cf985.stex" ]
+source_file="res://Rooms/SalaNRC/Walls/Wall0/Air.png"
+dest_files=[ "res://.import/Air.png-44f0b1a223b29073b377c257205e0723.stex" ]
 
 [params]
 

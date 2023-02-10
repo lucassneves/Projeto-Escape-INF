@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Folha.png-62ec293d09f77c0a848f42db492cbe70.stex"
+path="res://.import/Saida.png-4319aedf8fe4c73d8f63db9f7270d572.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactables/Readable/FolhaUFG/Folha.png"
-dest_files=[ "res://.import/Folha.png-62ec293d09f77c0a848f42db492cbe70.stex" ]
+source_file="res://Rooms/PlantaBaixa/Saída/Saida.png"
+dest_files=[ "res://.import/Saida.png-4319aedf8fe4c73d8f63db9f7270d572.stex" ]
 
 [params]
 

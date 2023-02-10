@@ -7,7 +7,6 @@ export(Resource) var item_needed
 # Metodo nao recomendado para acessar outros nodes
 # ver http://kidscancode.org/godot_recipes/4.x/basics/node_communication
 onready var computer: AnimatedSprite = get_tree().get_current_scene().get_node("Walls/SalaNRC_Wall2/AnimatedSprite")
-#onready var wall2_background: Sprite = get_tree().get_current_scene().get_node("Walls/SalaNRC_Wall2/Background")
 onready var block = get_tree().get_current_scene().get_node("Walls/SalaNRC_Wall2/Block")
 
 onready var sprite = get_parent().get_node("Background")
@@ -24,9 +23,11 @@ func _ready():
 		
 func _on_Fios_mouse_entered():
 	_hovering = true
+	Input.set_default_cursor_shape(2)
 
 func _on_Fios_mouse_exited():
 	_hovering = false
+	Input.set_default_cursor_shape(0)
 
 func _input(event):
 	if _hovering:

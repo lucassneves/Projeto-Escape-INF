@@ -12,12 +12,6 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47.5, 29 )
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 19.5, 10 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 46.5, 29 )
-
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 320, 180 )
@@ -38,6 +32,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 19.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 46.5, 29 )
+
 [node name="SalaNRC_Wall2" instance=ExtResource( 1 )]
 
 [node name="Background" parent="." index="0"]
@@ -52,7 +52,13 @@ puzzle_file = "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"
 position = Vector2( 37.5, 19 )
 shape = SubResource( 2 )
 
-[node name="Drawer" type="Area2D" parent="." index="2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
+visible = false
+position = Vector2( 160, 90 )
+frames = SubResource( 7 )
+animation = "computer"
+
+[node name="Drawer" type="Area2D" parent="." index="3"]
 script = ExtResource( 5 )
 locked = true
 
@@ -65,18 +71,12 @@ hframes = 2
 position = Vector2( 266.5, 145.125 )
 shape = SubResource( 1 )
 
-[node name="Block" type="Area2D" parent="." index="3"]
+[node name="Block" type="Area2D" parent="." index="4"]
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block" index="0"]
 position = Vector2( 210.5, 89 )
 shape = SubResource( 3 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="4"]
-visible = false
-position = Vector2( 160, 90 )
-frames = SubResource( 7 )
-animation = "computer"
 
 [node name="HoverInfo" type="Node2D" parent="." index="5"]
 

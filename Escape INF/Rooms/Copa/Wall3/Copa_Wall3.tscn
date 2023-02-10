@@ -1,16 +1,22 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Rooms/Copa/Wall3/copa_wall3.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Doors/Door.gd" type="Script" id=2]
 [ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Items/NotebookAcer/Acer.png" type="Texture" id=4]
 [ext_resource path="res://Items/NotebookAcer/notebook_acer.tres" type="Resource" id=5]
+[ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Interactables/Readable/Folhas/FolhaFtoC.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Interactables/Readable/Folhas/Folha.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 17.5, 15 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 39.5, 55.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8, 7.5 )
 
 [node name="Copa_Wall3" type="Node2D"]
 
@@ -38,7 +44,19 @@ goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 position = Vector2( 55.5, 100.5 )
 shape = SubResource( 1 )
 
+[node name="ReadableArea" parent="." instance=ExtResource( 6 )]
+position = Vector2( 245, 120 )
+readable_scene = ExtResource( 7 )
+
+[node name="Sprite" parent="ReadableArea" index="0"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" parent="ReadableArea" index="1"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 3 )
+
 [connection signal="mouse_entered" from="Door" to="Door" method="_on_Door_mouse_entered"]
 [connection signal="mouse_exited" from="Door" to="Door" method="_on_Door_mouse_exited"]
 
 [editable path="Collectable"]
+[editable path="ReadableArea"]

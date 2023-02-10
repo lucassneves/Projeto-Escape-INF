@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Folhas.png-89b2ffca2f3c3bd841f6ac17bd22c31f.stex"
+path="res://.import/FolhaGustavo.png-21dc7fc5e65a5af89ad65b1ff9028769.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactables/Readable/FolhaUFG/Folhas.png"
-dest_files=[ "res://.import/Folhas.png-89b2ffca2f3c3bd841f6ac17bd22c31f.stex" ]
+source_file="res://Interactables/Readable/Folhas/FolhaGustavo.png"
+dest_files=[ "res://.import/FolhaGustavo.png-21dc7fc5e65a5af89ad65b1ff9028769.stex" ]
 
 [params]
 

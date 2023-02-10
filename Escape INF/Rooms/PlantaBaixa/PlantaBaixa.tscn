@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.gd" type="Script" id=1]
 [ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.png" type="Texture" id=2]
@@ -8,7 +8,9 @@
 [ext_resource path="res://Rooms/SalaSergio/SalaSergio.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Rooms/Copa/Copa.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Rooms/SalaNRC/DoorNRC.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Rooms/PlantaBaixa/Patio.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Tmp/Tmp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Rooms/PlantaBaixa/Saída.tscn" type="PackedScene" id=11]
 
 [sub_resource type="StyleBoxFlat" id=13]
 draw_center = false
@@ -35,6 +37,12 @@ border_color = Color( 0, 0, 0, 1 )
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=16]
 
 [node name="PlantaBaixa" type="Control"]
 anchor_right = 1.0
@@ -71,6 +79,7 @@ margin_left = 128.0
 margin_top = 100.0
 margin_right = 158.0
 margin_bottom = 126.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 12 )
@@ -80,11 +89,27 @@ script = ExtResource( 3 )
 nome = "Laboratório 257"
 sala_destino = ExtResource( 4 )
 
+[node name="Patio" type="Button" parent="Salas"]
+margin_left = 43.0
+margin_top = 50.0
+margin_right = 114.0
+margin_bottom = 78.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+script = ExtResource( 3 )
+nome = "Pátio"
+sala_destino = ExtResource( 9 )
+
 [node name="lab152" type="Button" parent="Salas"]
 margin_left = 194.0
 margin_top = 50.0
 margin_right = 222.0
 margin_bottom = 76.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
@@ -99,6 +124,7 @@ margin_left = 128.0
 margin_top = 50.0
 margin_right = 158.0
 margin_bottom = 76.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
@@ -113,6 +139,7 @@ margin_left = 18.0
 margin_top = 50.0
 margin_right = 30.0
 margin_bottom = 62.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
@@ -127,6 +154,7 @@ margin_left = 43.0
 margin_top = 112.0
 margin_right = 57.0
 margin_bottom = 126.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
@@ -141,6 +169,7 @@ margin_left = 61.0
 margin_top = 112.0
 margin_right = 80.0
 margin_bottom = 126.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
@@ -155,6 +184,7 @@ margin_left = 84.0
 margin_top = 112.0
 margin_right = 110.0
 margin_bottom = 126.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
@@ -163,3 +193,16 @@ custom_styles/normal = SubResource( 2 )
 script = ExtResource( 3 )
 nome = "Secretaria"
 sala_destino = ExtResource( 10 )
+
+[node name="Saída" type="Button" parent="Salas"]
+margin_left = 114.0
+margin_top = 38.0
+margin_right = 123.0
+margin_bottom = 46.0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+script = ExtResource( 3 )
+sala_destino = ExtResource( 11 )

@@ -12,7 +12,7 @@ onready var digito2 = $Digito2
 
 func check_completion():
 	if (digito1.get_text()  == "6"):
-		if (digito2.get_text()  == "3"):
+		if (digito2.get_text()  == "4"):
 			if(mode == "Gelar"):
 				$ButtonDown.disabled = true
 				$ButtonMode.disabled = true
