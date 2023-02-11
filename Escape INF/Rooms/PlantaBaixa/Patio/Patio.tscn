@@ -30,10 +30,22 @@ nome = "Placa de saída de emergência"
 polygon = PoolVector2Array( 24, 10, 52, 11, 52, 20, 23, 19 )
 
 [node name="HoverInfo4" parent="HoverInfos" index="3" instance=ExtResource( 4 )]
-nome = "Papel Informativo sobre o teto que caiu"
+nome = "Papel Informativo sobre o telhado"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
 polygon = PoolVector2Array( 115, 11, 240, 13, 240, 69, 116, 69 )
+
+[node name="Control" type="Control" parent="." index="2"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" index="0"]
+margin_left = 134.0
+margin_top = 16.0
+margin_right = 169.0
+margin_bottom = 25.0
+rect_scale = Vector2( 2.75, 2.75 )
+text = "CUIDADO"
 
 [editable path="HoverInfos/HoverInfo"]
 [editable path="HoverInfos/HoverInfo2"]
