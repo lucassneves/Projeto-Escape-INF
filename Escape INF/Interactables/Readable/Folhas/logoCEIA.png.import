@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Folhas.png-59d59cdf4ec03e83551e9bd18e32f709.stex"
+path="res://.import/logoCEIA.png-17d5412bb325059ae51f19b0f3bc7781.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactables/Readable/FolhaNRC/Folhas.png"
-dest_files=[ "res://.import/Folhas.png-59d59cdf4ec03e83551e9bd18e32f709.stex" ]
+source_file="res://Interactables/Readable/Folhas/logoCEIA.png"
+dest_files=[ "res://.import/logoCEIA.png-17d5412bb325059ae51f19b0f3bc7781.stex" ]
 
 [params]
 

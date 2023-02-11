@@ -25,3 +25,11 @@ texture = ExtResource( 3 )
 
 [node name="Panel" parent="Readable/Content" index="2"]
 visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Readable/Content" index="3"]
+margin_left = -2.0
+margin_top = 19.0
+margin_right = 95.0
+margin_bottom = 31.0
+rect_scale = Vector2( 1.75, 2 )
+text = "Composição Inteira (+)"

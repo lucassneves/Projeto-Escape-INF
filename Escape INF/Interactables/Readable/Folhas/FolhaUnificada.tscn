@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Interactables/Readable/Readable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interactables/Readable/Folhas/Folhas.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/Readable/Folhas/FolhaUnificada.png" type="Texture" id=3]
+
+[node name="FolhaUnificada" instance=ExtResource( 1 )]
+__meta__ = {
+"_edit_vertical_guides_": [ 92.0, 252.0 ]
+}
+
+[node name="Readable" parent="." index="0"]
+texts = [ "Oooooh dia que fui ficar preso aqui.", "Justo no dia do churrasco da atlética.", "Estou precisando de um De Volta Para O Passado agora." ]
+
+[node name="Content" parent="Readable" index="0"]
+margin_left = -67.0
+margin_top = -88.0
+margin_right = 92.0
+margin_bottom = 85.0
+
+[node name="Panel" parent="Readable/Content" index="0"]
+visible = false
+
+[node name="Folha" type="TextureRect" parent="Readable/Content" index="1"]
+margin_left = -9.0
+margin_top = -2.0
+margin_right = 166.0
+margin_bottom = 174.0
+texture = ExtResource( 2 )
+
+[node name="Fundo" type="TextureRect" parent="Readable/Content" index="2"]
+margin_left = 3.0
+margin_top = 5.0
+margin_right = 154.0
+margin_bottom = 169.0
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Readable/Content" index="3"]
+margin_left = 8.0
+margin_top = 17.0
+margin_right = 52.0
+margin_bottom = 38.0
+rect_scale = Vector2( 3, 3 )
+text = "CHURRAS
+UNIFICADA"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Readable/Content" index="4"]
+margin_left = 11.0
+margin_top = 106.0
+margin_right = 81.0
+margin_bottom = 126.0
+rect_scale = Vector2( 2, 2 )
+bbcode_enabled = true
+bbcode_text = "< SAVE THE DATE >
+[center][color=red]HOJE"
+text = "< SAVE THE DATE >
+HOJE"

@@ -39,7 +39,7 @@ bbcode_enabled = true
 bbcode_text = "A  marca da UFG representa  uma colmeia abstrata, formada por 6 hexágonos azuis, de diferentes dimensões e espaçamentos distintos entre si, gravitando em torno de um centro hexagonal vazio. 
 
 Cada hexágono representa uma ciência, de forma diferente e interdependente, e juntos eles formam o hexágono central que é a UFG. Sem as ciências, a universidade não existe, e sem ela no centro, as ciências não se desenvolvem."
-text = "	A  marca da UFG representa  uma colmeia abstrata, formada por 6 hexágonos azuis, de diferentes dimensões e espaçamentos distintos entre si, gravitando em torno de um centro hexagonal vazio. 
+text = "A  marca da UFG representa  uma colmeia abstrata, formada por 6 hexágonos azuis, de diferentes dimensões e espaçamentos distintos entre si, gravitando em torno de um centro hexagonal vazio. 
 
-	Cada hexágono representa uma ciência, de forma diferente e interdependente, e juntos eles formam o hexágono central que é a UFG. Sem as ciências, a universidade não existe, e sem ela no centro, as ciências não se desenvolvem."
+Cada hexágono representa uma ciência, de forma diferente e interdependente, e juntos eles formam o hexágono central que é a UFG. Sem as ciências, a universidade não existe, e sem ela no centro, as ciências não se desenvolvem."
 scroll_active = false

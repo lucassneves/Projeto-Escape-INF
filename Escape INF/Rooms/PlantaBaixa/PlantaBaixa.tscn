@@ -9,7 +9,7 @@
 [ext_resource path="res://Rooms/Copa/Copa.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Rooms/SalaNRC/DoorNRC.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Rooms/PlantaBaixa/Patio.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Tmp/Tmp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Rooms/Lab152/Lab152.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Rooms/PlantaBaixa/Saida.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Rooms/Secretaria/Secretaria.tscn" type="PackedScene" id=12]
 

@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Rooms/Copa/Wall2/copa_wall2.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Interactables/Readable/FolhaNRC/Folha.png" type="Texture" id=3]
-[ext_resource path="res://Interactables/Readable/FolhaUnificada/FolhaUnificada.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interactables/Readable/Folhas/Folha.png" type="Texture" id=3]
+[ext_resource path="res://Interactables/Readable/Folhas/FolhaUnificada.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interactables/Readable/DocumentoSC/ReadableAir.tscn" type="PackedScene" id=6]
 

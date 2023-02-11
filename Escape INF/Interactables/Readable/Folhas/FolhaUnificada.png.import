@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Folha.png-9c239fd853d2a1999360284eadbd29cd.stex"
+path="res://.import/FolhaUnificada.png-08900f997b0de0c8192c5dc2186ae54e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactables/Readable/FolhaUnificada/Folha.png"
-dest_files=[ "res://.import/Folha.png-9c239fd853d2a1999360284eadbd29cd.stex" ]
+source_file="res://Interactables/Readable/Folhas/FolhaUnificada.png"
+dest_files=[ "res://.import/FolhaUnificada.png-08900f997b0de0c8192c5dc2186ae54e.stex" ]
 
 [params]
 

@@ -9,12 +9,12 @@
 [node name="Copa" instance=ExtResource( 3 )]
 
 [node name="Copa_Wall0" parent="Walls" index="0" instance=ExtResource( 1 )]
+visible = false
 
 [node name="Copa_Wall1" parent="Walls" index="1" instance=ExtResource( 5 )]
 visible = false
 
 [node name="Copa_Wall2" parent="Walls" index="2" instance=ExtResource( 4 )]
-visible = false
 
 [node name="Copa_Wall3" parent="Walls" index="3" instance=ExtResource( 2 )]
 visible = false
