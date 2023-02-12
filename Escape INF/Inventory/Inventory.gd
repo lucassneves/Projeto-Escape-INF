@@ -13,7 +13,7 @@ export(Array, Resource) var items = [
 	preload("res://Items/Chave257/chave257.tres"),
 	preload("res://Items/Banana/banana.tres"),
 	preload("res://Items/Ticket/inter_ticket.tres"),
-	null,
+	preload("res://Items/NotebookAcer/notebook_acer.tres"),
 	null,
 	null,
 	null,
