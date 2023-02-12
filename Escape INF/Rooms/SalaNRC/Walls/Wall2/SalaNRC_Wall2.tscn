@@ -9,7 +9,7 @@
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Computer.png" type="Texture" id=7]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Block.gd" type="Script" id=8]
 [ext_resource path="res://Items/Ticket/inter_ticket.tres" type="Resource" id=9]
-[ext_resource path="res://Interface/Credits/Credits.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Interface/Final2/Win.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47.5, 29 )

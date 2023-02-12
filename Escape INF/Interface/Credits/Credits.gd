@@ -5,8 +5,8 @@ var mouse_left_down = false
 
 onready var animation = $AnimationPlayer
 
-func _ready():
-	AudioPlayer.play_audio(preload("res://Audio/game-over.mp3"), "Music")
+#func _ready():
+	#AudioPlayer.play_audio(preload("res://Audio/game-over.mp3"), "Music")
 	
 func _input(event):
 	if event is InputEventMouseButton:

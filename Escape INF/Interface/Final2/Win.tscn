@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Interface/Final2/Win.gd" type="Script" id=1]
+
+[node name="Win" type="Node2D"]
+position = Vector2( 0, -1 )
+script = ExtResource( 1 )
+next_scene = "res://Interface/Final2/Churras.tscn"
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 319.0
+margin_bottom = 181.0
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 3.0
+margin_top = 52.0
+margin_right = 83.0
+margin_bottom = 73.0
+rect_scale = Vector2( 4, 4 )
+bbcode_enabled = true
+bbcode_text = "[tornado radius=5 freq=2 ][center]VOCÊ ESCAPOU !"
+text = "VOCÊ ESCAPOU !"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 8.0
+margin_top = 83.0
+margin_right = 209.0
+margin_bottom = 159.0
+rect_scale = Vector2( 1.5, 1.5 )
+bbcode_enabled = true
+bbcode_text = "[center]A lenda era real, você sofreu uma ataque de ansiedade e não conseguiu escapar do INF.  
+
+Você foi JUBILADO e agora passará o resto de seus dias na UFG atormentando calouros desavisados."
+text = "A lenda era real, você sofreu uma ataque de ansiedade e não conseguiu escapar do INF.  
+
+Você foi JUBILADO e agora passará o resto de seus dias na UFG atormentando calouros desavisados."

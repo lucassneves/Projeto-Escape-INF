@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Interface/Final2/Fire.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interface/Final2/churrasTeste.png" type="Texture" id=2]
+[ext_resource path="res://Interface/Final2/Churras.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+next_scene = "res://Interface/Credits/Credits.tscn"
+
+[node name="Fire" parent="." instance=ExtResource( 1 )]
+position = Vector2( 279, 151 )
+
+[node name="Fire2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 54, 145 )
+
+[node name="Fire3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 148, 163 )
+
+[node name="Fire4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 198, 153 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 1.0
+margin_right = 321.0
+margin_bottom = 180.0
+texture = ExtResource( 2 )

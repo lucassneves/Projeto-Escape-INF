@@ -1,0 +1,151 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Interface/Final/Jornal.gd" type="Script" id=1]
+[ext_resource path="res://Interface/Final/random_selection.png" type="Texture" id=2]
+[ext_resource path="res://Interface/Final/Jornal.png" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=14]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=15]
+offsets = PoolRealArray( 0, 0.523466, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=31]
+gradient = SubResource( 15 )
+
+[sub_resource type="Curve" id=17]
+_data = [ Vector2( 0, 0.463636 ), 0.0, 1.90083, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=32]
+curve = SubResource( 17 )
+
+[sub_resource type="ParticlesMaterial" id=19]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 360.0
+angle_random = 1.0
+scale_random = 0.3
+scale_curve = SubResource( 32 )
+color_ramp = SubResource( 31 )
+hue_variation = 0.02
+hue_variation_random = 1.0
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 1, 1, 1, 1 )
+
+[node name="Jornal" type="Node2D"]
+script = ExtResource( 1 )
+next_scene = "res://Interface/Final/GameOver.tscn"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Background" type="ColorRect" parent="Node2D"]
+margin_right = 319.0
+margin_bottom = 181.0
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Efeito" type="Particles2D" parent="Node2D"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+material = SubResource( 14 )
+position = Vector2( 63, 52 )
+amount = 6
+lifetime = 2.0
+process_material = SubResource( 19 )
+texture = ExtResource( 2 )
+
+[node name="Efeito2" type="Particles2D" parent="Node2D"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+material = SubResource( 14 )
+position = Vector2( 264, 128 )
+amount = 6
+lifetime = 2.0
+process_material = SubResource( 19 )
+texture = ExtResource( 2 )
+
+[node name="Efeito3" type="Particles2D" parent="Node2D"]
+visible = false
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+material = SubResource( 14 )
+position = Vector2( 175, 114 )
+scale = Vector2( 1.5, 1.5 )
+amount = 6
+lifetime = 2.0
+process_material = SubResource( 19 )
+texture = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+margin_left = 1.0
+margin_right = 321.0
+margin_bottom = 180.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="Node2D"]
+margin_left = 36.0
+margin_top = 30.0
+margin_right = 132.0
+margin_bottom = 50.0
+custom_styles/panel = SubResource( 33 )
+
+[node name="Panel" type="Panel" parent="Node2D/Panel"]
+margin_left = 155.0
+margin_top = -6.0
+margin_right = 251.0
+margin_bottom = 14.0
+custom_styles/panel = SubResource( 33 )
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D"]
+margin_left = 36.0
+margin_top = 15.0
+margin_right = 108.0
+margin_bottom = 23.0
+rect_scale = Vector2( 5, 5 )
+bbcode_enabled = true
+bbcode_text = "[color=red]Jornal  Goiás"
+text = "Jornal  Goiás"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
+margin_left = 48.0
+margin_top = 81.0
+margin_right = 277.0
+margin_bottom = 156.0
+bbcode_enabled = true
+bbcode_text = "Aluno desaperece misteriosamente, a última vez que  visto foi na data  28 de Fevereiro de 2022. 
+
+Estudantes relatam que o aluno teria marcado de ir no churrasco da integração do curso, mas não foi visto depois do término da aula.
+
+O seu paradeiro ainda permanece desconhecido."
+text = "Aluno desaperece misteriosamente, a última vez que  visto foi na data  28 de Fevereiro de 2022. 
+
+Estudantes relatam que o aluno teria marcado de ir no churrasco da integração do curso, mas não foi visto depois do término da aula.
+
+O seu paradeiro ainda permanece desconhecido."
+
+[node name="Label" type="Label" parent="Node2D"]
+margin_left = 64.0
+margin_top = 61.0
+margin_right = 195.0
+margin_bottom = 68.6364
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0, 0.113725, 1, 1 )
+text = "Estudante some inexplicavelmente!"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 322.0
+margin_bottom = 183.0
+color = Color( 0, 0, 0, 1 )
