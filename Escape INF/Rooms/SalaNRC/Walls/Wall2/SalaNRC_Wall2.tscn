@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/SuperComputador.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Computer.png" type="Texture" id=7]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Block.gd" type="Script" id=8]
+[ext_resource path="res://Items/Ticket/inter_ticket.tres" type="Resource" id=9]
+[ext_resource path="res://Interface/Credits/Credits.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47.5, 29 )
@@ -61,6 +63,8 @@ animation = "computer"
 [node name="Drawer" type="Area2D" parent="." index="3"]
 script = ExtResource( 5 )
 locked = true
+item_needed = ExtResource( 9 )
+cena_final = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Drawer" index="0"]
 position = Vector2( 264, 153 )

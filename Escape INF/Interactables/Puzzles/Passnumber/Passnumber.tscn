@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Puzzles/Passnumber/Passnumber.gd" type="Script" id=2]
-[ext_resource path="res://Interactables/Puzzles/Passnumber/Passnumber.png" type="Texture" id=3]
+[ext_resource path="res://Interactables/Puzzles/Passnumber/Number.png" type="Texture" id=3]
 [ext_resource path="res://Interactables/Puzzles/Passnumber/SequenceTyped.gd" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -21,10 +21,16 @@ margin_right = 1.0
 mouse_filter = 1
 script = ExtResource( 2 )
 
+[node name="BackgroundColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+
 [node name="Keyboard" type="Sprite" parent="."]
 position = Vector2( 158, 89 )
 texture = ExtResource( 3 )
-hframes = 2
+hframes = 3
+frame = 1
 
 [node name="SequenceTyped" type="Control" parent="."]
 margin_right = 319.0

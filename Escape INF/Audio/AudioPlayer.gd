@@ -5,8 +5,8 @@ onready var sound_bus := AudioServer.get_bus_index("Sound")
 onready var audio_playing = false
 
 func _ready(): # Ajusta o volume antes de iniciar o jogo
-	AudioServer.set_bus_volume_db(music_bus, linear2db(0))
-	AudioServer.set_bus_volume_db(sound_bus, linear2db(0))
+	AudioServer.set_bus_volume_db(music_bus, linear2db(0.1))
+	AudioServer.set_bus_volume_db(sound_bus, linear2db(0.3))
 
 func play_audio(audio, bus: String):
 	var audioStreamPlayer = AudioStreamPlayer.new()

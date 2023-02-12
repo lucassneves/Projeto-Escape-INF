@@ -5,7 +5,7 @@ var aux = 0
 var tmp = 1
 
 onready var button = get_children()
-onready var up = get_parent().get_node("Keyboard")
+onready var light = get_parent().get_node("Keyboard")
 
 func _ready():
 	for i in button.size():
@@ -18,16 +18,18 @@ func _on_panel_gui_input(event, index):
 			AudioPlayer.play_audio(preload("res://Audio/SFX/click.wav"), "Sound")
 			button[index].set_action_mode(tmp)
 			aux+=1
+			light.frame = 1
 			
 			if(aux%6==0):
 				if check_completion() == true:
-					up.frame = 1
+					light.frame = 2
 					AudioPlayer.play_audio(preload("res://Audio/SFX/correct-answer.wav"), "Sound")
 					get_parent().complete()
 					completed = true
 				else:
+					light.frame = 0
 					for i in button.size():
-						AudioPlayer.play_audio(preload("res://Audio/SFX/wrong-answer.wav"), "Sound")
+						AudioPlayer.play_audio(preload("res://Audio/SFX/alert.wav"), "Sound")
 						button[index].set_action_mode(0)
 						tmp=1
 					print("LOG: Puzzle PassnumberNRC incorreto.")

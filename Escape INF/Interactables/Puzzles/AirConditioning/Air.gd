@@ -8,6 +8,7 @@ func complete():
 
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	TextBox.show_texts(["Temperatura arrumada."])
+	Inventory.remove_item(preload("res://Items/ControleAr/ControleAr.tres"))
 	print("LOG: Puzzle Air concluído.")
 	ProgressManager.anxiety -= 25
 

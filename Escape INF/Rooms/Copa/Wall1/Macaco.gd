@@ -34,6 +34,7 @@ func _input(event):
 				queue_free()
 				
 			else:
+				AudioPlayer.play_audio(preload("res://Audio/SFX/monkey.wav"), "Music")
 				TextBox.show_texts(["O macaco está segurando um controle de ar condicionado! Será que consigo pegar?"])
 	
 

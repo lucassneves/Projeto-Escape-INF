@@ -1,12 +1,27 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Interactables/Puzzles/SuperComputer/SuperC.gd" type="Script" id=1]
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/Puzzles/SuperComputer/ComputerBig.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0431373, 0.0392157, 0.0392157, 1 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=6]
+resource_name = "Fast"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("TextoTyped:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 4.7 )
+}
+
+[sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextoTyped:percent_visible")
@@ -18,29 +33,61 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "Typed"
-length = 3.0
-tracks/0/type = "value"
+[sub_resource type="Animation" id=5]
+resource_name = "Type"
+length = 18.0
+tracks/0/type = "bezier"
 tracks/0/path = NodePath("TextoTyped:percent_visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2, 18 )
 }
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 0, 320, 180 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "cry",
+"speed": 5.0
+} ]
 
 [node name="SuperC" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -52,31 +99,21 @@ margin_bottom = 167.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="TextoTyped" type="Label" parent="."]
-margin_left = 44.0
-margin_top = 28.0
-margin_right = 297.0
-margin_bottom = 170.0
+margin_left = 52.0
+margin_top = 41.0
+margin_right = 295.0
+margin_bottom = 144.364
 custom_colors/font_color = Color( 0.321569, 0.439216, 0.643137, 1 )
-text = "Lorem Ipsum is simply dummy text of the printing
- and typesetting industry. Lorem Ipsum has been
- the industry's standard dummy text ever since the
- 1500s, when an unknown printer took a galley of
- type and scrambled it to make a type specimen
- book. It has survived not only five centuries, but
- also the leap into electronic typesetting, remaining
- essentially unchanged. It was popularised in the
- 1960s with the release of Letraset sheets containing
- Lorem Ipsum passages, and more recently with
- desktop publishing software like Aldus PageMaker
- including versions of Lorem Ipsum.
+text = "
+Antes era : \"Ah! o supercomputador isso.\" ,  \"o supercomputador aquilo.\",  \"Esse problema não é nada para o supercomputador.\". 
+
+E agora? Quem se importa comigo ? O tal do supercomputador.
+
+E só chatgpt pra cá, chatgpt pra lá, vai lá perguntar pro chatgpt como você faz pra escapar do INF então ... 
 "
 align = 1
 autowrap = true
 uppercase = true
-
-[node name="Computer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 2 )
-anims/Typed = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 22.0
@@ -84,4 +121,28 @@ margin_bottom = 24.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
+[node name="AnimationTyped" type="AnimationPlayer" parent="."]
+anims/Fast = SubResource( 6 )
+anims/RESET = SubResource( 4 )
+anims/Type = SubResource( 5 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 46.0
+margin_top = 21.0
+margin_right = 300.0
+margin_bottom = 166.0
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+flat = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 162, 93 )
+scale = Vector2( 0.729687, 0.708333 )
+frames = SubResource( 13 )
+animation = "cry"
+
 [connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
