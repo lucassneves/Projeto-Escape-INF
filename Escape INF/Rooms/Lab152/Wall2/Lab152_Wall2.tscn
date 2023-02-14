@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Lab152/Wall2/lab152_wall2.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Doors/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 66, 54.5 )
@@ -19,4 +20,27 @@ goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 position = Vector2( 90, 98.5 )
 shape = SubResource( 1 )
 
+[node name="HoverInfos" type="Node2D" parent="." index="2"]
+
+[node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 4 )]
+nome = "Porta"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
+polygon = PoolVector2Array( 24, 46, 24, 152, 155, 153, 155, 45 )
+
+[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 4 )]
+nome = "Ar Condicionado"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 39, -1, 38, 11, 56, 20, 151, 21, 151, 3, 145, 0 )
+
+[node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 4 )]
+nome = "Ar Condicionado"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 180, 0, 179, 10, 196, 20, 291, 19, 293, 3, 285, -1 )
+
 [editable path="Door"]
+[editable path="HoverInfos/HoverInfo"]
+[editable path="HoverInfos/HoverInfo2"]
+[editable path="HoverInfos/HoverInfo3"]

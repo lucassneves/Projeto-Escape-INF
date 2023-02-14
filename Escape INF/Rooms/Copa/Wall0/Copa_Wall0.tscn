@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Rooms/Copa/Wall0/copa_wall0.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Interactables/Readable/Postit/postit.png" type="Texture" id=9]
 [ext_resource path="res://Interactables/Readable/Postit/PostitTemp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 11.625 )
@@ -70,6 +71,31 @@ texture = ExtResource( 9 )
 [node name="CollisionShape2D" parent="ReadableArea" index="1"]
 shape = SubResource( 3 )
 
+[node name="HoverInfos" type="Node2D" parent="."]
+
+[node name="HoverInfo" parent="HoverInfos" instance=ExtResource( 11 )]
+nome = "Microondas"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
+polygon = PoolVector2Array( 71, 69, 71, 102, 129, 102, 136, 96, 136, 63, 82, 63 )
+
+[node name="HoverInfo2" parent="HoverInfos" instance=ExtResource( 11 )]
+nome = "Pia"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
+position = Vector2( -7.20753, -15.6478 )
+scale = Vector2( 1.02955, 1.16664 )
+polygon = PoolVector2Array( 209, 90, 193, 99, 222, 101, 223, 111, 257, 111, 265, 101, 285, 101, 292, 91 )
+
+[node name="HoverInfo3" parent="HoverInfos" instance=ExtResource( 11 )]
+nome = "Armário"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 26, 106, 26, 155, 136, 156, 149, 149, 150, 102 )
+
 [editable path="PuzzleArea"]
 [editable path="InvisibleCollectable"]
 [editable path="ReadableArea"]
+[editable path="HoverInfos/HoverInfo"]
+[editable path="HoverInfos/HoverInfo2"]
+[editable path="HoverInfos/HoverInfo3"]

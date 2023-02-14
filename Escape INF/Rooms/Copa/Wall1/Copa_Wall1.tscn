@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Rooms/Copa/Wall1/copa_wall1.png" type="Texture" id=1]
 [ext_resource path="res://Rooms/Copa/Wall1/macaco.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Items/ControleAr/controleScene.png" type="Texture" id=4]
 [ext_resource path="res://Items/ControleAr/ControleAr.tres" type="Resource" id=5]
 [ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 22.0
@@ -105,7 +106,37 @@ disabled = true
 anims/Fall = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 
+[node name="HoverInfos" type="Node2D" parent="."]
+
+[node name="HoverInfo" parent="HoverInfos" instance=ExtResource( 7 )]
+nome = "Macaco"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
+polygon = PoolVector2Array( 185, 60, 169, 78, 192, 77, 195, 93, 203, 91, 196, 66 )
+
+[node name="HoverInfo2" parent="HoverInfos" instance=ExtResource( 7 )]
+nome = "Filtro de água"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
+polygon = PoolVector2Array( 76, 35, 76, 73, 69, 77, 68, 164, 101, 164, 107, 159, 108, 75, 102, 75, 102, 37 )
+
+[node name="HoverInfo3" parent="HoverInfos" instance=ExtResource( 7 )]
+nome = "Cortina"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
+polygon = PoolVector2Array( 39, 1, 39, 87, 67, 86, 68, 0 )
+
+[node name="HoverInfo4" parent="HoverInfos" instance=ExtResource( 7 )]
+nome = "Cortina"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
+polygon = PoolVector2Array( 252, 1, 252, 85, 281, 85, 282, 0 )
+
 [connection signal="mouse_entered" from="Macaco" to="Macaco" method="_on_Macaco_mouse_entered"]
 [connection signal="mouse_exited" from="Macaco" to="Macaco" method="_on_Macaco_mouse_exited"]
 
 [editable path="Collectable"]
+[editable path="HoverInfos/HoverInfo"]
+[editable path="HoverInfos/HoverInfo2"]
+[editable path="HoverInfos/HoverInfo3"]
+[editable path="HoverInfos/HoverInfo4"]
