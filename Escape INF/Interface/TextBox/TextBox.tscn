@@ -2,10 +2,11 @@
 
 [ext_resource path="res://Interface/TextBox/TextBox.gd" type="Script" id=1]
 [ext_resource path="res://Interface/MainMenu/buttonIcon.png" type="Texture" id=2]
-[ext_resource path="res://Interface/panel.png" type="Texture" id=3]
+[ext_resource path="res://Interface/panel4.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 16, 16 )
 margin_left = 6.0
 margin_right = 6.0
 margin_top = 6.0

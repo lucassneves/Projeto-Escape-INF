@@ -27,7 +27,7 @@ func interact():
 	var wall_name = ProgressManager.previous_wall_name
 	
 	if Inventory.get_selected_item() == item_needed:
-			TextBox.show_texts(["Você entregou a banana para o macaco e ele foi embora, deixando o controle cair."])
+			TextBox.show_texts(["Você entregou o ingresso do inter ao supercomputador, que destrancou a porta principal."])
 			Inventory.remove_item(item_needed)
 			ProgressManager.add_completed_puzzles(room_file, wall_name,filename)
 			print("LOG: Puzzle SuperComputer concluído.")
@@ -35,4 +35,4 @@ func interact():
 	elif  ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
 		sprite.frame=1
 	else:
-		TextBox.show_texts(["Estava gaveta está travada"])
+		TextBox.show_texts(["Esta gaveta está travada"])

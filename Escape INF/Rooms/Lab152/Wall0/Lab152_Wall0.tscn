@@ -6,7 +6,6 @@
 [ext_resource path="res://Rooms/Lab152/Wall0/slideinf1.png" type="Texture" id=4]
 [ext_resource path="res://Items/NotebookAcer/Acer.png" type="Texture" id=5]
 [ext_resource path="res://Rooms/Lab152/Wall0/nosignal.png" type="Texture" id=6]
-[ext_resource path="res://Items/NotebookAcer/notebook_acer.tres" type="Resource" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 19, 7.375 )
@@ -18,8 +17,6 @@ texture = ExtResource( 2 )
 
 [node name="Slide" type="Area2D" parent="." index="1"]
 script = ExtResource( 3 )
-locked = true
-item_needed = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="Slide" index="0"]
 visible = false

@@ -8,7 +8,7 @@ script = ExtResource( 1 )
 next_scene = "res://Interface/Final2/Churras.tscn"
 
 [node name="Background" type="ColorRect" parent="."]
-margin_right = 319.0
+margin_right = 320.0
 margin_bottom = 181.0
 color = Color( 0.0627451, 0.152941, 0.235294, 1 )
 __meta__ = {

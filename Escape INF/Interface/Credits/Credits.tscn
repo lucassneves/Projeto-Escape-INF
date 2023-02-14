@@ -1,14 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://UFGLogo.png" type="Texture" id=1]
 [ext_resource path="res://Interface/Credits/Credits.gd" type="Script" id=2]
 [ext_resource path="res://Interface/MainMenu/buttonIcon.png" type="Texture" id=3]
-
-[sub_resource type="StyleBoxLine" id=3]
-content_margin_left = 4.0
-thickness = 0
-
-[sub_resource type="StyleBoxEmpty" id=4]
 
 [sub_resource type="Animation" id=5]
 resource_name = "Animate"
@@ -138,20 +132,11 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("ColorRect:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
+[sub_resource type="StyleBoxLine" id=3]
+content_margin_left = 4.0
+thickness = 0
+
+[sub_resource type="StyleBoxEmpty" id=4]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Scroll"
@@ -166,27 +151,18 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 30 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 2, -827 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -827 ) ]
 }
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = -3.0
-margin_right = 4.0
-margin_bottom = -3.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_horizontal_guides_": [ 182.0 ],
-"_edit_vertical_guides_": [ 318.0 ]
-}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -8.0
-margin_bottom = 2493.0
+margin_bottom = 892.0
 color = Color( 0.0627451, 0.152941, 0.235294, 1 )
 
 [node name="Label" type="Label" parent="ColorRect"]
@@ -474,19 +450,6 @@ margin_top = -40.0
 margin_right = 220.0
 margin_bottom = -40.0
 
-[node name="QuitButton" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer8"]
-margin_left = 81.0
-margin_top = 47.0
-margin_right = 151.0
-margin_bottom = 62.0
-mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 3 )
-custom_styles/focus = SubResource( 4 )
-text = "SAIR"
-icon = ExtResource( 3 )
-flat = true
-align = 0
-
 [node name="UFGLogo2" type="Control" parent="ColorRect/VBoxContainer/HBoxContainer8"]
 modulate = Color( 1, 1, 1, 0.784314 )
 margin_right = 40.0
@@ -550,22 +513,21 @@ autoplay = "Animate"
 anims/Animate = SubResource( 11 )
 anims/RESET = SubResource( 12 )
 
-[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
-visible = false
-margin_top = 669.0
-margin_right = 220.0
-margin_bottom = 676.636
-text = "Engine utilizada: Godot Engine"
-align = 1
-
-[node name="TextureRect2" type="TextureRect" parent="ColorRect/VBoxContainer"]
-margin_top = 938.0
-margin_right = 220.0
-margin_bottom = 938.0
+[node name="QuitButton" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer8"]
+margin_left = 81.0
+margin_top = 47.0
+margin_right = 151.0
+margin_bottom = 62.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+text = "SAIR"
+icon = ExtResource( 3 )
+flat = true
+align = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Scroll"
-anims/RESET = SubResource( 1 )
 anims/Scroll = SubResource( 2 )
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer8/QuitButton" to="." method="_on_QuitButton_pressed"]
