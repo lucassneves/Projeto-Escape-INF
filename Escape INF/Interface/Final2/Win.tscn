@@ -5,7 +5,7 @@
 [node name="Win" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
-next_scene = "res://Interface/Final2/Churras.tscn"
+next_scene = "res://Interface/Final2/INF.tscn"
 
 [node name="Background" type="ColorRect" parent="."]
 margin_right = 320.0
