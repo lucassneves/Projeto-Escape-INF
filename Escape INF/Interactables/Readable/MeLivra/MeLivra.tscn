@@ -30,17 +30,17 @@ __meta__ = {
 
 [node name="Nome" type="Label" parent="Readable/Content" index="2"]
 margin_left = 31.0
-margin_top = 18.0
+margin_top = 17.0
 margin_right = 149.0
-margin_bottom = 25.6364
+margin_bottom = 24.6364
 rect_scale = Vector2( 2, 1.5 )
 text = "LUCIANA DE  OLIVEIRA BERRETA"
 
 [node name="Inf" type="Label" parent="Readable/Content" index="3"]
 margin_left = 93.0
-margin_top = 29.0
+margin_top = 28.0
 margin_right = 198.0
-margin_bottom = 36.6364
+margin_bottom = 46.2727
 text = "INSTITUTO DE INFORMÁTICA
                    4.5 *"
 

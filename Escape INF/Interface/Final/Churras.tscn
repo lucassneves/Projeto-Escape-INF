@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Interface/Final/Fire.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interface/Final/carne.png" type="Texture" id=2]
+[ext_resource path="res://Interface/Final/Churras.gd" type="Script" id=3]
+[ext_resource path="res://Interface/Final/carne2.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+next_scene = "res://Interface/Credits/Credits.tscn"
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 281.0
+margin_bottom = 140.0
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fire" parent="." instance=ExtResource( 1 )]
+position = Vector2( 157, 201 )
+amount = 5
+
+[node name="Fire2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 107, 150 )
+amount = 8
+
+[node name="Fire3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 158, 108 )
+amount = 1
+
+[node name="Fire4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 222, 169 )
+amount = 8
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 57.0
+margin_top = 25.0
+margin_right = 258.0
+margin_bottom = 142.0
+texture = ExtResource( 2 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 1.0
+margin_top = 20.0
+margin_right = 321.0
+margin_bottom = 149.0
+texture = ExtResource( 4 )

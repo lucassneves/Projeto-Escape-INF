@@ -2,13 +2,13 @@
 
 [ext_resource path="res://Interface/Final/Final.png" type="Texture" id=1]
 [ext_resource path="res://UFGLogo.png" type="Texture" id=2]
-[ext_resource path="res://Interface/Final/Macaco.gd" type="Script" id=3]
+[ext_resource path="res://Interface/Final/INF.gd" type="Script" id=3]
 
 [sub_resource type="Theme" id=1]
 
-[node name="Node2D" type="Node2D"]
+[node name="Final" type="Node2D"]
 script = ExtResource( 3 )
-next_scene = "res://Interface/Credits/Credits.tscn"
+next_scene = "res://Interface/Final/Churras.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 40.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jornal.png-b7daaebb2b71dbf2690f4250963c0c84.stex"
+path="res://.import/random_selection.png-f7fc6347fdca0118db98a067d2ab3481.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interface/Final/Jornal.png"
-dest_files=[ "res://.import/Jornal.png-b7daaebb2b71dbf2690f4250963c0c84.stex" ]
+source_file="res://Interface/GameOver/random_selection.png"
+dest_files=[ "res://.import/random_selection.png-f7fc6347fdca0118db98a067d2ab3481.stex" ]
 
 [params]
 

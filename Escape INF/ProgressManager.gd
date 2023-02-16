@@ -3,7 +3,8 @@ extends Node
 var previous_room: String
 var previous_wall_name: String
 var previous_wall_index: int
-var final_scene = "res://Interface/Final/journal.tscn"
+var final_scene = "res://Interface/GameOver/journal.tscn"
+var tmp_scene = "res://Interface/GameOver/GameOver.tscn" #Tirar na versão final
 
 var anxiety = 0 setget set_anxiety
 var first_time_anxiety = true
@@ -76,9 +77,11 @@ func set_anxiety(value):
 	anxiety = clamp(value, 0, 100)
 	emit_signal("anxiety_changed")
 	
+	if anxiety == 80:
+		TextBox.show_texts(["Ansiedade é uma coisa preocupante, melhor para um pouco!"])
+	
 	if anxiety == 100:
-		var _a = get_tree().change_scene(final_scene)
-		#TextBox.show_texts(["Você ficou ansioso demais!"])
+		var _a = get_tree().change_scene(tmp_scene) #final_scene
 		emit_signal("anxiety_attack")
 
 func check_progress(progress_type: String, room = null, wall = null, object = null):

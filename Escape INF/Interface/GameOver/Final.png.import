@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Flame.png-cc1156ed634564a830fcbdc5ebb18eab.stex"
+path="res://.import/Final.png-fed3ae7c7dfa11d01d2c7993e07e833e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interface/Final2/Flame.png"
-dest_files=[ "res://.import/Flame.png-cc1156ed634564a830fcbdc5ebb18eab.stex" ]
+source_file="res://Interface/GameOver/Final.png"
+dest_files=[ "res://.import/Final.png-fed3ae7c7dfa11d01d2c7993e07e833e.stex" ]
 
 [params]
 

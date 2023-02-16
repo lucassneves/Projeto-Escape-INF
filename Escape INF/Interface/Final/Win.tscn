@@ -1,39 +1,32 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Interface/Final/GameOver.gd" type="Script" id=1]
+[ext_resource path="res://Interface/Final/Win.gd" type="Script" id=1]
 
-[node name="GameOver" type="Node2D"]
+[node name="Win" type="Node2D"]
+position = Vector2( 0, -1 )
 script = ExtResource( 1 )
-next_scene = "res://Interface/Final/Macaco.tscn"
+next_scene = "res://Interface/Final2/INF.tscn"
 
 [node name="Background" type="ColorRect" parent="."]
-margin_right = 319.0
+margin_right = 320.0
 margin_bottom = 181.0
 color = Color( 0.0627451, 0.152941, 0.235294, 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="."]
-visible = false
-margin_left = 53.0
-margin_top = 16.0
-margin_right = 97.0
-margin_bottom = 23.6364
-rect_scale = Vector2( 5, 5 )
-text = "GAME OVER !"
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = -1.0
-margin_top = -10.0
-margin_right = 79.0
-margin_bottom = 11.0
+margin_left = 3.0
+margin_top = 52.0
+margin_right = 83.0
+margin_bottom = 73.0
 rect_scale = Vector2( 4, 4 )
 bbcode_enabled = true
-bbcode_text = "[tornado radius=5 freq=2 ][center]GAME OVER !"
-text = "GAME OVER !"
+bbcode_text = "[tornado radius=5 freq=2 ][center]VOCÊ ESCAPOU !"
+text = "VOCÊ ESCAPOU !"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 8.0
 margin_top = 83.0
 margin_right = 209.0

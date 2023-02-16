@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/random_selection.png-25435d0b54a5723a6bd03b9623939ffe.stex"
+path="res://.import/Flame.png-e36bb14d1da6110e0a043a72a31ee32c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interface/Final/random_selection.png"
-dest_files=[ "res://.import/random_selection.png-25435d0b54a5723a6bd03b9623939ffe.stex" ]
+source_file="res://Interface/Final/Flame.png"
+dest_files=[ "res://.import/Flame.png-e36bb14d1da6110e0a043a72a31ee32c.stex" ]
 
 [params]
 

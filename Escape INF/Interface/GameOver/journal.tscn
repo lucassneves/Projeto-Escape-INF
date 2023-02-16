@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Interface/Final/Jornal.gd" type="Script" id=1]
-[ext_resource path="res://Interface/Final/random_selection.png" type="Texture" id=2]
-[ext_resource path="res://Interface/Final/Jornal.png" type="Texture" id=3]
+[ext_resource path="res://Interface/GameOver/Jornal.gd" type="Script" id=1]
+[ext_resource path="res://Interface/GameOver/random_selection.png" type="Texture" id=2]
+[ext_resource path="res://Interface/GameOver/Jornal.png" type="Texture" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=14]
 blend_mode = 1
@@ -44,7 +44,7 @@ bg_color = Color( 1, 1, 1, 1 )
 
 [node name="Jornal" type="Node2D"]
 script = ExtResource( 1 )
-next_scene = "res://Interface/Final/GameOver.tscn"
+next_scene = "res://Interface/GameOver/Macaco.tscn"
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -124,16 +124,16 @@ margin_top = 81.0
 margin_right = 277.0
 margin_bottom = 156.0
 bbcode_enabled = true
-bbcode_text = "Aluno desaperece misteriosamente, a última vez que  visto foi na data  28 de Fevereiro de 2022. 
+bbcode_text = "[center]Aluno desaparece misteriosamente, sendo visto a última vez na data  28 de fevereiro de 2022. 
 
-Estudantes relatam que o aluno teria marcado de ir no churrasco da integração do curso, mas não foi visto depois do término da aula.
+Estudantes relatam que o aluno teria marcado de ir ao churrasco da integração do curso, mas não foi visto depois do término da aula.
 
-O seu paradeiro ainda permanece desconhecido."
-text = "Aluno desaperece misteriosamente, a última vez que  visto foi na data  28 de Fevereiro de 2022. 
+O seu paradeiro permanece desconhecido."
+text = "Aluno desaparece misteriosamente, sendo visto a última vez na data  28 de fevereiro de 2022. 
 
-Estudantes relatam que o aluno teria marcado de ir no churrasco da integração do curso, mas não foi visto depois do término da aula.
+Estudantes relatam que o aluno teria marcado de ir ao churrasco da integração do curso, mas não foi visto depois do término da aula.
 
-O seu paradeiro ainda permanece desconhecido."
+O seu paradeiro permanece desconhecido."
 
 [node name="Label" type="Label" parent="Node2D"]
 margin_left = 64.0
@@ -141,7 +141,7 @@ margin_top = 61.0
 margin_right = 195.0
 margin_bottom = 68.6364
 rect_scale = Vector2( 1.5, 1.5 )
-custom_colors/font_color = Color( 0, 0.113725, 1, 1 )
+custom_colors/font_color = Color( 1, 0.521569, 0.0156863, 1 )
 text = "Estudante some inexplicavelmente!"
 
 [node name="ColorRect" type="ColorRect" parent="."]
