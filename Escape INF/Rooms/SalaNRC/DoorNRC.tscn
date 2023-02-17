@@ -10,6 +10,7 @@ script = ExtResource( 2 )
 goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 
 [node name="SalaNRC_Wall0" parent="Walls" index="0" instance=ExtResource( 1 )]
+visible = false
 
 [node name="WallSwitch" parent="UI Layer/UI" index="0"]
 visible = false

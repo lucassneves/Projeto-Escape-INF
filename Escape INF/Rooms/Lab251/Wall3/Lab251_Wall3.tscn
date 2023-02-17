@@ -79,7 +79,18 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea22" parent="." index="5" instance=ExtResource( 10 )]
+[node name="ReadableArea24" parent="." index="5" instance=ExtResource( 10 )]
+position = Vector2( 293, 181 )
+readable_scene = ExtResource( 5 )
+
+[node name="Sprite" parent="ReadableArea24" index="0"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" parent="ReadableArea24" index="1"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 3 )
+
+[node name="ReadableArea22" parent="." index="6" instance=ExtResource( 10 )]
 position = Vector2( 46, 147 )
 readable_scene = ExtResource( 14 )
 
@@ -90,7 +101,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea21" parent="." index="6" instance=ExtResource( 10 )]
+[node name="ReadableArea21" parent="." index="7" instance=ExtResource( 10 )]
 position = Vector2( 116, 125 )
 readable_scene = ExtResource( 14 )
 
@@ -101,7 +112,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea2" parent="." index="7" instance=ExtResource( 10 )]
+[node name="ReadableArea2" parent="." index="8" instance=ExtResource( 10 )]
 position = Vector2( 313, 102 )
 readable_scene = ExtResource( 11 )
 
@@ -112,7 +123,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea3" parent="." index="8" instance=ExtResource( 10 )]
+[node name="ReadableArea3" parent="." index="9" instance=ExtResource( 10 )]
 position = Vector2( 224, 140 )
 readable_scene = ExtResource( 12 )
 
@@ -123,7 +134,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea4" parent="." index="9" instance=ExtResource( 10 )]
+[node name="ReadableArea4" parent="." index="10" instance=ExtResource( 10 )]
 position = Vector2( 246, 47 )
 readable_scene = ExtResource( 13 )
 
@@ -134,7 +145,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea16" parent="." index="10" instance=ExtResource( 10 )]
+[node name="ReadableArea16" parent="." index="11" instance=ExtResource( 10 )]
 position = Vector2( 46, 104 )
 readable_scene = ExtResource( 13 )
 
@@ -145,7 +156,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea5" parent="." index="11" instance=ExtResource( 10 )]
+[node name="ReadableArea5" parent="." index="12" instance=ExtResource( 10 )]
 position = Vector2( 186, 89 )
 readable_scene = ExtResource( 14 )
 
@@ -156,7 +167,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea6" parent="." index="12" instance=ExtResource( 10 )]
+[node name="ReadableArea6" parent="." index="13" instance=ExtResource( 10 )]
 position = Vector2( 202, 132 )
 readable_scene = ExtResource( 13 )
 
@@ -167,7 +178,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea7" parent="." index="13" instance=ExtResource( 10 )]
+[node name="ReadableArea7" parent="." index="14" instance=ExtResource( 10 )]
 position = Vector2( 134, 89 )
 readable_scene = ExtResource( 12 )
 
@@ -178,7 +189,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea8" parent="." index="14" instance=ExtResource( 10 )]
+[node name="ReadableArea8" parent="." index="15" instance=ExtResource( 10 )]
 position = Vector2( 146, 15 )
 readable_scene = ExtResource( 9 )
 
@@ -189,7 +200,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea9" parent="." index="15" instance=ExtResource( 10 )]
+[node name="ReadableArea9" parent="." index="16" instance=ExtResource( 10 )]
 position = Vector2( 123, 156 )
 readable_scene = ExtResource( 15 )
 
@@ -200,7 +211,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea12" parent="." index="16" instance=ExtResource( 10 )]
+[node name="ReadableArea12" parent="." index="17" instance=ExtResource( 10 )]
 position = Vector2( 11, 138 )
 readable_scene = ExtResource( 15 )
 
@@ -211,7 +222,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea14" parent="." index="17" instance=ExtResource( 10 )]
+[node name="ReadableArea14" parent="." index="18" instance=ExtResource( 10 )]
 position = Vector2( 265, 10 )
 readable_scene = ExtResource( 15 )
 
@@ -222,7 +233,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea10" parent="." index="18" instance=ExtResource( 10 )]
+[node name="ReadableArea10" parent="." index="19" instance=ExtResource( 10 )]
 position = Vector2( 258, 106 )
 readable_scene = ExtResource( 16 )
 
@@ -233,7 +244,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea15" parent="." index="19" instance=ExtResource( 10 )]
+[node name="ReadableArea15" parent="." index="20" instance=ExtResource( 10 )]
 position = Vector2( 276, 138 )
 readable_scene = ExtResource( 16 )
 
@@ -244,7 +255,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea19" parent="." index="20" instance=ExtResource( 10 )]
+[node name="ReadableArea19" parent="." index="21" instance=ExtResource( 10 )]
 position = Vector2( 290, 158 )
 readable_scene = ExtResource( 16 )
 
@@ -255,7 +266,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea11" parent="." index="21" instance=ExtResource( 10 )]
+[node name="ReadableArea11" parent="." index="22" instance=ExtResource( 10 )]
 position = Vector2( 287, 74 )
 readable_scene = ExtResource( 13 )
 
@@ -266,7 +277,7 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea13" parent="." index="22" instance=ExtResource( 10 )]
+[node name="ReadableArea13" parent="." index="23" instance=ExtResource( 10 )]
 position = Vector2( 294, 124 )
 readable_scene = ExtResource( 9 )
 
@@ -277,8 +288,8 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="ReadableArea20" parent="." index="23" instance=ExtResource( 10 )]
-position = Vector2( 293, 181 )
+[node name="ReadableArea20" parent="." index="24" instance=ExtResource( 10 )]
+position = Vector2( 124, 104 )
 readable_scene = ExtResource( 6 )
 
 [node name="Sprite" parent="ReadableArea20" index="0"]
@@ -288,7 +299,18 @@ texture = ExtResource( 8 )
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
-[node name="LockeditemNew" parent="." index="24" instance=ExtResource( 2 )]
+[node name="ReadableArea23" parent="." index="25" instance=ExtResource( 10 )]
+position = Vector2( 100, 64 )
+readable_scene = ExtResource( 6 )
+
+[node name="Sprite" parent="ReadableArea23" index="0"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" parent="ReadableArea23" index="1"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 3 )
+
+[node name="LockeditemNew" parent="." index="26" instance=ExtResource( 2 )]
 locked = true
 item_needed = ExtResource( 7 )
 needed_text = "Tem o encaixe de uma chave aqui... Talvez faça alguma coisa."
@@ -309,6 +331,7 @@ shape = SubResource( 5 )
 [editable path="ReadableArea"]
 [editable path="ReadableArea17"]
 [editable path="ReadableArea18"]
+[editable path="ReadableArea24"]
 [editable path="ReadableArea22"]
 [editable path="ReadableArea21"]
 [editable path="ReadableArea2"]
@@ -328,4 +351,5 @@ shape = SubResource( 5 )
 [editable path="ReadableArea11"]
 [editable path="ReadableArea13"]
 [editable path="ReadableArea20"]
+[editable path="ReadableArea23"]
 [editable path="LockeditemNew"]
