@@ -14,7 +14,6 @@ extents = Vector2( 56, 80.5 )
 texture = ExtResource( 1 )
 
 [node name="Door" parent="." index="1" instance=ExtResource( 4 )]
-locked = true
 
 [node name="CollisionShape2D" parent="Door" index="0"]
 visible = false
