@@ -49,10 +49,9 @@ texture = ExtResource( 2 )
 hframes = 3
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
-position = Vector2( 159, 92 )
+position = Vector2( 160, 90 )
 frames = SubResource( 4 )
 animation = ""
-frame = 2
 playing = true
 
 [node name="HoverInfo" type="Node2D" parent="." index="2"]
@@ -94,7 +93,7 @@ polygon = PoolVector2Array( 177.995, 22.8072, 167.301, 18.2814, 179.599, 19.6391
 nome = "Servidores"
 
 [node name="CollisionShape2D" parent="HoverInfo/HoverInfo5" index="0"]
-polygon = PoolVector2Array( 69, 40, 68, 174, 179, 178, 271, 170, 272, 21, 264, 58, 251, 30, 182, 35, 180, 50, 123, 46, 104, 94, 78, 38 )
+polygon = PoolVector2Array( 69, 40, 68, 174, 179, 178, 274, 176, 272, 21, 264, 58, 232, 20, 182, 35, 177, 41, 126, 37, 104, 94, 78, 38 )
 
 [editable path="HoverInfo/HoverInfo"]
 [editable path="HoverInfo/HoverInfo/HoverInfo"]
