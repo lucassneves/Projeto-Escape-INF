@@ -73,84 +73,108 @@ margin_bottom = 53.0
 rect_scale = Vector2( 2, 2 )
 text = "0"
 
-[node name="Botao1" type="Button" parent="Control"]
-margin_left = 113.0
-margin_top = 81.0
-margin_right = 137.0
-margin_bottom = 95.0
+[node name="GridContainer" type="GridContainer" parent="Control"]
+margin_left = 112.0
+margin_top = 73.0
+margin_right = 194.0
+margin_bottom = 135.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Botao1" type="Button" parent="Control/GridContainer"]
+margin_right = 28.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "1"
 
-[node name="Botao2" type="Button" parent="Control"]
-margin_left = 138.0
-margin_top = 81.0
-margin_right = 170.0
-margin_bottom = 96.0
+[node name="Botao2" type="Button" parent="Control/GridContainer"]
+margin_left = 28.0
+margin_right = 55.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "2"
 
-[node name="Botao3" type="Button" parent="Control"]
-margin_left = 171.0
-margin_top = 81.0
-margin_right = 192.0
-margin_bottom = 95.0
+[node name="Botao3" type="Button" parent="Control/GridContainer"]
+margin_left = 55.0
+margin_right = 82.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "3"
 
-[node name="Botao4" type="Button" parent="Control"]
-margin_left = 112.0
-margin_top = 96.0
-margin_right = 137.0
-margin_bottom = 115.0
+[node name="Botao4" type="Button" parent="Control/GridContainer"]
+margin_top = 21.0
+margin_right = 28.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "4"
 
-[node name="Botao5" type="Button" parent="Control"]
-margin_left = 138.0
-margin_top = 96.0
-margin_right = 170.0
-margin_bottom = 115.0
+[node name="Botao5" type="Button" parent="Control/GridContainer"]
+margin_left = 28.0
+margin_top = 21.0
+margin_right = 55.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "5"
 
-[node name="Botao6" type="Button" parent="Control"]
-margin_left = 171.0
-margin_top = 94.0
-margin_right = 193.0
-margin_bottom = 115.0
+[node name="Botao6" type="Button" parent="Control/GridContainer"]
+margin_left = 55.0
+margin_top = 21.0
+margin_right = 82.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "6"
 
-[node name="Botao7" type="Button" parent="Control"]
-margin_left = 112.0
-margin_top = 116.0
-margin_right = 138.0
-margin_bottom = 135.0
+[node name="Botao7" type="Button" parent="Control/GridContainer"]
+margin_top = 42.0
+margin_right = 28.0
+margin_bottom = 62.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "7"
 
-[node name="Botao8" type="Button" parent="Control"]
-margin_left = 139.0
-margin_top = 117.0
-margin_right = 170.0
-margin_bottom = 135.0
+[node name="Botao8" type="Button" parent="Control/GridContainer"]
+margin_left = 28.0
+margin_top = 42.0
+margin_right = 55.0
+margin_bottom = 62.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "8"
 
-[node name="Botao9" type="Button" parent="Control"]
-margin_left = 172.0
-margin_top = 116.0
-margin_right = 193.0
-margin_bottom = 135.0
+[node name="Botao9" type="Button" parent="Control/GridContainer"]
+margin_left = 55.0
+margin_top = 42.0
+margin_right = 82.0
+margin_bottom = 62.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "9"
 
 [node name="BotaoEnter" type="Button" parent="Control"]
-margin_left = 139.0
+margin_left = 138.0
 margin_top = 136.0
-margin_right = 169.0
+margin_right = 169.364
 margin_bottom = 150.0
 text = "Abrir"
 
 [connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
-[connection signal="pressed" from="Control/Botao1" to="Control" method="_on_Botao1_pressed"]
-[connection signal="pressed" from="Control/Botao2" to="Control" method="_on_Botao2_pressed"]
-[connection signal="pressed" from="Control/Botao3" to="Control" method="_on_Botao3_pressed"]
-[connection signal="pressed" from="Control/Botao4" to="Control" method="_on_Botao4_pressed"]
-[connection signal="pressed" from="Control/Botao5" to="Control" method="_on_Botao5_pressed"]
-[connection signal="pressed" from="Control/Botao6" to="Control" method="_on_Botao6_pressed"]
-[connection signal="pressed" from="Control/Botao7" to="Control" method="_on_Botao7_pressed"]
-[connection signal="pressed" from="Control/Botao8" to="Control" method="_on_Botao8_pressed"]
-[connection signal="pressed" from="Control/Botao9" to="Control" method="_on_Botao9_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao1" to="Control" method="_on_Botao1_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao2" to="Control" method="_on_Botao2_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao3" to="Control" method="_on_Botao3_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao4" to="Control" method="_on_Botao4_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao5" to="Control" method="_on_Botao5_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao6" to="Control" method="_on_Botao6_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao7" to="Control" method="_on_Botao7_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao8" to="Control" method="_on_Botao8_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Botao9" to="Control" method="_on_Botao9_pressed"]
 [connection signal="pressed" from="Control/BotaoEnter" to="Control" method="_on_BotaoEnter_pressed"]

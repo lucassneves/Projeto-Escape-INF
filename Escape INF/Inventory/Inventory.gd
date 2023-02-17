@@ -4,7 +4,6 @@ const inventory_size := 12
 
 var selected_item_index = null setget set_selected_item_index
 
-
 export(Array, Resource) var items = [
 	preload("res://Items/Celular/celular.tres"),
 	preload("res://Items/CableEthernet/cable_ethernet.tres"),
@@ -51,6 +50,8 @@ func remove_item(item: Item):
 		if items[i] == item:
 			items[i] = null
 			emit_signal("item_changed", i)
+			if selected_item_index == i:
+				selected_item_index = null
 			return
 	print("Item nao encontrado")
 			

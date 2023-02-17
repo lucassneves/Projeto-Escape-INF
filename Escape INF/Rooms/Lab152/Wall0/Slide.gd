@@ -47,7 +47,7 @@ func interact():
 	
 	if locked:
 		if Inventory.get_selected_item() == item_needed:
-			TextBox.show_texts(["Slide nostálgico, parece ter algo escrito nele que eu possa usar"])
+			TextBox.show_texts([used_text])
 			locked = false
 			ProgressManager.add_unlocked_item(room_file, wall_name, locked_name)
 			Inventory.remove_item(item_needed)
@@ -56,7 +56,7 @@ func interact():
 			sprite3.hide()
 			ProgressManager.anxiety -= 10
 		else:
-			TextBox.show_texts(["Preciso de algo para colocar aqui!"])
+			TextBox.show_texts([needed_text])
 	else:
 		if goto:
 			ProgressManager.previous_room = room_file

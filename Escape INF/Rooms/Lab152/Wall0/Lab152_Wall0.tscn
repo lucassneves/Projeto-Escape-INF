@@ -10,7 +10,7 @@
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 19, 7.375 )
+extents = Vector2( 60, 36.5 )
 
 [node name="Lab257_Wall0" instance=ExtResource( 1 )]
 
@@ -21,6 +21,8 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 locked = true
 item_needed = ExtResource( 7 )
+needed_text = "Se eu tivesse um notebook, poderia conectar um slide..."
+used_text = "Slide nostálgico! Parece ter algo escrito nele que eu possa usar."
 
 [node name="Sprite" type="Sprite" parent="Slide" index="0"]
 visible = false
@@ -29,7 +31,7 @@ scale = Vector2( 0.36875, 0.4 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slide" index="1"]
-position = Vector2( 61, 96.375 )
+position = Vector2( 160, 66.5 )
 shape = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="Slide" index="2"]
@@ -45,33 +47,25 @@ texture = ExtResource( 6 )
 
 [node name="HoverInfos" type="Node2D" parent="." index="2"]
 
-[node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 8 )]
-nome = "?"
-
-[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
-position = Vector2( -0.469761, 0 )
-scale = Vector2( 1.0152, 1 )
-polygon = PoolVector2Array( 42, 89, 42, 104, 79, 104, 79, 89 )
-
-[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 8 )]
+[node name="HoverInfo2" parent="HoverInfos" index="0" instance=ExtResource( 8 )]
 nome = "Tela de Projeção"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 polygon = PoolVector2Array( 101, 30, 101, 102, 220, 102, 219, 30 )
 
-[node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 8 )]
+[node name="HoverInfo3" parent="HoverInfos" index="1" instance=ExtResource( 8 )]
 nome = "Projetor"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 131, 4, 131, 10, 136, 22, 163, 22, 165, 14, 159, 5 )
 
-[node name="HoverInfo4" parent="HoverInfos" index="3" instance=ExtResource( 8 )]
+[node name="HoverInfo4" parent="HoverInfos" index="2" instance=ExtResource( 8 )]
 nome = "Computadores"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
 polygon = PoolVector2Array( 4, 140, 2, 165, 127, 166, 128, 139 )
 
-[node name="HoverInfo5" parent="HoverInfos" index="4" instance=ExtResource( 8 )]
+[node name="HoverInfo5" parent="HoverInfos" index="3" instance=ExtResource( 8 )]
 nome = "Computadores"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo5" index="0"]
@@ -80,7 +74,6 @@ polygon = PoolVector2Array( 191, 144, 188, 170, 314, 170, 314, 142 )
 [connection signal="mouse_entered" from="Slide" to="Slide" method="_on_Slide_mouse_entered"]
 [connection signal="mouse_exited" from="Slide" to="Slide" method="_on_Slide_mouse_exited"]
 
-[editable path="HoverInfos/HoverInfo"]
 [editable path="HoverInfos/HoverInfo2"]
 [editable path="HoverInfos/HoverInfo3"]
 [editable path="HoverInfos/HoverInfo4"]
