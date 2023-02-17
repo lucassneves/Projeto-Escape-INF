@@ -12,6 +12,8 @@ func complete():
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
 	TextBox.show_texts(["Até o microondas tem senha nesse lugar.",
-	"Ainda bem que consegui abrir.", "Vamos ver o que tem dentro!"])
+	"Ainda bem que consegui abrir.", "Parece que tem algo dentro!"])
+	
+	print("LOG: Puzzle Microwaves concluído.")
 	
 	ProgressManager.anxiety -= 25

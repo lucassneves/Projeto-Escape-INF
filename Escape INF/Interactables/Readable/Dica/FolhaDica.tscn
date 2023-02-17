@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Interactables/Readable/DocumentoSC/Folhas.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Readable/Dica/dica.png" type="Texture" id=2]
 [ext_resource path="res://Interactables/Readable/Readable.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0.223529, 0.823529, 1 )
 
 [node name="FolhaDica" type="CanvasLayer"]
 
@@ -32,6 +35,22 @@ margin_top = 38.0
 margin_right = 145.0
 margin_bottom = 168.0
 texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Readable/Content"]
+margin_left = 47.0
+margin_top = 15.0
+margin_right = 87.0
+margin_bottom = 25.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "   LAB 152"
+
+[node name="Panel" type="Panel" parent="Readable/Content"]
+margin_left = 128.0
+margin_top = 38.0
+margin_right = 154.0
+margin_bottom = 114.0
+custom_styles/panel = SubResource( 1 )
 
 [connection signal="gui_input" from="Readable" to="Readable" method="_on_Readable_gui_input"]
 [connection signal="mouse_entered" from="Readable/Content" to="Readable" method="_on_Content_mouse_entered"]

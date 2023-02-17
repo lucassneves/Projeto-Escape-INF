@@ -12,3 +12,7 @@ func complete():
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
 	ProgressManager.anxiety -= 0
+
+
+func _on_GoBack_pressed():
+	var _a = get_tree().change_scene(ProgressManager.previous_room)

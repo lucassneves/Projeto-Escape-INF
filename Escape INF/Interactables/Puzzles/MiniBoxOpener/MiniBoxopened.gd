@@ -10,6 +10,5 @@ func complete():
 	var wall_name = ProgressManager.previous_wall_name
 	
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
-	
-	
+
 	ProgressManager.anxiety -= 0

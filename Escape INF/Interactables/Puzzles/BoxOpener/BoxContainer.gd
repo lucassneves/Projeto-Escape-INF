@@ -51,16 +51,13 @@ func _on_panel_gui_input(event, index):
 				elif first_panel==null:
 					var switcher
 					first_panel = index
-					print(first_panel)
+					#print(first_panel)
 					switcher = panels[index+1].rect_position
 					panels[index+1].rect_position = panels[first_panel].rect_position
 					panels[first_panel].rect_position = switcher
 					first_panel = null
 					switcher = null
 
-						
-				
-				
 				if check_completion() == true:
 					get_parent().complete()
 					completed = true
@@ -69,11 +66,11 @@ func _on_panel_gui_input(event, index):
 func check_completion():
 	var values = [Vector2(-7,30), Vector2(44,30), Vector2(93,30)] 
 
-	print(panels[4].rect_position)
-	print(panels[10].rect_position)
-	print(panels[24].rect_position)
+#	print(panels[4].rect_position)
+#	print(panels[10].rect_position)
+#	print(panels[24].rect_position)
 		
 	if panels[4].rect_position == values[0] and panels[10].rect_position == values[1] and panels[24].rect_position == values[2]:
 		#Answer 404
-		print("completed")
+		print("LOG: Puzzle BoxOpener concluído.")
 		return true

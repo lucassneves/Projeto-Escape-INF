@@ -35,6 +35,8 @@ AudioPlayer="*res://Audio/AudioPlayer.tscn"
 
 window/size/width=320
 window/size/height=180
+window/size/borderless=true
+window/size/fullscreen=true
 window/size/test_width=1120
 window/size/test_height=630
 window/stretch/mode="2d"

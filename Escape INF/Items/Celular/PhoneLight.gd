@@ -6,7 +6,7 @@ func _ready():
 	
 func on_selected_item_changed():
 	var item = Inventory.get_selected_item()
-	if item != null and item.name == 'Celular':
+	if item != null and item.name == 'celular':
 		show()
 
 func _input(event):

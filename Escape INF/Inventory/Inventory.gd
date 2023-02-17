@@ -4,35 +4,35 @@ const inventory_size := 12
 
 var selected_item_index = null setget set_selected_item_index
 
-export(Array, Resource) var items = [
-	preload("res://Items/Celular/celular.tres"),
-	preload("res://Items/CableEthernet/cable_ethernet.tres"),
-	preload("res://Items/ControleAr/ControleAr.tres"),
-	preload("res://Items/Chave251/chave251.tres"),
-	preload("res://Items/Chave257/chave257.tres"),
-	preload("res://Items/Banana/banana.tres"),
-	preload("res://Items/Ticket/inter_ticket.tres"),
-	preload("res://Items/NotebookAcer/notebook_acer.tres"),
-	null,
-	null,
-	null,
-	null
-]
-
 #export(Array, Resource) var items = [
 #	preload("res://Items/Celular/celular.tres"),
-#	null,
-#	null,
-#	null,
-#	null,
-#	null,
-#	null,
-#	null,
+#	preload("res://Items/CableEthernet/cable_ethernet.tres"),
+#	preload("res://Items/ControleAr/ControleAr.tres"),
+#	preload("res://Items/Chave251/chave251.tres"),
+#	preload("res://Items/Chave257/chave257.tres"),
+#	preload("res://Items/Banana/banana.tres"),
+#	preload("res://Items/Ticket/inter_ticket.tres"),
+#	preload("res://Items/NotebookAcer/notebook_acer.tres"),
 #	null,
 #	null,
 #	null,
 #	null
 #]
+
+export(Array, Resource) var items = [
+	preload("res://Items/Celular/celular.tres"),
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null,
+	null
+]
 
 signal item_changed(index)
 signal selected_item_changed

@@ -10,6 +10,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
 
+[node name="BackgroundColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 5.0
 margin_top = 4.0

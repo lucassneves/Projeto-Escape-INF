@@ -16,11 +16,17 @@ extents = Vector2( 30, 20.25 )
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 35 )
 
-[node name="ConnectPath" type="Control"]
+[node name="MiniBoxOpenedContainer" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 script = ExtResource( 6 )
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
 
 [node name="RectContainer" type="Control" parent="."]
 anchor_left = 0.5
@@ -41,7 +47,6 @@ margin_right = 57.0
 margin_bottom = 97.0
 rect_scale = Vector2( 5, 5 )
 rect_pivot_offset = Vector2( 16, 16 )
-mouse_filter = 2
 texture = ExtResource( 3 )
 stretch_mode = 2
 

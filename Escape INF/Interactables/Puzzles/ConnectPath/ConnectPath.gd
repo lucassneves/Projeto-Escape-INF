@@ -11,6 +11,8 @@ func complete():
 	
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
-	TextBox.show_texts(["Você ligou a energia do INF!"])
+	TextBox.show_texts(["Você religou a energia!"])
+	
+	print("LOG: Puzzle ConnectPath concluído.")
 	
 	ProgressManager.anxiety -= 25

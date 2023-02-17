@@ -17,4 +17,6 @@ func complete():
 	
 	TextBox.show_texts(text)
 	
+	print("LOG: Puzzle Imagetile concluído.")
+	
 	ProgressManager.anxiety -= 25

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall3/PainelCabos.png" type="Texture" id=2]
@@ -8,12 +8,16 @@
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall3/Fios.gd" type="Script" id=7]
 [ext_resource path="res://Items/CableEthernet/cable_ethernet.tres" type="Resource" id=8]
+[ext_resource path="res://Interactables/LockedItems/BlockProgress.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.5, 8 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 41, 46.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 48.5, 68.5 )
 
 [node name="SalaNRC_Wall3" instance=ExtResource( 1 )]
 
@@ -43,7 +47,13 @@ item_needed = ExtResource( 8 )
 position = Vector2( 148, 91.5 )
 shape = SubResource( 2 )
 
-[node name="HoverInfo" type="Node2D" parent="." index="3"]
+[node name="BlockProgress" parent="." index="3" instance=ExtResource( 9 )]
+
+[node name="CollisionShape2D" parent="BlockProgress" index="0"]
+position = Vector2( 146.5, 108.5 )
+shape = SubResource( 3 )
+
+[node name="HoverInfo" type="Node2D" parent="." index="4"]
 
 [node name="HoverInfo" parent="HoverInfo" index="0" instance=ExtResource( 6 )]
 nome = "Papel"
@@ -63,10 +73,18 @@ nome = "Fios curtos de Internet"
 [node name="CollisionShape2D" parent="HoverInfo/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 55, 25, 77, 29, 62, 33 )
 
+[node name="HoverInfo4" parent="HoverInfo" index="3" instance=ExtResource( 6 )]
+nome = "Cabos de internet ligada ao supercomputador"
+
+[node name="CollisionShape2D" parent="HoverInfo/HoverInfo4" index="0"]
+polygon = PoolVector2Array( 105, 47, 188, 44, 191, 177, 103, 177 )
+
 [connection signal="mouse_entered" from="Fios" to="Fios" method="_on_Fios_mouse_entered"]
 [connection signal="mouse_exited" from="Fios" to="Fios" method="_on_Fios_mouse_exited"]
 
 [editable path="ReadableArea"]
+[editable path="BlockProgress"]
 [editable path="HoverInfo/HoverInfo"]
 [editable path="HoverInfo/HoverInfo2"]
 [editable path="HoverInfo/HoverInfo3"]
+[editable path="HoverInfo/HoverInfo4"]

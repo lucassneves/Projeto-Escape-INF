@@ -62,7 +62,17 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="HoverInfos" type="Node2D" parent="." index="3"]
+[node name="ReadableArea" parent="." index="3" instance=ExtResource( 10 )]
+position = Vector2( 248, 71 )
+readable_scene = ExtResource( 11 )
+
+[node name="Sprite" parent="ReadableArea" index="0"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" parent="ReadableArea" index="1"]
+shape = SubResource( 4 )
+
+[node name="HoverInfos" type="Node2D" parent="." index="4"]
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 12 )]
 nome = "Notebook"
@@ -90,20 +100,10 @@ nome = "Cadeira"
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo5" index="0"]
 polygon = PoolVector2Array( 150, 180, 142, 173, 142, 144, 172, 144, 172, 173, 165, 180 )
 
-[node name="ReadableArea" parent="." index="4" instance=ExtResource( 10 )]
-position = Vector2( 248, 71 )
-readable_scene = ExtResource( 11 )
-
-[node name="Sprite" parent="ReadableArea" index="0"]
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" parent="ReadableArea" index="1"]
-shape = SubResource( 4 )
-
 [editable path="InvisibleCollectable"]
 [editable path="PuzzleArea"]
+[editable path="ReadableArea"]
 [editable path="HoverInfos/HoverInfo"]
 [editable path="HoverInfos/HoverInfo2"]
 [editable path="HoverInfos/HoverInfo4"]
 [editable path="HoverInfos/HoverInfo5"]
-[editable path="ReadableArea"]

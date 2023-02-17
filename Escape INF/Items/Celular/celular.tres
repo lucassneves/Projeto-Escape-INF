@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Celular"
+name = "celular"
 sprite = ExtResource( 2 )
 description = "Seu celular está sem sinal de rede, mas a lanterna pode ser útil."

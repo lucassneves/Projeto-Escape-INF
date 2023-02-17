@@ -11,6 +11,6 @@ func complete():
 	
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
-	TextBox.show_texts(["Você abriu a caixa!", "Será que tem algo dentro?"])
+	TextBox.show_texts(["Você abriu a caixa!", "Será que tem algo dentro pra precisar de uma senha?"])
 	
 	ProgressManager.anxiety -= 25

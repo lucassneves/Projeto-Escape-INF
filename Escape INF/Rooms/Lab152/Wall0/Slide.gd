@@ -13,6 +13,7 @@ export(String, FILE, "*.tscn") var goto
 onready var sprite = $Sprite
 onready var sprite2 = $Sprite2
 onready var sprite3 = $Sprite3
+onready var control = $Control
 
 var _hovering = false
 
@@ -24,6 +25,7 @@ func _ready():
 		locked = false
 		sprite.visible = true
 		sprite2.visible = true
+		control.visible = true
 		sprite3.hide()
 
 func _on_Slide_mouse_entered():
@@ -53,6 +55,7 @@ func interact():
 			Inventory.remove_item(item_needed)
 			sprite.visible = true
 			sprite2.visible = true
+			control.visible = true
 			sprite3.hide()
 			ProgressManager.anxiety -= 10
 		else:

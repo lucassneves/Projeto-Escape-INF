@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Cable Ethernet"
+name = "cable ethernet"
 sprite = ExtResource( 2 )
 description = "Um cabo de ethernet! Perfeito para conectar na internet quando o Eduroam fica ruim ..."

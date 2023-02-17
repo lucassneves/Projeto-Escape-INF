@@ -9,6 +9,7 @@
 
 [node name="Lab257" instance=ExtResource( 3 )]
 script = ExtResource( 6 )
+skip_intros = false
 
 [node name="Lab257_Wall0" parent="Walls" index="0" instance=ExtResource( 1 )]
 

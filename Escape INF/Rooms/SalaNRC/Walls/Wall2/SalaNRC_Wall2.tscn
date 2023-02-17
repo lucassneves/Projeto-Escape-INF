@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/SuperComputador.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Block.gd" type="Script" id=8]
 [ext_resource path="res://Items/Ticket/inter_ticket.tres" type="Resource" id=9]
 [ext_resource path="res://Interface/Final/Win.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Interactables/LockedItems/BlockProgress.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47.5, 29 )
@@ -39,6 +40,9 @@ extents = Vector2( 19.5, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 46.5, 29 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 84.5, 58 )
 
 [node name="SalaNRC_Wall2" instance=ExtResource( 1 )]
 
@@ -82,7 +86,13 @@ script = ExtResource( 8 )
 position = Vector2( 210.5, 89 )
 shape = SubResource( 3 )
 
-[node name="HoverInfo" type="Node2D" parent="." index="5"]
+[node name="BlockProgress" parent="." index="5" instance=ExtResource( 11 )]
+
+[node name="CollisionShape2D" parent="BlockProgress" index="0"]
+position = Vector2( 204.5, 103 )
+shape = SubResource( 8 )
+
+[node name="HoverInfo" type="Node2D" parent="." index="6"]
 
 [node name="HoverInfo" parent="HoverInfo" index="0" instance=ExtResource( 3 )]
 nome = "Muitos gabinetes da SMS"
@@ -114,6 +124,7 @@ polygon = PoolVector2Array( 75, 0, 257, 2, 257, 55, 162, 56, 159, 85, 73, 83 )
 [connection signal="mouse_exited" from="Block" to="Block" method="_on_Block_mouse_exited"]
 
 [editable path="PuzzleArea"]
+[editable path="BlockProgress"]
 [editable path="HoverInfo/HoverInfo"]
 [editable path="HoverInfo/HoverInfo2"]
 [editable path="HoverInfo/HoverInfo3"]

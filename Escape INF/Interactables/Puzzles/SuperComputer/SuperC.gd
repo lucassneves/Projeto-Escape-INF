@@ -5,12 +5,12 @@ onready var text = $TextoTyped
 onready var sprite = $AnimatedSprite
 
 func _ready():
-	computer.play("Fast") #Type - Fast
+	computer.play("Type") #Type - Fast
 	AudioPlayer.play_audio(preload("res://Audio/SFX/to-type.mp3"), "Sound")
 	
-func _process(_delta):
-	if (computer.current_animation_position >= 5): #18
-		AudioPlayer.stop_all_audios()
+#func _process(_delta):
+#	if (computer.current_animation_position >= 18): #18 - 5
+#		AudioPlayer.stop_all_audios()
 		
 
 func _on_TextureRect_gui_input(event):
@@ -19,7 +19,7 @@ func _on_TextureRect_gui_input(event):
 
 
 func _on_Button_pressed():
-	if computer.current_animation_position >= 5 : #18
+	if computer.current_animation_position >= 18 : #18 - 5
 		text.hide()
 		sprite.show()
 		sprite.play("cry")

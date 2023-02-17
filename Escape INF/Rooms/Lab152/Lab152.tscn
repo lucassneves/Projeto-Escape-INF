@@ -9,9 +9,9 @@
 [node name="Lab152" instance=ExtResource( 3 )]
 
 [node name="Lab152_Wall0" parent="Walls" index="0" instance=ExtResource( 1 )]
-visible = false
 
 [node name="Lab152_Wall1" parent="Walls" index="1" instance=ExtResource( 2 )]
+visible = false
 
 [node name="Lab152_Wall2" parent="Walls" index="2" instance=ExtResource( 5 )]
 visible = false
@@ -20,7 +20,7 @@ visible = false
 visible = false
 
 [node name="Label" parent="UI Layer" index="1"]
-text = "Laboratório 257"
+text = "Laboratório 152"
 
 [node name="PhoneLight" parent="." index="3"]
 mode = 2

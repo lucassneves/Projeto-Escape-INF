@@ -65,5 +65,5 @@ func check_completion():
 	
 			contador +=1
 		if contador == 16:
-			print("completed")
+			#print("completed")
 			return true

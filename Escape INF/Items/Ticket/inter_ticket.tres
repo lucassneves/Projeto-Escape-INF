@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Ingresso INTER 2023"
+name = "ingresso INTER 2023"
 sprite = ExtResource( 2 )
-description = "Um ingresso muito valioso! Algumas pessoas perdem um rim por ter um."
+description = "Um ingresso muito valioso! Algumas pessoas perdem um rim para ter um."

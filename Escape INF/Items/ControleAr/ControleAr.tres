@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Controle do Ar Condicionado"
+name = "controle do ar condicionado"
 sprite = ExtResource( 2 )
 description = "Um controle de ar condicionado. Posso usar para controlar a temperatura de algum lugar."

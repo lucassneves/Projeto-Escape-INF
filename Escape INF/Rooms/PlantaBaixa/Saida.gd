@@ -3,7 +3,9 @@ extends Node2D
 export(String, FILE, "*.tscn") var goto
 
 var intro_texts = [
-	"Frase bacana sobre a saída."
+	"Aqui está a saída do INF. Tão perto, e tão longe ao mesmo tempo.",
+	"O vidro é blindado, me parece inútil tentar quebra na força bruta.",
+	"Minha melhor chance é nessa fechadura eletrônica."
 ]
 
 func _on_GoBack_gui_input(event):
@@ -13,6 +15,8 @@ func _on_GoBack_gui_input(event):
 func _ready():
 	
 	var room_file = get_tree().current_scene.filename
+	
+	Input.set_default_cursor_shape(0)
 	
 	if not ProgressManager.check_progress("seen_texts", room_file, null, "intro_texts"):
 		TextBox.show_texts(intro_texts)

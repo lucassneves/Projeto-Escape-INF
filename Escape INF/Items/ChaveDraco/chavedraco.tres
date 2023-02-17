@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Peça faltante"
+name = "peça de quadro"
 sprite = ExtResource( 2 )
 description = "Esta é a peça para completar o quadro."
