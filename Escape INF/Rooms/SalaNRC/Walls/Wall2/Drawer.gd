@@ -2,7 +2,6 @@ extends Area2D
 
 export(bool) var locked := false
 export(Resource) var item_needed
-export(PackedScene) var cena_final #Colocar cutscene do aluno saindo do INF 
 
 onready var sprite = $Sprite
 
@@ -29,9 +28,8 @@ func interact():
 	if Inventory.get_selected_item() == item_needed:
 			TextBox.show_texts(["Você entregou o ingresso do inter ao supercomputador, que destrancou a porta principal."])
 			Inventory.remove_item(item_needed)
-			ProgressManager.add_completed_puzzles(room_file, wall_name,filename)
+			ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 			print("LOG: Puzzle SuperComputer concluído.")
-			var _a = get_tree().change_scene_to(cena_final)
 	elif  ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
 		sprite.frame=1
 	else:

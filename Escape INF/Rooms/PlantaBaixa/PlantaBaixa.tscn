@@ -179,6 +179,7 @@ nome = "NRC"
 sala_destino = ExtResource( 8 )
 
 [node name="secretaria" type="Button" parent="Salas"]
+visible = false
 margin_left = 84.0
 margin_top = 112.0
 margin_right = 110.0

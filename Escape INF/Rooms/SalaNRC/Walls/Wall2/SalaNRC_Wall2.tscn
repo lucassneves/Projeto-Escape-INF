@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/SuperComputador.png" type="Texture" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Computer.png" type="Texture" id=7]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Block.gd" type="Script" id=8]
 [ext_resource path="res://Items/Ticket/inter_ticket.tres" type="Resource" id=9]
-[ext_resource path="res://Interface/Final/Win.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Interactables/LockedItems/BlockProgress.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -68,7 +67,6 @@ animation = "computer"
 script = ExtResource( 5 )
 locked = true
 item_needed = ExtResource( 9 )
-cena_final = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Drawer" index="0"]
 position = Vector2( 264, 153 )
@@ -87,6 +85,7 @@ position = Vector2( 210.5, 89 )
 shape = SubResource( 3 )
 
 [node name="BlockProgress" parent="." index="5" instance=ExtResource( 11 )]
+needed_text = "Está muito quente aqui! Os servidores estão supraquecendo. É melhor arrumar a temperatura logo."
 
 [node name="CollisionShape2D" parent="BlockProgress" index="0"]
 position = Vector2( 204.5, 103 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall0/sergioescritorio_wall0.png" type="Texture" id=2]
@@ -6,11 +6,8 @@
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Items/Cafe/cafesergio.tres" type="Resource" id=5]
 [ext_resource path="res://Items/Cafe/cafepote.png" type="Texture" id=6]
-[ext_resource path="res://Interactables/Readable/Folhas/Folha.png" type="Texture" id=7]
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.gd" type="Script" id=8]
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Interactables/Readable/Dica/FolhaDica.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -18,8 +15,6 @@ extents = Vector2( 8.5, 8 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.1476, 10 )
-
-[sub_resource type="RectangleShape2D" id=4]
 
 [node name="Sergio_Wall0" instance=ExtResource( 1 )]
 
@@ -62,17 +57,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="ReadableArea" parent="." index="3" instance=ExtResource( 10 )]
-position = Vector2( 248, 71 )
-readable_scene = ExtResource( 11 )
-
-[node name="Sprite" parent="ReadableArea" index="0"]
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" parent="ReadableArea" index="1"]
-shape = SubResource( 4 )
-
-[node name="HoverInfos" type="Node2D" parent="." index="4"]
+[node name="HoverInfos" type="Node2D" parent="." index="3"]
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 12 )]
 nome = "Notebook"
@@ -102,7 +87,6 @@ polygon = PoolVector2Array( 150, 180, 142, 173, 142, 144, 172, 144, 172, 173, 16
 
 [editable path="InvisibleCollectable"]
 [editable path="PuzzleArea"]
-[editable path="ReadableArea"]
 [editable path="HoverInfos/HoverInfo"]
 [editable path="HoverInfos/HoverInfo2"]
 [editable path="HoverInfos/HoverInfo4"]

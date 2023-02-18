@@ -48,6 +48,7 @@ position = Vector2( 148, 91.5 )
 shape = SubResource( 2 )
 
 [node name="BlockProgress" parent="." index="3" instance=ExtResource( 9 )]
+needed_text = "Está muito quente aqui! Os servidores estão supraquecendo. É melhor arrumar a temperatura logo."
 
 [node name="CollisionShape2D" parent="BlockProgress" index="0"]
 position = Vector2( 146.5, 108.5 )

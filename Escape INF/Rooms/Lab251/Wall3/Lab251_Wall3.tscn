@@ -34,7 +34,7 @@ extents = Vector2( 24.75, 22.75 )
 texture = ExtResource( 4 )
 
 [node name="Collectable" parent="." index="1" instance=ExtResource( 17 )]
-position = Vector2( 33, 5 )
+position = Vector2( 282, 181 )
 item_data = ExtResource( 7 )
 
 [node name="Sprite" parent="Collectable" index="0"]

@@ -61,8 +61,6 @@ tracks/0/keys = {
 [node name="Passnumber" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.0
-margin_right = 1.0
 mouse_filter = 1
 script = ExtResource( 2 )
 
@@ -84,7 +82,8 @@ anims/RESET = SubResource( 6 )
 anims/Wrong = SubResource( 7 )
 
 [node name="SequenceTyped" type="Control" parent="."]
-margin_right = 319.0
+margin_left = -1.0
+margin_right = 318.0
 margin_bottom = 179.0
 script = ExtResource( 4 )
 

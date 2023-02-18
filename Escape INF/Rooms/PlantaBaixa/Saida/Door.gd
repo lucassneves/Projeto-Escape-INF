@@ -1,8 +1,8 @@
 extends Area2D
 
 export(bool) var locked := false
-
 export(String, FILE, "*.tscn") var goto
+onready var sprite = get_parent().get_node("Sprite")
 
 var _hovering = false
 
@@ -12,6 +12,9 @@ func _ready():
 	
 	if ProgressManager.check_progress("unlocked_doors", room_file, wall_name):
 		locked = false
+		
+	if ProgressManager.check_progress("completed_puzzles", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"):
+		sprite.show()
 
 func _input(event):
 	if _hovering:
@@ -26,11 +29,9 @@ func interact():
 	var wall_index = get_parent().get_parent().current_wall_index
 	
 	if locked:
-		if ProgressManager.check_progress("completed_puzzles", room_file, "SalaNRC_Wall0", "res://Interactables/Puzzles/Passnumber/Passnumber.tscn"):
+		if ProgressManager.check_progress("completed_puzzles", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"):
 			locked = false
-			TextBox.show_texts(["A porta foi destrancada!"])
 			ProgressManager.add_unlocked_door(room_file, wall_name)
-			AudioPlayer.play_audio(preload("res://Audio/SFX/door-unlock2.wav"), "Sound")
 		else:
 			TextBox.show_texts(["A porta está trancada."])
 			AudioPlayer.play_audio(preload("res://Audio/SFX/door-locked.wav"), "Sound")
@@ -39,7 +40,6 @@ func interact():
 		ProgressManager.previous_wall_name = wall_name
 		ProgressManager.previous_wall_index = wall_index
 		var _a = get_tree().change_scene(goto)
-		
 
 func _on_Door_mouse_entered():
 	_hovering = true
@@ -48,3 +48,8 @@ func _on_Door_mouse_entered():
 func _on_Door_mouse_exited():
 	_hovering = false
 	Input.set_default_cursor_shape(0)
+
+func _on_TextureRect_gui_input(event):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+		var _a = get_tree().change_scene(ProgressManager.previous_room)
+

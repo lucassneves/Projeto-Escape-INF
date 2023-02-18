@@ -60,7 +60,7 @@ func _on_panel_gui_input(event, index):
 				elif first_panel==null:
 					var switcher
 					first_panel = index
-					print(first_panel)
+					#print(first_panel)
 					switcher = panels[index+1].rect_position
 					panels[index+1].rect_position = panels[first_panel].rect_position
 					panels[first_panel].rect_position = switcher
@@ -87,5 +87,5 @@ func check_completion():
 		
 	if panels[0].rect_position == values[0] and panels[8].rect_position == values[1] and panels[18].rect_position == values[2] and panels[27].rect_position == values[3]:
 		#Answer 404
-		print("completed")
+		#print("completed")
 		return true

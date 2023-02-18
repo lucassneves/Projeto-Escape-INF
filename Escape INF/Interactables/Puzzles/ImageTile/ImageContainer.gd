@@ -17,7 +17,7 @@ func _ready():
 func _on_panel_gui_input(event, index):
 	if not completed:
 			if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-				print(index)
+				#print(index)
 				if first_panel == null:
 					first_panel = index
 				if first_panel != null and index != first_panel:
@@ -62,8 +62,6 @@ func check_completion():
 	
 	for i in panels.size():		
 		if panels[i].rect_position == values[i]:
-	
 			contador +=1
 		if contador == 16:
-			#print("completed")
 			return true

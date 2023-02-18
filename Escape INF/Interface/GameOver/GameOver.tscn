@@ -24,10 +24,9 @@ rect_scale = Vector2( 5, 5 )
 text = "GAME OVER !"
 
 [node name="GameOver" type="RichTextLabel" parent="."]
-margin_left = -1.0
-margin_top = -10.0
-margin_right = 79.0
-margin_bottom = 11.0
+margin_top = 40.0
+margin_right = 80.0
+margin_bottom = 61.0
 rect_scale = Vector2( 4, 4 )
 bbcode_enabled = true
 bbcode_text = "[tornado radius=5 freq=2 ][center]GAME OVER !"
