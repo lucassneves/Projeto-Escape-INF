@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/anime_soundtrack_inf.mp3-c9f4724f76d03d4b30bdea6126fc5070.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/anime_soundtrack_inf.mp3"
+dest_files=[ "res://.import/anime_soundtrack_inf.mp3-c9f4724f76d03d4b30bdea6126fc5070.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

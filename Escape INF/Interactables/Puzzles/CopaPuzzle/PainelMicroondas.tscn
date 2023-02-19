@@ -87,6 +87,7 @@ margin_left = 112.0
 margin_top = 73.0
 margin_right = 194.0
 margin_bottom = 135.0
+mouse_default_cursor_shape = 2
 custom_constants/vseparation = 0
 custom_constants/hseparation = 0
 columns = 3

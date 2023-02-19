@@ -1,6 +1,6 @@
 extends Node2D
 
-export (bool) var skip_intros = true # Para testar o jogo mais rapidamente
+export (bool) var skip_intros = true #Para testar o jogo mais rapidamente
 
 onready var blockProgress: Area2D = get_tree().get_current_scene().get_node("Walls/Lab257_Wall2/BlockProgress")
 

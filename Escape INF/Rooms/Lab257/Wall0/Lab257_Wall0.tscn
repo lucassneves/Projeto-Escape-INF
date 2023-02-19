@@ -8,7 +8,7 @@
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Rooms/Lab257/Wall0/frase.png" type="Texture" id=9]
 [ext_resource path="res://Rooms/Lab257/Wall0/MeLivra.png" type="Texture" id=10]
-[ext_resource path="res://Interactables/Readable/MeLivra/MeLivra.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Interactables/Readable/Monitores/SuperComputador.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 5 )

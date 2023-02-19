@@ -29,7 +29,6 @@ position = Vector2( 205, 89 )
 shape = SubResource( 1 )
 
 [node name="HoverInfos" type="Node2D" parent="." index="3"]
-visible = false
 
 [node name="HoverInfo2" parent="HoverInfos" index="0" instance=ExtResource( 3 )]
 nome = "Porta trancada com chave"

@@ -15,6 +15,7 @@ func _ready():
 		
 	if ProgressManager.check_progress("completed_puzzles", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"):
 		sprite.show()
+		ProgressManager.add_unlocked_door(room_file, wall_name)
 
 func _input(event):
 	if _hovering:
@@ -48,8 +49,3 @@ func _on_Door_mouse_entered():
 func _on_Door_mouse_exited():
 	_hovering = false
 	Input.set_default_cursor_shape(0)
-
-func _on_TextureRect_gui_input(event):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-		var _a = get_tree().change_scene(ProgressManager.previous_room)
-

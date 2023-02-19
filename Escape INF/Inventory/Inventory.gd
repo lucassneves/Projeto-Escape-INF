@@ -4,6 +4,13 @@ const inventory_size := 12
 
 var selected_item_index = null setget set_selected_item_index
 
+#Puzzles Express
+#func _ready():
+#	ProgressManager.add_completed_puzzles("res://Rooms/Lab257/Lab257.tscn", "Lab257_Wall1", "res://Interactables/Puzzles/ConnectPath/ConnectPath.tscn")
+#	ProgressManager.add_completed_puzzles("res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall0", "res://Interactables/Puzzles/AirConditioning/Air.tscn")
+#	ProgressManager.add_completed_puzzles("res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn")
+#	ProgressManager.add_unlocked_item("res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios")
+
 #export(Array, Resource) var items = [
 #	preload("res://Items/Celular/celular.tres"),
 #	preload("res://Items/CableEthernet/cable_ethernet.tres"),

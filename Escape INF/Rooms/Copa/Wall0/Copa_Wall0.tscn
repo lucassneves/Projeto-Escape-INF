@@ -61,7 +61,6 @@ shape = SubResource( 2 )
 disabled = true
 
 [node name="ReadableArea" parent="." instance=ExtResource( 8 )]
-visible = false
 position = Vector2( 74, 137 )
 readable_scene = ExtResource( 10 )
 

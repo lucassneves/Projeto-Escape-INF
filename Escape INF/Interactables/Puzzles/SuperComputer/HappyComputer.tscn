@@ -1,0 +1,168 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=1]
+[ext_resource path="res://Interactables/Puzzles/SuperComputer/AnimationCry.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/Puzzles/SuperComputer/HappyComputer.gd" type="Script" id=3]
+[ext_resource path="res://Interactables/Puzzles/SuperComputer/AnimationHappy.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.0431373, 0.0392157, 0.0392157, 1 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "Fast"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("TextoTyped:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 4.7 )
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextoTyped:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "Type"
+length = 18.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("TextoTyped:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2, 18 )
+}
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=18]
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 640, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 4 )
+region = Rect2( 320, 0, 320, 180 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
+region = Rect2( 640, 0, 320, 180 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "cry",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "happy",
+"speed": 5.0
+} ]
+
+[node name="HappyComputer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0627451, 0.152941, 0.235294, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 45.0
+margin_top = 20.0
+margin_right = 299.0
+margin_bottom = 167.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 13 )
+
+[node name="TextoTyped" type="Label" parent="."]
+margin_left = 52.0
+margin_top = 41.0
+margin_right = 295.0
+margin_bottom = 144.364
+custom_colors/font_color = Color( 0.321569, 0.439216, 0.643137, 1 )
+text = "
+Ahhhhhhh! É sério que você me deu um ingresso do Inter?
+
+Esse foi o maior gesto que um humano já fez por mim. Mesmo sem poder ir fisicamente, você fez esse supercomputador muito feliz.
+
+Eu abri a porta principal, você ir para o seu churrasco agora.
+
+Promete me visitar quando puder?"
+align = 1
+autowrap = true
+uppercase = true
+
+[node name="AnimationTyped" type="AnimationPlayer" parent="."]
+anims/Fast = SubResource( 14 )
+anims/RESET = SubResource( 15 )
+anims/Type = SubResource( 16 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 46.0
+margin_top = 21.0
+margin_right = 300.0
+margin_bottom = 166.0
+mouse_default_cursor_shape = 2
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 17 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/focus = SubResource( 19 )
+flat = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 162, 93 )
+scale = Vector2( 0.729687, 0.708333 )
+frames = SubResource( 20 )
+animation = "happy"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 22.0
+margin_bottom = 24.0
+mouse_default_cursor_shape = 2
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]

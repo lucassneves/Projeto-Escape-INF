@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Interactables/Puzzles/SuperComputer/SuperC.gd" type="Script" id=1]
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=2]
-[ext_resource path="res://Interactables/Puzzles/SuperComputer/ComputerBig.png" type="Texture" id=3]
+[ext_resource path="res://Interactables/Puzzles/SuperComputer/AnimationCry.png" type="Texture" id=3]
+[ext_resource path="res://Interactables/Puzzles/SuperComputer/happyFace.png" type="Texture" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0431373, 0.0392157, 0.0392157, 1 )
@@ -90,6 +91,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 margin_left = 45.0
@@ -110,7 +112,8 @@ Antes era : \"Ah! o supercomputador isso.\" ,  \"o supercomputador aquilo.\",  \
 E agora? Quem se importa comigo ? O tal do supercomputador.
 
 E só chatgpt pra cá, chatgpt pra lá, vai lá perguntar pro chatgpt como você faz pra escapar do INF então ... 
-"
+
+E em hipótese nenhuma vá no lugar tal."
 align = 1
 autowrap = true
 uppercase = true
@@ -118,6 +121,7 @@ uppercase = true
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 22.0
 margin_bottom = 24.0
+mouse_default_cursor_shape = 2
 texture = ExtResource( 2 )
 stretch_mode = 4
 
@@ -143,6 +147,11 @@ position = Vector2( 162, 93 )
 scale = Vector2( 0.729687, 0.708333 )
 frames = SubResource( 13 )
 animation = "cry"
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 177, 93 )
+texture = ExtResource( 4 )
 
 [connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

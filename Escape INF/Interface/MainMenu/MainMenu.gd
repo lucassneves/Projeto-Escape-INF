@@ -3,7 +3,7 @@ extends Control
 export (String, FILE, "*.tscn") var first_scene
 export (String, FILE, "*.tscn") var tutorial_scene
 
-var SOUNDTRACK2 = preload("res://Audio/anime_soundtrack_inf.mp3")
+var SOUNDTRACK2 = preload("res://Audio/SFX/anime_soundtrack_inf.mp3")
 
 func _ready():	
 	if AudioPlayer.audio_playing == false:

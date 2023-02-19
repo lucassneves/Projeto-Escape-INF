@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Interactables/Puzzles/BoxOpener/Boxopened.gd" type="Script" id=1]
 [ext_resource path="res://Interactables/Puzzles/BoxOpener/box_opened.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/Readable/DocumentoSC/ReadableSC.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Interactables/Readable/DocumentoSC/ReadableAir.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Interface/WallSwitch/wallSwitch.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -32,7 +32,7 @@ __meta__ = {
 
 [node name="ReadableArea" parent="." instance=ExtResource( 4 )]
 position = Vector2( 186, 88 )
-readable_scene = ExtResource( 6 )
+readable_scene = ExtResource( 3 )
 
 [node name="Sprite" parent="ReadableArea" index="0"]
 scale = Vector2( 5, 5 )

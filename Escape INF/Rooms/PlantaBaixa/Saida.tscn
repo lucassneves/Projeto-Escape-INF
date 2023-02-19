@@ -19,8 +19,9 @@ text = "Saída do INF
 "
 
 [node name="GoBack" type="TextureRect" parent="UI Layer" index="2"]
+margin_left = 6.0
 margin_top = 13.0
-margin_right = 22.0
+margin_right = 28.0
 margin_bottom = 37.0
 texture = ExtResource( 3 )
 stretch_mode = 4

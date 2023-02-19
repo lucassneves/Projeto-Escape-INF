@@ -2,6 +2,8 @@ extends Control
 
 onready var panels = get_children()
 
+var click = preload("res://Audio/SFX/click.wav")
+
 var numero1 = "_"
 var numero2 = "_"
 var numero3 = "_"
@@ -24,6 +26,8 @@ func _on_TextureRect_gui_input(event):
 		var _a = get_tree().change_scene(ProgressManager.previous_room)
 
 func _on_Botao1_pressed():
+	
+	AudioPlayer.play_audio(click, "Sound")
 
 	if proximo == 1:
 		numero1 = "1"
@@ -40,6 +44,8 @@ func _on_Botao1_pressed():
 
 func _on_Botao2_pressed():
 	
+	AudioPlayer.play_audio(click, "Sound")
+	
 	if proximo == 1:
 		numero1 = "2"
 	if proximo == 2:
@@ -54,6 +60,8 @@ func _on_Botao2_pressed():
 		proximo = 5
 	
 func _on_Botao3_pressed():
+	
+	AudioPlayer.play_audio(click, "Sound")
 	
 	if proximo == 1:
 		numero1 = "3"
@@ -70,6 +78,8 @@ func _on_Botao3_pressed():
 
 func _on_Botao4_pressed():
 	
+	AudioPlayer.play_audio(click, "Sound")
+	
 	if proximo == 1:
 		numero1 = "4"
 	if proximo == 2:
@@ -84,6 +94,8 @@ func _on_Botao4_pressed():
 		proximo = 5
 
 func _on_Botao5_pressed():
+	
+	AudioPlayer.play_audio(click, "Sound")
 	
 	if proximo == 1:
 		numero1 = "5"
@@ -100,6 +112,8 @@ func _on_Botao5_pressed():
 	
 func _on_Botao6_pressed():
 	
+	AudioPlayer.play_audio(click, "Sound")
+	
 	if proximo == 1:
 		numero1 = "6"
 	if proximo == 2:
@@ -114,6 +128,8 @@ func _on_Botao6_pressed():
 		proximo = 5
 
 func _on_Botao7_pressed():
+	
+	AudioPlayer.play_audio(click, "Sound")
 	
 	if proximo == 1:
 		numero1 = "7"
@@ -130,6 +146,8 @@ func _on_Botao7_pressed():
 
 func _on_Botao8_pressed():
 	
+	AudioPlayer.play_audio(click, "Sound")
+	
 	if proximo == 1:
 		numero1 = "8"
 	if proximo == 2:
@@ -145,6 +163,8 @@ func _on_Botao8_pressed():
 
 func _on_Botao9_pressed():
 	
+	AudioPlayer.play_audio(click, "Sound")
+	
 	if proximo == 1:
 		numero1 = "9"
 	if proximo == 2:
@@ -159,6 +179,9 @@ func _on_Botao9_pressed():
 		proximo = 5
 
 func _on_BotaoEnter_pressed():
+	
+	AudioPlayer.play_audio(click, "Sound")
+	
 	if proximo == 5:
 		if numero1 == "3":
 			if numero2 == "5":

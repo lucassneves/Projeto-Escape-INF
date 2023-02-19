@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/SuperComputador.png" type="Texture" id=2]
@@ -9,7 +9,11 @@
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Computer.png" type="Texture" id=7]
 [ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/Block.gd" type="Script" id=8]
 [ext_resource path="res://Items/Ticket/inter_ticket.tres" type="Resource" id=9]
+[ext_resource path="res://Rooms/SalaNRC/Walls/Wall2/happyFaceMonitor.png" type="Texture" id=10]
 [ext_resource path="res://Interactables/LockedItems/BlockProgress.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 47, 30.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47.5, 29 )
@@ -43,13 +47,24 @@ extents = Vector2( 46.5, 29 )
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 84.5, 58 )
 
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 27.5, 14.5 )
+
 [node name="SalaNRC_Wall2" instance=ExtResource( 1 )]
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
 hframes = 3
 
-[node name="PuzzleArea" parent="." index="1" instance=ExtResource( 6 )]
+[node name="PuzzleArea2" parent="." index="1" instance=ExtResource( 6 )]
+position = Vector2( 174, 69 )
+puzzle_file = "res://Interactables/Puzzles/SuperComputer/HappyComputer.tscn"
+
+[node name="CollisionShape2D" parent="PuzzleArea2" index="1"]
+position = Vector2( 37, 20.5 )
+shape = SubResource( 9 )
+
+[node name="PuzzleArea" parent="." index="2" instance=ExtResource( 6 )]
 position = Vector2( 173, 68 )
 puzzle_file = "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"
 
@@ -57,13 +72,18 @@ puzzle_file = "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"
 position = Vector2( 37.5, 19 )
 shape = SubResource( 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="3"]
 visible = false
 position = Vector2( 160, 90 )
 frames = SubResource( 7 )
 animation = "computer"
 
-[node name="Drawer" type="Area2D" parent="." index="3"]
+[node name="Sprite" type="Sprite" parent="." index="4"]
+visible = false
+position = Vector2( 212, 96 )
+texture = ExtResource( 10 )
+
+[node name="Drawer" type="Area2D" parent="." index="5"]
 script = ExtResource( 5 )
 locked = true
 item_needed = ExtResource( 9 )
@@ -77,21 +97,27 @@ hframes = 2
 position = Vector2( 266.5, 145.125 )
 shape = SubResource( 1 )
 
-[node name="Block" type="Area2D" parent="." index="4"]
+[node name="Block" type="Area2D" parent="." index="6"]
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block" index="0"]
 position = Vector2( 210.5, 89 )
 shape = SubResource( 3 )
 
-[node name="BlockProgress" parent="." index="5" instance=ExtResource( 11 )]
+[node name="BlockProgress" parent="." index="7" instance=ExtResource( 11 )]
 needed_text = "Está muito quente aqui! Os servidores estão supraquecendo. É melhor arrumar a temperatura logo."
 
 [node name="CollisionShape2D" parent="BlockProgress" index="0"]
 position = Vector2( 204.5, 103 )
 shape = SubResource( 8 )
 
-[node name="HoverInfo" type="Node2D" parent="." index="6"]
+[node name="BlockProgress2" parent="." index="8" instance=ExtResource( 11 )]
+
+[node name="CollisionShape2D" parent="BlockProgress2" index="0"]
+position = Vector2( 270.5, 148.5 )
+shape = SubResource( 10 )
+
+[node name="HoverInfo" type="Node2D" parent="." index="9"]
 
 [node name="HoverInfo" parent="HoverInfo" index="0" instance=ExtResource( 3 )]
 nome = "Muitos gabinetes da SMS"
@@ -122,8 +148,10 @@ polygon = PoolVector2Array( 75, 0, 257, 2, 257, 55, 162, 56, 159, 85, 73, 83 )
 [connection signal="mouse_entered" from="Block" to="Block" method="_on_Block_mouse_entered"]
 [connection signal="mouse_exited" from="Block" to="Block" method="_on_Block_mouse_exited"]
 
+[editable path="PuzzleArea2"]
 [editable path="PuzzleArea"]
 [editable path="BlockProgress"]
+[editable path="BlockProgress2"]
 [editable path="HoverInfo/HoverInfo"]
 [editable path="HoverInfo/HoverInfo2"]
 [editable path="HoverInfo/HoverInfo3"]
