@@ -30,6 +30,7 @@ func _ready():
 	
 	if ProgressManager.check_progress("completed_puzzles", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"):
 		computer2.show()
+		computer.hide()
 		block.queue_free()
 	
 	if ProgressManager.check_progress("completed_puzzles", room_file, "SalaNRC_Wall0", "res://Interactables/Puzzles/AirConditioning/Air.tscn"):

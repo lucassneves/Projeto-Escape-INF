@@ -112,8 +112,7 @@ Antes era : \"Ah! o supercomputador isso.\" ,  \"o supercomputador aquilo.\",  \
 E agora? Quem se importa comigo ? O tal do supercomputador.
 
 E só chatgpt pra cá, chatgpt pra lá, vai lá perguntar pro chatgpt como você faz pra escapar do INF então ... 
-
-E em hipótese nenhuma vá no lugar tal."
+"
 align = 1
 autowrap = true
 uppercase = true
@@ -147,6 +146,14 @@ position = Vector2( 162, 93 )
 scale = Vector2( 0.729687, 0.708333 )
 frames = SubResource( 13 )
 animation = "cry"
+
+[node name="Label" type="Label" parent="AnimatedSprite"]
+margin_left = 61.6703
+margin_top = 87.5294
+margin_right = 166.67
+margin_bottom = 95.1658
+custom_colors/font_color = Color( 0.00784314, 0.533333, 0.819608, 1 )
+text = "*Não vá no Laboratório 152"
 
 [node name="Sprite2" type="Sprite" parent="."]
 visible = false

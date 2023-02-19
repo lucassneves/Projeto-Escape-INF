@@ -6,7 +6,7 @@ onready var sprite = $AnimatedSprite
 onready var button = $Button
 
 func _ready():
-	computer.play("Type") #Type - Fa
+	computer.play("Type") 
 	AudioPlayer.play_audio(preload("res://Audio/SFX/to-type.wav"), "Sound")
 
 

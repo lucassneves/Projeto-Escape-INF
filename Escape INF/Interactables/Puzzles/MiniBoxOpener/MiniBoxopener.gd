@@ -11,7 +11,7 @@ func complete():
 	
 	ProgressManager.add_completed_puzzles(room_file, wall_name, filename)
 	
-	TextBox.show_texts(["Você abriu a mini caixa!", "Provavelmente deve ter algo dentro?"])
+	TextBox.show_texts(["Você abriu a mini caixa!", "Provavelmente deve ter algo dentro."])
 	print("LOG: Puzzle MiniBoxOpener concluído.")
 	
 	ProgressManager.anxiety -= 25

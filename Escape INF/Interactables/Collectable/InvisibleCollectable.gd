@@ -37,7 +37,7 @@ func _input(event):
 			get_tree().set_input_as_handled()
 
 func collect():
-	print(item_data.name + " coletado!")
+	print("ITEM: " + item_data.name + " coletado!")
 	TextBox.show_texts(["Você colocou " + item_data.name + " na sua mochila."])
 	Inventory.add_item(item_data)
 	
@@ -48,8 +48,6 @@ func collect():
 	ProgressManager.anxiety -= 10
 	
 	queue_free()
-
-
 
 func _on_Collectable_visibility_changed():
 	pass # Replace with function body.

@@ -4,6 +4,7 @@ export(bool) var locked := false
 export(Resource) var item_needed
 
 onready var sprite = $Sprite
+onready var sprite2 = get_parent().get_node("Sprite")
 onready var block_drawer = get_parent().get_node("BlockProgress2")
 
 var _hovering = false
@@ -18,11 +19,9 @@ func _on_Drawer_mouse_exited():
 	Input.set_default_cursor_shape(0)
 
 func _ready():
-	if ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
+	if ProgressManager.check_progress("unlocked_items","res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "Gaveta"):
 		sprite.frame=1
 		block_drawer.queue_free()
-	else:
-		TextBox.show_texts(["Esta gaveta está travada."])
 	
 
 func _input(event):
@@ -32,11 +31,11 @@ func _input(event):
 			get_tree().set_input_as_handled()
 		
 func interact():
-	var room_file = ProgressManager.previous_room
-	var wall_name = ProgressManager.previous_wall_name
-	
 	if Inventory.get_selected_item() == item_needed:
 			Inventory.remove_item(item_needed)
-			ProgressManager.add_completed_puzzles(room_file, wall_name, "res://Interactables/Puzzles/SuperComputer/SuperC.tscn")
+			ProgressManager.add_completed_puzzles("res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn")
 			print("LOG: Puzzle SuperComputer concluído.")
-			var _a = get_tree().change_scene(computer_scene)
+			sprite2.show()
+			var _a = get_tree().change_scene(computer_scene)	
+	if not ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
+		TextBox.show_texts("A gaveta está trancada.")

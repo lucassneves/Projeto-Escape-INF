@@ -19,5 +19,6 @@ func _ready():
 	Input.set_default_cursor_shape(0)
 	
 	if not ProgressManager.check_progress("seen_texts", room_file, null, "intro_texts"):
-		TextBox.show_texts(intro_texts)
-		ProgressManager.add_seen_texts(room_file, "intro_texts")
+		if not ProgressManager.check_progress("completed_puzzles", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"):
+			TextBox.show_texts(intro_texts)
+			ProgressManager.add_seen_texts(room_file, "intro_texts")
