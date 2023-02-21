@@ -1,10 +1,50 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Interface/GameOver/Final.png" type="Texture" id=1]
 [ext_resource path="res://UFGLogo.png" type="Texture" id=2]
 [ext_resource path="res://Interface/GameOver/Macaco.gd" type="Script" id=3]
 
 [sub_resource type="Theme" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+uniform float circle_size : hint_range(0.0, 1.10);
+uniform float screen_width = 320;
+uniform float screen_height = 180;
+
+uniform vec2 pos = vec2(160, 65);
+
+void fragment() {
+	vec2 pos_viewport = vec2(pos.x / screen_width, pos.y / screen_height);
+	float ratio = screen_width / screen_height;
+	float dist = distance(pos_viewport, vec2(mix(pos_viewport.x, UV.x, ratio), UV.y));
+	COLOR.a = step(circle_size, dist);
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+shader_param/circle_size = 1.1
+shader_param/screen_width = 320.0
+shader_param/screen_height = 180.0
+shader_param/pos = Vector2( 160, 65 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:material:shader_param/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.51723 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.1, 0.0, 0.0 ]
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -52,3 +92,14 @@ margin_bottom = 232.0
 rect_scale = Vector2( 0.2, 0.2 )
 theme = SubResource( 1 )
 texture = ExtResource( 2 )
+
+[node name="SceneTransitionLocal" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="SceneTransitionLocal"]
+material = SubResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneTransitionLocal"]
+anims/Out = SubResource( 4 )

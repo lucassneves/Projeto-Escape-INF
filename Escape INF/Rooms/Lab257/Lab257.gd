@@ -12,7 +12,6 @@ var intro_texts = [
 onready var screenModulate = $ScreenModulate
 
 func _ready():
-	
 	var room_file = get_tree().current_scene.filename
 	
 	if ProgressManager.check_progress("completed_puzzles", room_file, "Lab257_Wall1", "res://Interactables/Puzzles/ConnectPath/ConnectPath.tscn"):

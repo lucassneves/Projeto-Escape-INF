@@ -1,7 +1,6 @@
 extends Panel
 
-const MAIN_MENU = preload("res://Interface/MainMenu/MainMenu.tscn")
-export (String, FILE, "*.tscn") var tutorial_scene
+const MAIN_MENU_PATH = "res://Interface/MainMenu/MainMenu.tscn"
 
 func _on_PauseMenuRect_gui_input(event):
 	if event is InputEventMouseButton:
@@ -15,4 +14,4 @@ func _on_Resume_pressed():
 
 func _on_MainMenuButton_pressed():
 	get_tree().paused = false
-	var _a = get_tree().change_scene_to(MAIN_MENU)
+	SceneTransition.transition_scene(MAIN_MENU_PATH)

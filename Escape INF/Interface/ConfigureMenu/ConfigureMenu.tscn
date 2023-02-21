@@ -58,7 +58,6 @@ margin_right = 43.5
 margin_bottom = 49.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 1 )
-tutorial_scene = "res://Interface/Tutorial/TutorialPage1.tscn"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0

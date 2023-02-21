@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.gd" type="Script" id=1]
-[ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/PlantaBaixa/PlantaBaixa2.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/PlantaBaixa/salaButton.gd" type="Script" id=3]
 [ext_resource path="res://Rooms/Lab257/Lab257.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Rooms/Lab251/Lab251.tscn" type="PackedScene" id=5]
@@ -50,6 +50,41 @@ script = ExtResource( 1 )
 
 [node name="PlantaBaixa" type="TextureRect" parent="."]
 texture = ExtResource( 2 )
+
+[node name="legendas" type="VBoxContainer" parent="."]
+margin_left = 269.0
+margin_top = 68.0
+margin_right = 309.0
+margin_bottom = 108.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="legendas"]
+margin_top = 1.0
+margin_right = 40.0
+margin_bottom = 8.63636
+size_flags_vertical = 6
+text = "Disponível"
+
+[node name="Label2" type="Label" parent="legendas"]
+margin_top = 11.0
+margin_right = 40.0
+margin_bottom = 18.6364
+size_flags_vertical = 6
+text = "Bloqueado"
+
+[node name="Label3" type="Label" parent="legendas"]
+margin_top = 21.0
+margin_right = 40.0
+margin_bottom = 28.6364
+size_flags_vertical = 6
+text = "Pátio"
+
+[node name="Label4" type="Label" parent="legendas"]
+margin_top = 31.0
+margin_right = 40.0
+margin_bottom = 38.6364
+size_flags_vertical = 6
+text = "Escada"
 
 [node name="LabelTitulo" type="Label" parent="."]
 margin_left = 2.0

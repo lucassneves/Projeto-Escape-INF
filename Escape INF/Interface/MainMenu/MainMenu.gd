@@ -5,13 +5,13 @@ export (String, FILE, "*.tscn") var tutorial_scene
 
 var SOUNDTRACK2 = preload("res://Audio/SFX/anime_soundtrack_inf.mp3")
 
-func _ready():	
+func _ready():
 	if AudioPlayer.audio_playing == false:
 		AudioPlayer.play_audio(SOUNDTRACK2, "Music")
 		AudioPlayer.audio_playing = true
 
 func _on_PlayButton_pressed():
-	var _a = get_tree().change_scene(first_scene)
+	SceneTransition.transition_scene(first_scene)
 
 func _on_QuitButton_pressed():
 	get_tree().quit()

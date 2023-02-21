@@ -30,6 +30,7 @@ Inventory="*res://Inventory/Inventory.gd"
 TextBox="*res://Interface/TextBox/TextBox.tscn"
 ProgressManager="*res://ProgressManager.gd"
 AudioPlayer="*res://Audio/AudioPlayer.tscn"
+SceneTransition="*res://Interface/SceneTransition.tscn"
 
 [display]
 

@@ -145,7 +145,7 @@ thickness = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-first_scene = "res://Rooms/Intro/Intro.tscn"
+first_scene = "res://Rooms/Lab257/Lab257.tscn"
 tutorial_scene = "res://Interface/Tutorial/TutorialPage1.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
