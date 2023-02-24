@@ -45,6 +45,7 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed and get_parent().visible and not _hovering:
 		get_parent().visible = false
 		get_tree().set_input_as_handled()
+		Blur.visible = false
 
 func select_slot(slot_index):
 	
@@ -80,6 +81,7 @@ func _on_InventoryRect_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == BUTTON_LEFT:
 			get_parent().show()
+			Blur.unfocus_blur()
 
 func _on_InventoryRect_mouse_entered():
 	_hovering = true

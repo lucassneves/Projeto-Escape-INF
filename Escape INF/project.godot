@@ -31,6 +31,7 @@ TextBox="*res://Interface/TextBox/TextBox.tscn"
 ProgressManager="*res://ProgressManager.gd"
 AudioPlayer="*res://Audio/AudioPlayer.tscn"
 SceneTransition="*res://Interface/SceneTransition.tscn"
+Blur="*res://Interface/Blur.tscn"
 
 [display]
 

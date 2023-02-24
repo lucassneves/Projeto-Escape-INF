@@ -71,18 +71,41 @@ func add_seen_texts(room_name, texts):
 		seen_texts[room_name] = [texts]
 		
 func set_anxiety(value):
-	if first_time_anxiety and value > 0:
-		TextBox.show_texts(["Acho que mexer nas coisas sem pensar só vai aumentar minha ansiedade... Preciso focar!"])
-		first_time_anxiety = false
+	
+	var delta = value - anxiety
+	
 	anxiety = clamp(value, 0, 100)
+	
 	emit_signal("anxiety_changed")
 	
-	if anxiety == 80:
-		TextBox.show_texts(["Ansiedade é uma coisa preocupante, melhor para um pouco!"])
+	if first_time_anxiety and delta > 0:
+		TextBox.show_texts(["Acho que mexer nas coisas sem pensar só vai aumentar minha ansiedade... Preciso focar!"])
+		first_time_anxiety = false
 	
 	if anxiety == 100:
+		Blur.get_node("ColorRect/AnimationPlayer").play("AnxietyAttack")
+		Blur.layer = 1
+		yield(Blur.get_node("ColorRect/AnimationPlayer"), "animation_finished")
+		
+		TextBox.show_texts(["Você ficou ansioso demais e acabou desmaiando..."])
+		
+		yield(TextBox, "texts_done")
+		
+		Blur.visible = false
+		Blur.layer = 0
+		
 		var _a = get_tree().change_scene(tmp_scene) #final_scene
 		emit_signal("anxiety_attack")
+	
+	elif delta > 0 and anxiety >= 90:
+		if anxiety == 90:
+			TextBox.show_texts(["Estou ansioso demais, se continuar assim vou acabar desmaiando."])
+		Blur.get_node("ColorRect/AnimationPlayer").play("SuperDizzy")
+	
+	elif delta > 0 and anxiety >= 70:
+		if anxiety == 70:
+			TextBox.show_texts(["Ansiedade é uma coisa preocupante, melhor parar um pouco!"])
+		Blur.get_node("ColorRect/AnimationPlayer").play("Dizzy")
 
 func check_progress(progress_type: String, room = null, wall = null, object = null):
 	match progress_type:
