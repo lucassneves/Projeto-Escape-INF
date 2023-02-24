@@ -37,5 +37,3 @@ func interact():
 			print("LOG: Puzzle SuperComputer concluído.")
 			sprite2.show()
 			var _a = get_tree().change_scene(computer_scene)	
-	if not ProgressManager.check_progress("unlocked_items", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall3", "Fios"):
-		TextBox.show_texts("A gaveta está trancada.")

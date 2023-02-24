@@ -49,7 +49,7 @@ margin_top = 45.0
 margin_right = 208.0
 margin_bottom = 63.2727
 text = "SERVIÇO PÚBLICO FEDERAL
-UNIVERSIDADE FEDERALDE GOIÁS"
+UNIVERSIDADE FEDERAL DE GOIÁS"
 align = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Readable/Content" index="5"]
@@ -63,10 +63,10 @@ bbcode_text = "[center]
 
 	Como resultado da pesquisa o supercomputador adiuiriu a vontande de ir para o Inter,de tanto os alunos falarem sobre ele e o usarem para tentar comprar o ingresso.do evento. 
 
-[color=red]	Por conseguência, o supercomputador se nega a fazer qualquer atividade, enquanto não adquirir o seu ingresso para Inter 2023. "
+[color=red]	Por consequência, o supercomputador se nega a fazer qualquer atividade, enquanto não adquirir o seu ingresso para Inter 2023. "
 text = "
 	A Universidade Federal de Goiás (UFG), por intermédio do Instituto de Informática (INF) torna público a informação de que o supercomputador localizado no campus Samambaia, durante pesquisa com PLN foi programado para aprender e evoluir sua rede neural durante conversação conforme interagia com as pessoas. 
 
 	Como resultado da pesquisa o supercomputador adiuiriu a vontande de ir para o Inter,de tanto os alunos falarem sobre ele e o usarem para tentar comprar o ingresso.do evento. 
 
-	Por conseguência, o supercomputador se nega a fazer qualquer atividade, enquanto não adquirir o seu ingresso para Inter 2023. "
+	Por consequência, o supercomputador se nega a fazer qualquer atividade, enquanto não adquirir o seu ingresso para Inter 2023. "

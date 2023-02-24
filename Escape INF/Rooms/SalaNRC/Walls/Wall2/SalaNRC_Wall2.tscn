@@ -112,6 +112,7 @@ position = Vector2( 204.5, 103 )
 shape = SubResource( 8 )
 
 [node name="BlockProgress2" parent="." index="8" instance=ExtResource( 11 )]
+needed_text = "A gaveta está bloqueada."
 
 [node name="CollisionShape2D" parent="BlockProgress2" index="0"]
 position = Vector2( 270.5, 148.5 )

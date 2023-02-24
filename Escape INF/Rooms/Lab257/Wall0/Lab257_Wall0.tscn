@@ -5,10 +5,10 @@
 [ext_resource path="res://Interactables/Readable/Prova/provaScene.png" type="Texture" id=3]
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interactables/Readable/Prova/ReadableProva.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interactables/Readable/Monitores/MeLivra.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Rooms/Lab257/Wall0/frase.png" type="Texture" id=9]
 [ext_resource path="res://Rooms/Lab257/Wall0/MeLivra.png" type="Texture" id=10]
-[ext_resource path="res://Interactables/Readable/Monitores/SuperComputador.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 5 )
@@ -42,7 +42,7 @@ shape = SubResource( 1 )
 
 [node name="ReadableArea3" parent="." index="4" instance=ExtResource( 4 )]
 position = Vector2( 86, 109 )
-readable_scene = ExtResource( 11 )
+readable_scene = ExtResource( 6 )
 
 [node name="Sprite" parent="ReadableArea3" index="0"]
 texture = ExtResource( 10 )
