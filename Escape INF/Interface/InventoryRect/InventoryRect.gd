@@ -65,6 +65,7 @@ func select_slot(slot_index):
 	
 func update_slot(slot_index):
 	var item: Item = Inventory.items[slot_index]
+	
 	if item != null:
 		var item_rect = TextureRect.new()
 		item_rect.expand = true
@@ -72,9 +73,11 @@ func update_slot(slot_index):
 		item_rect.texture = Inventory.items[slot_index].sprite
 		item_rect.rect_min_size = Vector2(32,32)
 		slotsGrid.get_child(slot_index).add_child(item_rect)
+		slotsGrid.get_child(slot_index).mouse_default_cursor_shape = 2
 		
 	elif slotsGrid.get_child(slot_index).get_children().size() > 0:
 		slotsGrid.get_child(slot_index).get_child(0).queue_free()
+		slotsGrid.get_child(slot_index).mouse_default_cursor_shape = 0
 		self.selected_slot_index = null
 
 func _on_InventoryRect_gui_input(event):

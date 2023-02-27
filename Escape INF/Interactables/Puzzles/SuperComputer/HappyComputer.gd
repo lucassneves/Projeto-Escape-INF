@@ -6,10 +6,11 @@ onready var sprite = $AnimatedSprite
 onready var button = $Button
 
 var mouse_left_down
+var audio
 
 func _ready():
 	computer.play("Type") 
-	AudioPlayer.play_audio(preload("res://Audio/SFX/to-type.wav"), "Sound")
+	audio = AudioPlayer.play_audio(preload("res://Audio/SFX/to-type.wav"), "Sound")
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -21,7 +22,8 @@ func _input(event):
 			computer.playback_speed = 1
 
 func _on_Button_pressed():
-	if computer.current_animation_position >= 18 :
+	if computer.current_animation_position >= 18 and not sprite.visible:
+		audio.queue_free()
 		computer.playback_speed = 1
 		text.hide()
 		sprite.show()

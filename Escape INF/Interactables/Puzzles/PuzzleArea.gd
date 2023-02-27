@@ -32,6 +32,7 @@ func _on_PuzzleArea_mouse_exited():
 func _input(event):
 	if _hovering:
 		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+			Input.set_default_cursor_shape(0)
 			get_tree().set_input_as_handled()
 			if item_needed:
 				if Inventory.get_selected_item() == item_needed:

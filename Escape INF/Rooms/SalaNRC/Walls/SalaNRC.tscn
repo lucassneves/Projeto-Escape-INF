@@ -28,8 +28,5 @@ text = "Sala NRC
 [node name="ScreenModulate" parent="." index="2"]
 color = Color( 1, 0.764706, 0.764706, 1 )
 
-[node name="PhoneLight" parent="." index="3"]
-mode = 2
-
 [editable path="UI Layer/UI"]
 [editable path="UI Layer/UI/Inventory"]

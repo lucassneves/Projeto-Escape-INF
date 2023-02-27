@@ -8,13 +8,14 @@ onready var button = $Button
 
 var mouse_left_down
 
+var audio
+
 func _ready():
 	
 	if not ProgressManager.check_progress("completed_puzzles", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"):
 		computer.play("Type")
-		AudioPlayer.play_audio(preload("res://Audio/SFX/to-type.wav"), "Sound")
+		audio = AudioPlayer.play_audio(preload("res://Audio/SFX/to-type.wav"), "Sound")
 		
-	
 	if ProgressManager.check_progress("completed_puzzles", "res://Rooms/SalaNRC/Walls/SalaNRC.tscn", "SalaNRC_Wall2", "res://Interactables/Puzzles/SuperComputer/SuperC.tscn"):
 		button.hide()
 		text.hide()
@@ -34,7 +35,8 @@ func _on_TextureRect_gui_input(event):
 		var _a = get_tree().change_scene(ProgressManager.previous_room)
 
 func _on_Button_pressed():
-	if computer.current_animation_position >= 18 :
+	if computer.current_animation_position >= 18 and not sprite.visible:
+		audio.queue_free()
 		computer.playback_speed = 1
 		text.hide()
 		sprite.show()

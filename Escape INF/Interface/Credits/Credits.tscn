@@ -202,10 +202,10 @@ margin_bottom = 24.0
 rect_min_size = Vector2( 100, 0 )
 text = "Programação:
 - André (Sênior)
-- Angelo (Entusiata)
-- Daniela (Entusiata)
-- Lucas (Entusiata)
-- Wanderson (Entusiata)"
+- Angelo (Entusiasta)
+- Daniela (Entusiasta)
+- Lucas (Entusiasta)
+- Wanderson (Entusiasta)"
 fit_content_height = true
 scroll_active = false
 
