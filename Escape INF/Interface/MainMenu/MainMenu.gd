@@ -6,6 +6,7 @@ export (String, FILE, "*.tscn") var tutorial_scene
 var SOUNDTRACK2 = preload("res://Audio/SFX/anime_soundtrack_inf.mp3")
 
 func _ready():
+	Blur.visible = false
 	if AudioPlayer.audio_playing == false:
 		AudioPlayer.play_audio(SOUNDTRACK2, "Music")
 		AudioPlayer.audio_playing = true

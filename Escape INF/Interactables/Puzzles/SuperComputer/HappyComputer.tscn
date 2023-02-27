@@ -126,7 +126,7 @@ Ahhhhhhh! É sério que você me deu um ingresso do Inter?
 
 Esse foi o maior gesto que um humano já fez por mim. Mesmo sem poder ir fisicamente, você fez esse supercomputador muito feliz.
 
-Eu abri a porta principal, você ir para o seu churrasco agora.
+Eu abri a porta principal, você pode ir para o seu churrasco agora.
 
 Promete me visitar quando puder?"
 align = 1
@@ -148,6 +148,7 @@ custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_styles/hover = SubResource( 17 )
 custom_styles/pressed = SubResource( 18 )
 custom_styles/focus = SubResource( 19 )
+action_mode = 0
 flat = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

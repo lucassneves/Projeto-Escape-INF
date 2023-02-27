@@ -8,6 +8,9 @@ func on_selected_item_changed():
 	var item = Inventory.get_selected_item()
 	if item != null and item.name == 'celular':
 		show()
+		position = get_global_mouse_position()
+	else:
+		hide()
 
 func _input(event):
 	if event is InputEventMouseMotion:

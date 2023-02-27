@@ -26,9 +26,6 @@ margin_bottom = 37.0
 texture = ExtResource( 3 )
 stretch_mode = 4
 
-[node name="PhoneLight" parent="." index="3"]
-mode = 2
-
 [connection signal="gui_input" from="UI Layer/GoBack" to="." method="_on_GoBack_gui_input"]
 
 [editable path="UI Layer/UI"]

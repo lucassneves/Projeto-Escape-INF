@@ -3,8 +3,7 @@ extends Node2D
 export(String, FILE, "*.tscn") var goto
 
 var intro_texts = [
-	"Frase bacana sobre o pátio",
-	"Pena, que fecharam a passagem por conta do telhado que foi danificado.",
+	"Que pena, fecharam a passagem por conta do telhado que foi danificado.",
 	"Não há nada nesse ambiente que me ajude a sair daqui.",
 	"Melhor continuar minha jornada, tenho que chegar o tempo do churrasco."
 ]
