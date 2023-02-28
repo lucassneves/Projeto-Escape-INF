@@ -34,7 +34,8 @@ extents = Vector2( 24.75, 22.75 )
 texture = ExtResource( 4 )
 
 [node name="Collectable" parent="." index="1" instance=ExtResource( 17 )]
-position = Vector2( 282, 181 )
+position = Vector2( 22, 6 )
+rotation = 3.14159
 item_data = ExtResource( 7 )
 
 [node name="Sprite" parent="Collectable" index="0"]
@@ -80,7 +81,7 @@ position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
 
 [node name="ReadableArea24" parent="." index="5" instance=ExtResource( 10 )]
-position = Vector2( 293, 181 )
+position = Vector2( 290, 180 )
 readable_scene = ExtResource( 5 )
 
 [node name="Sprite" parent="ReadableArea24" index="0"]

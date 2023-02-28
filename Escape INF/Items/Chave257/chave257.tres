@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "chave do laboratório 257"
+name = "chave do laboratório 256"
 sprite = ExtResource( 2 )
-description = "A chave que abre a porta do laboratório 257."
+description = "A chave que abre a porta do laboratório 256."

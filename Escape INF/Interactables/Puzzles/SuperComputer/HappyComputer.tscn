@@ -97,6 +97,8 @@ animations = [ {
 [node name="HappyComputer" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -2.0
+margin_right = -2.0
 script = ExtResource( 3 )
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
@@ -117,9 +119,9 @@ custom_styles/panel = SubResource( 13 )
 
 [node name="TextoTyped" type="Label" parent="."]
 margin_left = 52.0
-margin_top = 41.0
+margin_top = 31.0
 margin_right = 295.0
-margin_bottom = 144.364
+margin_bottom = 155.636
 custom_colors/font_color = Color( 0.321569, 0.439216, 0.643137, 1 )
 text = "
 Ahhhhhhh! É sério que você me deu um ingresso do Inter?
@@ -128,7 +130,7 @@ Esse foi o maior gesto que um humano já fez por mim. Mesmo sem poder ir fisicam
 
 Eu abri a porta principal, você pode ir para o seu churrasco agora.
 
-Promete me visitar quando puder?"
+Promete me visitar quando puder? Aliás, nosso nome é SKyNET & PROMETHEUS foi um prazer te conhecer."
 align = 1
 autowrap = true
 uppercase = true

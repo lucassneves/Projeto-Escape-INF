@@ -24,6 +24,6 @@ visible = false
 visible = false
 
 [node name="Label" parent="UI Layer" index="1"]
-text = "Laboratório 257"
+text = "Laboratório 256"
 
 [node name="PhoneLight" parent="." index="3" instance=ExtResource( 7 )]

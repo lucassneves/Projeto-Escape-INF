@@ -89,7 +89,7 @@ func set_anxiety(value):
 		Blur.layer = 1
 		yield(Blur.get_node("ColorRect/AnimationPlayer"), "animation_finished")
 		
-		TextBox.show_texts(["Você ficou ansioso demais e acabou desmaiando..."])
+		#TextBox.show_texts(["Você ficou ansioso demais e acabou desmaiando..."])
 		
 		yield(TextBox, "texts_done")
 		
