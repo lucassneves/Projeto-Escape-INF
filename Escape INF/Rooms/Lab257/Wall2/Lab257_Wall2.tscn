@@ -37,7 +37,7 @@ shape = SubResource( 1 )
 
 [node name="HoverInfo" parent="." index="2" instance=ExtResource( 5 )]
 position = Vector2( 222, 100 )
-nome = "Porta do Laboratório 257"
+nome = "Porta do Laboratório 256"
 
 [node name="CollisionShape2D" parent="HoverInfo" index="0"]
 polygon = PoolVector2Array( -29, 52, -29, -44, 29, -44, 29, 52 )

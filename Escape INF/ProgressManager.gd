@@ -91,8 +91,6 @@ func set_anxiety(value):
 		
 		#TextBox.show_texts(["Você ficou ansioso demais e acabou desmaiando..."])
 		
-		yield(TextBox, "texts_done")
-		
 		Blur.visible = false
 		Blur.layer = 0
 		
