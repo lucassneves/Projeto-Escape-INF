@@ -23,6 +23,8 @@ var collected_items := {}
 
 var seen_texts := {}
 
+var game_started = false
+
 signal anxiety_changed
 signal anxiety_attack
 

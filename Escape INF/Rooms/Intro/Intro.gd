@@ -19,4 +19,4 @@ func _ready():
 	
 func _on_texts_done():
 	yield(get_tree().create_timer(1), "timeout") # Espera 1 segundo
-	var _a = get_tree().change_scene(first_room)
+	SceneTransition.transition_scene(first_room)

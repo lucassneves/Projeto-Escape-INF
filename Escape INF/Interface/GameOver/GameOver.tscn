@@ -4,7 +4,7 @@
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource( 1 )
-next_scene = "res://Interface/Credits/Credits.tscn"
+next_scene = "res://Interface/GameOver/journal.tscn"
 
 [node name="Background" type="ColorRect" parent="."]
 margin_right = 320.0

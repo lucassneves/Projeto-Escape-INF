@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/secretaria_wall0.png-ce6236a207a41bba730c9f040a4830fc.stex"
+path="res://.import/title.png-721543c757df53b820ab79e906013aa3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rooms/Secretaria/Wall0/secretaria_wall0.png"
-dest_files=[ "res://.import/secretaria_wall0.png-ce6236a207a41bba730c9f040a4830fc.stex" ]
+source_file="res://Interface/MainMenu/title.png"
+dest_files=[ "res://.import/title.png-721543c757df53b820ab79e906013aa3.stex" ]
 
 [params]
 
